@@ -1,0 +1,18 @@
+[1][INFO ] 2022-06-11 22:00:57.318 : Project Name        : PetStore
+[3][INFO ] 2022-06-11 22:00:57.386 : Test Environment    : local
+[5][INFO ] 2022-06-11 22:00:57.386 : Executed on OS      : Linux
+[7][INFO ] 2022-06-11 22:00:57.386 : Executed By         : likhithanr
+[9][INFO ] 2022-06-11 22:00:57.386 : ******************************Execution of Test Class 1 started*******************************
+[11][INFO ] 2022-06-11 22:00:57.416 : Test case 1.1 finished
+[13][INFO ] 2022-06-11 22:00:57.420 : Test case 1.1 finished
+[15][INFO ] 2022-06-11 22:00:57.421 : test1 : PASSED
+[17][INFO ] 2022-06-11 22:00:57.574 : ***********************************Test execution ended************************************
+
+[19][INFO ] 2022-06-11 22:00:57.576 : Total Class        : 1
+[21][INFO ] 2022-06-11 22:00:57.609 : Start Time         : Sat Jun 11 22:00:57 IST 2022
+[23][INFO ] 2022-06-11 22:00:57.609 : Passed tests count : 1.0
+[25][INFO ] 2022-06-11 22:00:57.609 : Failed tests count : 0.0
+[27][INFO ] 2022-06-11 22:00:57.609 : Skipped tests count: 0
+[29][INFO ] 2022-06-11 22:00:57.609 : Pass percentage    : 100.0%
+[31][INFO ] 2022-06-11 22:00:57.609 : Fail percentage    : 0.0%
+[33][INFO ] 2022-06-11 22:00:57.609 : End Time           : Sat Jun 11 22:00:57 IST 2022

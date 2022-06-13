@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Functinal_Execution]">
+  <parameter name="reportName" value="PetStore Automation Report : Series Execution"/>
+  <test thread-count="5" verbose="0" name="Sample test1(failed)">
+    <classes>
+      <class name="com.n26.functional.pets.CreatePet_POST">
+        <methods>
+          <include name="setUp"/>
+          <include name="testCreatePetWithInvalidDataType_name"/>
+          <include name="scriptStart"/>
+          <include name="testCreatePetWithInvalidRequestMethod"/>
+          <include name="testCreatePetwWithoutMandatoryParams"/>
+          <include name="testCreatePetWithInvalidDataType_Id"/>
+          <include name="testCreatePet"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.CreatePet_POST -->
+      <class name="com.n26.functional.pets.DeletePetById">
+        <methods>
+          <include name="testDeletePetByInvalidId"/>
+          <include name="testDeletePetByValidId"/>
+          <include name="scriptStart"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.DeletePetById -->
+      <class name="com.n26.functional.pets.FindByTags">
+        <methods>
+          <include name="testGetPetByValidTag"/>
+          <include name="tesGetPetByInvalidTags"/>
+          <include name="setUp"/>
+          <include name="scriptStart"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.FindByTags -->
+      <class name="com.n26.functional.pets.UpdateAndGetPetById">
+        <methods>
+          <include name="scriptStart"/>
+          <include name="setUp"/>
+          <include name="testUpdatePetById"/>
+          <include name="testUpdatePetByInvaidId"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.UpdateAndGetPetById -->
+      <class name="com.n26.functional.pets.FindPetByStatus">
+        <methods>
+          <include name="scriptStart"/>
+          <include name="testValidPetBySoldStatus"/>
+          <include name="setUp"/>
+          <include name="testValidPetByAvailableStatus"/>
+          <include name="testGetPetByInvalidStatus"/>
+          <include name="testValidPetByPendingStatus"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.FindPetByStatus -->
+    </classes>
+  </test> <!-- Sample test1(failed) -->
+</suite> <!-- Failed suite [Functinal_Execution] -->

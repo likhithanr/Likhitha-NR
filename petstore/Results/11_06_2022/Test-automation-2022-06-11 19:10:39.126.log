@@ -1,0 +1,79 @@
+[1][INFO ] 2022-06-11 19:10:38.904 : Project Name        : PetStore
+[3][INFO ] 2022-06-11 19:10:38.980 : Test Environment    : local
+[5][INFO ] 2022-06-11 19:10:38.980 : Executed on OS      : Linux
+[7][INFO ] 2022-06-11 19:10:38.980 : Executed By         : likhithanr
+[9][INFO ] 2022-06-11 19:10:38.980 : ******************************Execution of Test Class 1 started*******************************
+[11][INFO ] 2022-06-11 19:10:39.010 : Test case 1.1 finished
+[13][INFO ] 2022-06-11 19:10:39.013 : Test case 1.1 finished
+[15][INFO ] 2022-06-11 19:10:39.014 : test1 : PASSED
+[17][ERROR] 2022-06-11 19:10:39.117 : Error executing FreeMarker template
+freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> config.documentTitle  [in template "spark/partials/head.ftl" at line 19, column 12]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${config.documentTitle}  [in template "spark/partials/head.ftl" at line 19, column 10]
+	- Reached through: #include "partials/head.ftl"  [in template "spark/spark.spa.ftl" at line 19, column 1]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToTextualCommon(EvalUtil.java:481) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:401) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.EvalUtil.coerceModelToStringOrMarkup(EvalUtil.java:370) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:100) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:370) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visitAndTransform(Environment.java:501) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.CompressedBlock.accept(CompressedBlock.java:42) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:334) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.include(Environment.java:2925) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Include.accept(Include.java:171) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:334) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.visit(Environment.java:340) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.core.Environment.process(Environment.java:313) ~[freemarker-2.3.30.jar:2.3.30]
+	at freemarker.template.Template.process(Template.java:383) ~[freemarker-2.3.30.jar:2.3.30]
+	at com.aventstack.extentreports.templating.FreemarkerTemplate.processTemplate(FreemarkerTemplate.java:52) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.templating.FreemarkerTemplate.getSource(FreemarkerTemplate.java:39) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.templating.FreemarkerTemplate.writeTemplate(FreemarkerTemplate.java:45) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.reporter.AbstractFileReporter.processTemplate(AbstractFileReporter.java:74) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.flush(ExtentSparkReporter.java:149) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.access$100(ExtentSparkReporter.java:27) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter$1.onNext(ExtentSparkReporter.java:121) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter$1.onNext(ExtentSparkReporter.java:113) ~[extentreports-5.0.7.jar:?]
+	at io.reactivex.rxjava3.subjects.PublishSubject$PublishDisposable.onNext(PublishSubject.java:310) ~[rxjava-3.0.4.jar:?]
+	at io.reactivex.rxjava3.subjects.PublishSubject.onNext(PublishSubject.java:226) ~[rxjava-3.0.4.jar:?]
+	at com.aventstack.extentreports.ReactiveSubject.onFlush(ReactiveSubject.java:83) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.AbstractProcessor.onFlush(AbstractProcessor.java:85) ~[extentreports-5.0.7.jar:?]
+	at com.aventstack.extentreports.ExtentReports.flush(ExtentReports.java:284) ~[extentreports-5.0.7.jar:?]
+	at com.n26.report.TestListener.onFinish(TestListener.java:24) ~[classes/:?]
+	at org.testng.TestRunner.fireEvent(TestRunner.java:899) ~[testng-7.0.0.jar:?]
+	at org.testng.TestRunner.afterRun(TestRunner.java:863) ~[testng-7.0.0.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:594) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuites(TestNG.java:1032) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1000) ~[testng-7.0.0.jar:?]
+	at com.microsoft.java.test.runner.testng.TestNGRunner.run(TestNGRunner.java:45) ~[com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.testng.TestNGLauncher.execute(TestNGLauncher.java:32) ~[com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+	at com.microsoft.java.test.runner.Launcher.main(Launcher.java:57) ~[com.microsoft.java.test.runner-jar-with-dependencies.jar:?]
+[19][INFO ] 2022-06-11 19:10:39.126 : ***********************************Test execution ended************************************
+
+[21][INFO ] 2022-06-11 19:10:39.127 : Total Class        : 1
+[23][INFO ] 2022-06-11 19:10:39.131 : Start Time         : Sat Jun 11 19:10:38 IST 2022
+[25][INFO ] 2022-06-11 19:10:39.131 : Passed tests count : 1.0
+[27][INFO ] 2022-06-11 19:10:39.131 : Failed tests count : 0.0
+[29][INFO ] 2022-06-11 19:10:39.131 : Skipped tests count: 0
+[31][INFO ] 2022-06-11 19:10:39.131 : Pass percentage    : 100.0%
+[33][INFO ] 2022-06-11 19:10:39.131 : Fail percentage    : 0.0%
+[35][INFO ] 2022-06-11 19:10:39.131 : End Time           : Sat Jun 11 19:10:39 IST 2022

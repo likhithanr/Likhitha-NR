@@ -1,0 +1,22 @@
+[1][INFO ] 2022-06-12 11:57:36.486 : Project Name        : PetStore
+[3][INFO ] 2022-06-12 11:57:36.561 : Test Environment    : http://localhost:8080/api/v3
+[5][INFO ] 2022-06-12 11:57:36.562 : Executed on OS      : Linux
+[7][INFO ] 2022-06-12 11:57:36.562 : Executed By         : likhithanr
+[9][INFO ] 2022-06-12 11:57:36.562 : ******************************Execution of POST - Pet creation started*******************************
+[11][INFO ] 2022-06-12 11:57:36.570 : Test case 1.1 finished
+[13][INFO ] 2022-06-12 11:57:36.574 : Test case 1.1 finished
+[15][INFO ] 2022-06-12 11:57:37.481 : {"id":1,"category":{"id":1,"name":"Dogs"},"photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[17][INFO ] 2022-06-12 11:57:37.482 : {"id":1,"category":{"id":1,"name":"Dogs"},"photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[19][INFO ] 2022-06-12 11:57:37.482 : 200
+[21][INFO ] 2022-06-12 11:57:37.482 : 200
+[23][INFO ] 2022-06-12 11:57:37.487 : ctearePet : PASSED
+[25][INFO ] 2022-06-12 11:57:37.729 : ***********************************Test execution ended************************************
+
+[27][INFO ] 2022-06-12 11:57:37.733 : Total Class        : 1
+[29][INFO ] 2022-06-12 11:57:37.737 : Start Time         : Sun Jun 12 11:57:36 IST 2022
+[31][INFO ] 2022-06-12 11:57:37.738 : Passed tests count : 1.0
+[33][INFO ] 2022-06-12 11:57:37.738 : Failed tests count : 0.0
+[35][INFO ] 2022-06-12 11:57:37.738 : Skipped tests count: 0
+[37][INFO ] 2022-06-12 11:57:37.738 : Pass percentage    : 100.0%
+[39][INFO ] 2022-06-12 11:57:37.738 : Fail percentage    : 0.0%
+[41][INFO ] 2022-06-12 11:57:37.739 : End Time           : Sun Jun 12 11:57:37 IST 2022

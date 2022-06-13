@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Functinal_Execution">
+	<parameter name="reportName"
+		value="PetStore Automation Report : Series Execution" />
+	 <test name="Sample test1">
+    <classes>
+			<class name="com.n26.functional.pets.CreatePet_POST" />
+
+			<class name="com.n26.functional.pets.UpdateAndGetPetById" />
+
+			<class name="com.n26.functional.pets.DeletePetById" />
+
+			<class name="com.n26.functional.pets.FindPetByStatus" />
+
+			<class name="com.n26.functional.pets.FindByTags" />
+		</classes>
+
+    </test> 
+    	
+</suite> 

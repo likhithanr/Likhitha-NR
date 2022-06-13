@@ -1,0 +1,260 @@
+[1][INFO ] 2022-06-13 18:53:59.407 : Project Name        : PetStore
+[3][INFO ] 2022-06-13 18:53:59.484 : Test Environment    : http://localhost:8080/api/v3
+[5][INFO ] 2022-06-13 18:53:59.484 : Executed on OS      : Linux
+[7][INFO ] 2022-06-13 18:53:59.484 : Executed By         : likhithanr
+[9][INFO ] 2022-06-13 18:53:59.484 : ******************************Execution of POST - Pet creation started*******************************
+[11][INFO ] 2022-06-13 18:53:59.491 : ******************************Execution of DELETE - Deleting pet by Id started*******************************
+[13][INFO ] 2022-06-13 18:53:59.491 : ******************************Execution of GET - Retrieving pet by tags started*******************************
+[15][INFO ] 2022-06-13 18:53:59.492 : ******************************Execution of GET - UPdating existing pet started*******************************
+[17][INFO ] 2022-06-13 18:53:59.492 : ******************************Execution of PUT - UPdating existing pet started*******************************
+[19][INFO ] 2022-06-13 18:53:59.502 : Setting up configurations
+[21][INFO ] 2022-06-13 18:53:59.833 : TestCase 1 : Test case to validate successful pet creation 
+[23][INFO ] 2022-06-13 18:53:59.833 : TestCase 1 : Test case to validate successful pet creation 
+[25][INFO ] 2022-06-13 18:54:00.266 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[27][INFO ] 2022-06-13 18:54:00.266 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[29][INFO ] 2022-06-13 18:54:00.266 : Status Code : 200
+[31][INFO ] 2022-06-13 18:54:00.267 : Status Code : 200
+[33][INFO ] 2022-06-13 18:54:00.754 : Beagal : Pet created
+[35][INFO ] 2022-06-13 18:54:00.755 : Beagal : Pet created
+[37][INFO ] 2022-06-13 18:54:00.757 : testCreatePet : PASSED
+[39][INFO ] 2022-06-13 18:54:00.759 : Setting up configurations
+[41][INFO ] 2022-06-13 18:54:00.761 : TestCase 1 : Test case to retrieve valid Pet by tags
+[43][INFO ] 2022-06-13 18:54:01.157 : Status Code : 200
+[45][INFO ] 2022-06-13 18:54:01.164 : Pet tags : [[own]]
+[47][INFO ] 2022-06-13 18:54:01.172 : Expected filered tags pet are displaying : [{"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":111,"name":"own"}],"status":"available"}]
+[49][INFO ] 2022-06-13 18:54:01.173 : testValidPetByAvailableStatus : PASSED
+[51][INFO ] 2022-06-13 18:54:01.174 : TestCase 2 : Test case to retrieve invalid Pet by tags
+[53][INFO ] 2022-06-13 18:54:01.233 : Status Code : 200
+[55][INFO ] 2022-06-13 18:54:01.234 : There is no pet available for the tag : true
+[57][INFO ] 2022-06-13 18:54:01.234 : Expected empty tag array is displaying : []
+[59][INFO ] 2022-06-13 18:54:01.234 : tesGetPetByInvalidTags : PASSED
+[61][INFO ] 2022-06-13 18:54:01.235 : TestCase 2: Test case to validate bad request when request sent without mandatory field
+[63][INFO ] 2022-06-13 18:54:01.236 : TestCase 2: Test case to validate bad request when request sent without mandatory field
+[65][ERROR] 2022-06-13 18:54:01.288 : testCreatePetwWithoutMandatoryParams : FAILED : 
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
+	at com.n26.functional.pets.CreatePet_POST.testCreatePetwWithoutMandatoryParams(CreatePet_POST.java:69) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.0.0.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_312]
+	at org.testng.TestRunner.privateRun(TestRunner.java:770) ~[testng-7.0.0.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:591) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuites(TestNG.java:1032) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1000) ~[testng-7.0.0.jar:?]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+[67][INFO ] 2022-06-13 18:54:01.296 : TestCase 3: Test case to validate 405 bad request
+[69][INFO ] 2022-06-13 18:54:01.296 : TestCase 3: Test case to validate 405 bad request
+[71][INFO ] 2022-06-13 18:54:01.308 : Response : {"code":405,"message":"HTTP 405 Method Not Allowed"}
+[73][INFO ] 2022-06-13 18:54:01.308 : Response : {"code":405,"message":"HTTP 405 Method Not Allowed"}
+[75][INFO ] 2022-06-13 18:54:01.308 : Status Code : 405
+[77][INFO ] 2022-06-13 18:54:01.308 : Status Code : 405
+[79][INFO ] 2022-06-13 18:54:01.316 : 405 : Bad Request status code
+[81][INFO ] 2022-06-13 18:54:01.316 : 405 : Bad Request status code
+[83][INFO ] 2022-06-13 18:54:01.322 : HTTP 405 Method Not Allowed : Invalid Value
+[85][INFO ] 2022-06-13 18:54:01.322 : HTTP 405 Method Not Allowed : Invalid Value
+[87][INFO ] 2022-06-13 18:54:01.323 : testCreatePetWithInvalidRequestMethod : PASSED
+[89][INFO ] 2022-06-13 18:54:01.324 : TestCase 4: Test case to validate ID param with Inavalid data types
+[91][INFO ] 2022-06-13 18:54:01.324 : TestCase 4: Test case to validate ID param with Inavalid data types
+[93][INFO ] 2022-06-13 18:54:01.352 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[95][INFO ] 2022-06-13 18:54:01.352 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[97][ERROR] 2022-06-13 18:54:01.364 : testCreatePetWithInvalidDataType_Id : FAILED : 
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
+	at com.n26.functional.pets.CreatePet_POST.testCreatePetWithInvalidDataType_Id(CreatePet_POST.java:100) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.0.0.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_312]
+	at org.testng.TestRunner.privateRun(TestRunner.java:770) ~[testng-7.0.0.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:591) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuites(TestNG.java:1032) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1000) ~[testng-7.0.0.jar:?]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+[99][INFO ] 2022-06-13 18:54:01.366 : TestCase 5: Test case to validate Name param with Inavalid data types
+[101][INFO ] 2022-06-13 18:54:01.366 : TestCase 5: Test case to validate Name param with Inavalid data types
+[103][INFO ] 2022-06-13 18:54:01.395 : {"photoUrls":["url1"],"name":"123","id":111,"category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[105][INFO ] 2022-06-13 18:54:01.395 : {"photoUrls":["url1"],"name":"123","id":111,"category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[107][ERROR] 2022-06-13 18:54:01.409 : testCreatePetWithInvalidDataType_name : FAILED : 
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
+	at com.n26.functional.pets.CreatePet_POST.testCreatePetWithInvalidDataType_name(CreatePet_POST.java:116) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.0.0.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_312]
+	at org.testng.TestRunner.privateRun(TestRunner.java:770) ~[testng-7.0.0.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:591) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuites(TestNG.java:1032) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1000) ~[testng-7.0.0.jar:?]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+[109][INFO ] 2022-06-13 18:54:01.412 : Setting up configurations
+[111][INFO ] 2022-06-13 18:54:01.446 : TestCase 1 : Test case to validate pet deletion by id
+[113][INFO ] 2022-06-13 18:54:01.548 : Pet delete response : Pet deleted
+[115][INFO ] 2022-06-13 18:54:01.577 : Get response for deleted Pet : Pet not found
+[117][INFO ] 2022-06-13 18:54:01.578 : testDeletePetByValidId : PASSED
+[119][INFO ] 2022-06-13 18:54:01.579 : TestCase 2 : Test case to delete Pet by invalid id
+[121][INFO ] 2022-06-13 18:54:01.598 : Pet delete response : Pet deleted
+[123][ERROR] 2022-06-13 18:54:01.599 : testValidPetByAvailableStatus : FAILED : 
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
+	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
+	at com.n26.functional.pets.DeletePetById.testValidPetByAvailableStatus(DeletePetById.java:74) ~[test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_312]
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146) ~[testng-7.0.0.jar:?]
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.0.0.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[?:1.8.0_312]
+	at org.testng.TestRunner.privateRun(TestRunner.java:770) ~[testng-7.0.0.jar:?]
+	at org.testng.TestRunner.run(TestRunner.java:591) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53) ~[testng-7.0.0.jar:?]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.runSuites(TestNG.java:1032) ~[testng-7.0.0.jar:?]
+	at org.testng.TestNG.run(TestNG.java:1000) ~[testng-7.0.0.jar:?]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123) ~[surefire-testng-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
+[125][INFO ] 2022-06-13 18:54:01.607 : Setting up configurations
+[127][INFO ] 2022-06-13 18:54:01.620 : TestCase 1 : Test case to validate successful pet creation 
+[129][INFO ] 2022-06-13 18:54:01.677 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Lab","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[131][INFO ] 2022-06-13 18:54:01.677 : Status Code : 200
+[133][INFO ] 2022-06-13 18:54:01.757 : Old name ---> Beagal and updated name-->: Lab : Pet updated succesfully for the ID : 111
+[135][INFO ] 2022-06-13 18:54:01.757 : testUpdatePetById : PASSED
+[137][INFO ] 2022-06-13 18:54:01.758 : TestCase 2 : Test case to validate unsuccesful Pet updation for invalid id
+[139][INFO ] 2022-06-13 18:54:01.804 : Response : Pet not found
+[141][INFO ] 2022-06-13 18:54:01.804 : Status Code : 404
+[143][INFO ] 2022-06-13 18:54:01.822 : Old name ---> Beagal and updated name-->: Beagal : Pet not updated as invalid ID Passed: 
+[145][INFO ] 2022-06-13 18:54:01.822 : testUpdatePetByInvaidId : PASSED
+[147][INFO ] 2022-06-13 18:54:01.823 : Setting up configurations
+[149][INFO ] 2022-06-13 18:54:01.824 : TestCase 1 : Test case to retrieve valid Pet by status
+[151][INFO ] 2022-06-13 18:54:01.833 : Response : [{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":8,"category":{"id":4,"name":"Lions"},"name":"Lion 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2","/tmp/inflector6607735105158583683.tmp","/tmp/inflector206451380903558755.tmp"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":10,"category":{"id":1,"name":"Beagal"},"name":"Dogs","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"},{"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}]
+[153][INFO ] 2022-06-13 18:54:01.833 : Status Code : 200
+[155][INFO ] 2022-06-13 18:54:01.867 : Pet status : [available, available, available, available, available, available, available]
+[157][INFO ] 2022-06-13 18:54:01.867 : testValidPetByAvailableStatus : PASSED
+[159][INFO ] 2022-06-13 18:54:01.868 : TestCase 1 : Test case to validate find pet by invalid status
+[161][INFO ] 2022-06-13 18:54:01.884 : Response : {"code":400,"message":"Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`"}
+[163][INFO ] 2022-06-13 18:54:01.884 : Status Code : 400
+[165][INFO ] 2022-06-13 18:54:01.893 : Inavlid status value : Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`
+[167][INFO ] 2022-06-13 18:54:01.894 : testGetPetByInvalidStatus : PASSED
+[169][INFO ] 2022-06-13 18:54:01.895 : TestCase 1 : Test case to retrieve valid Pet by status
+[171][INFO ] 2022-06-13 18:54:01.903 : Response : [{"id":6,"category":{"id":1,"name":"Dogs"},"name":"Dog 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"},{"id":333,"category":{"id":1,"name":"Dogs"},"name":"Lab1","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"pending"}]
+[173][INFO ] 2022-06-13 18:54:01.903 : Status Code : 200
+[175][INFO ] 2022-06-13 18:54:01.931 : Pet status : [pending, pending]
+[177][INFO ] 2022-06-13 18:54:01.932 : testValidPetByPendingStatus : PASSED
+[179][INFO ] 2022-06-13 18:54:01.932 : TestCase 1 : Test case to retrieve valid Pet by status
+[181][INFO ] 2022-06-13 18:54:01.945 : Response : [{"id":5,"category":{"id":1,"name":"Dogs"},"name":"Dog 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"sold"}]
+[183][INFO ] 2022-06-13 18:54:01.945 : Status Code : 200
+[185][INFO ] 2022-06-13 18:54:01.975 : Pet status : [sold]
+[187][INFO ] 2022-06-13 18:54:01.976 : testValidPetBySoldStatus : PASSED
+[189][INFO ] 2022-06-13 18:54:02.197 : ***********************************Test execution ended************************************
+
+[191][INFO ] 2022-06-13 18:54:02.227 : Total Class        : 19
+[193][INFO ] 2022-06-13 18:54:02.228 : Start Time         : Mon Jun 13 18:53:59 IST 2022
+[195][INFO ] 2022-06-13 18:54:02.228 : Passed tests count : 11.0
+[197][INFO ] 2022-06-13 18:54:02.228 : Failed tests count : 4.0
+[199][INFO ] 2022-06-13 18:54:02.228 : Skipped tests count: 0
+[201][INFO ] 2022-06-13 18:54:02.228 : Pass percentage    : 73.33333333333333%
+[203][INFO ] 2022-06-13 18:54:02.228 : Fail percentage    : 26.666666666666668%
+[205][INFO ] 2022-06-13 18:54:02.228 : End Time           : Mon Jun 13 18:54:01 IST 2022
