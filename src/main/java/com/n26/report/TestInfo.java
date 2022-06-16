@@ -34,7 +34,7 @@ public class TestInfo {
     public static void info(String testDesc) {
 
         TestInfo.getTest().info(MarkupHelper.createLabel(testDesc, ExtentColor.BLUE));
-        Log.info(testDesc);
+       // Log.info(testDesc);
     }
 }
 

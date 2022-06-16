@@ -4,16 +4,23 @@
 	<parameter name="reportName"
 		value="PetStore Automation Report : Series Execution" />
 	 <test name="Sample test1">
+	 
     <classes>
 			<class name="com.n26.functional.pets.CreatePet_POST" />
-
 			<class name="com.n26.functional.pets.UpdateAndGetPetById" />
-
+			<class name="com.n26.functional.store.CreateOrder" />
+			<class name="com.n26.functional.store.DeleteOrder" />
+			<class name="com.n26.functional.store.GetOrders" />
 			<class name="com.n26.functional.pets.DeletePetById" />
-
 			<class name="com.n26.functional.pets.FindPetByStatus" />
-
+			<class name="com.n26.functional.user.DeleteUser" />
+			<class name="com.n26.functional.user.LoginLogout" />
+			<class name="com.n26.functional.user.UpdateUser" />
+			<class name="com.n26.functional.user.UserCreation" />
 			<class name="com.n26.functional.pets.FindByTags" />
+			<class name="com.n26.functional.pets.UpdatePetById" />
+			<class name="com.n26.functional.pets.UplodPetImage" />
+			
 		</classes>
 
     </test> 

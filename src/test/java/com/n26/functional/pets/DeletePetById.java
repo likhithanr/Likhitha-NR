@@ -53,7 +53,7 @@ public class DeletePetById extends BaseTest{
 
         //getting id afer deletion 
          Request.setApiURI(base_URI, EndPoints.GET_FINDBYID);
-        Response getResponse=Request.getRequest("id", id);
+        Response getResponse=Request.getRequestUsingPath("id", id);
         Log.scriptInfo("Get response for deleted Pet : "+getResponse.asString());
         Assert.assertEquals(getResponse.statusCode()==404, true);
         Assert.assertEquals(getResponse.asString().equals("Pet not found"), true);

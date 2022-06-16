@@ -49,7 +49,7 @@ public class CreatePet_POST extends BaseTest{
 
         Response respsonse= Request.postRequest(updatedRequest.toString());
 
-          Assert.assertEquals(respsonse.statusCode()==200, true);
+        Assert.assertEquals(respsonse.statusCode()==200, true);
         Log.scriptInfo("Response : "+respsonse.asString());
         Log.scriptInfo("Status Code : "+respsonse.statusCode());
         //System.out.println(obj.getJSONArray("errors").getJSONObject(0).getString("msg"));
@@ -107,14 +107,11 @@ public class CreatePet_POST extends BaseTest{
     public void testCreatePetWithInvalidDataType_name()
     {
         Log.scriptInfo("TestCase 5: Test case to validate Name param with Inavalid data types"); 
-        testData = Excel.getTestData("Pet", 4);
-        JSONObject updatedRequest=Pet.updateJsonBody(testData,4);
-        Log.scriptInfo(updatedRequest);;
-        Response respsonse= Request.postRequest(updatedRequest.toString());
+       JSONObject updatedJson= Request.readJsonObjectFile(jsonFile);
+       updatedJson.put("name", 123456);
+        Response respsonse= Request.postRequest(updatedJson.toString());
 
         Assert.assertEquals(respsonse.statusCode()==400, true);
-        Log.scriptInfo("Response : "+respsonse.asString());
-        Log.scriptInfo("Status Code : "+respsonse.statusCode());
         Log.scriptInfo(respsonse.jsonPath().getString("code")+" : Bad Request status code");
         Log.scriptInfo(respsonse.jsonPath().getString("message")+" : Invalid Value");
 

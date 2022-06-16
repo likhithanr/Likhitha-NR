@@ -42,7 +42,7 @@ public class FindPetByStatus extends BaseTest{
 
         //fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);
-        Response getResponse=Request.getRequest("status","available");
+        Response getResponse=Request.getRequestUsingQuery("status","available");
         Log.scriptInfo("Response : "+getResponse.asString());
         Log.scriptInfo("Status Code : "+getResponse.statusCode());
         String subString=getResponse.jsonPath().getString("status").substring(1, getResponse.jsonPath().getString("status").length()-1).trim();
@@ -66,7 +66,7 @@ public class FindPetByStatus extends BaseTest{
 
         //fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);
-        Response getResponse=Request.getRequest("status","pending");
+        Response getResponse=Request.getRequestUsingQuery("status","pending");
         Log.scriptInfo("Response : "+getResponse.asString());
         Log.scriptInfo("Status Code : "+getResponse.statusCode());
         String subString=getResponse.jsonPath().getString("status").substring(1, getResponse.jsonPath().getString("status").length()-1).trim();
@@ -91,7 +91,7 @@ public class FindPetByStatus extends BaseTest{
 
         //fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);
-        Response getResponse=Request.getRequest("status","sold");
+        Response getResponse=Request.getRequestUsingQuery("status","sold");
         Log.scriptInfo("Response : "+getResponse.asString());
         Log.scriptInfo("Status Code : "+getResponse.statusCode());
         String subString=getResponse.jsonPath().getString("status").substring(1, getResponse.jsonPath().getString("status").length()-1).trim();
@@ -116,7 +116,7 @@ public class FindPetByStatus extends BaseTest{
 
         //fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);
-        Response getResponse=Request.getRequest("status","Deleted");
+        Response getResponse=Request.getRequestUsingQuery("status","Deleted");
         Log.scriptInfo("Response : "+getResponse.asString());
         Log.scriptInfo("Status Code : "+getResponse.statusCode());
         Log.scriptInfo("Inavlid status value : "+getResponse.jsonPath().getString("message"));

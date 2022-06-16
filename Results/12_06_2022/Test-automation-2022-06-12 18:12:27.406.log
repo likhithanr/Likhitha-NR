@@ -1,7 +1,0 @@
-[1][INFO ] 2022-06-12 18:12:27.314 : Project Name        : PetStore
-[3][INFO ] 2022-06-12 18:12:27.400 : Test Environment    : http://localhost:8080/api/v3
-[5][INFO ] 2022-06-12 18:12:27.401 : Executed on OS      : Linux
-[7][INFO ] 2022-06-12 18:12:27.401 : Executed By         : likhithanr
-[9][INFO ] 2022-06-12 18:12:27.401 : ******************************Execution of POST - Pet creation started*******************************
-[11][INFO ] 2022-06-12 18:12:27.407 : Test case 1.1 finished
-[13][INFO ] 2022-06-12 18:12:27.411 : Test case 1.1 finished

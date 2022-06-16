@@ -9,46 +9,52 @@
           <include name="setUp"/>
           <include name="testCreatePetWithInvalidDataType_name"/>
           <include name="scriptStart"/>
-          <include name="testCreatePetWithInvalidRequestMethod"/>
           <include name="testCreatePetwWithoutMandatoryParams"/>
-          <include name="testCreatePetWithInvalidDataType_Id"/>
-          <include name="testCreatePet"/>
         </methods>
       </class> <!-- com.n26.functional.pets.CreatePet_POST -->
+      <class name="com.n26.functional.store.CreateOrder">
+        <methods>
+          <include name="setUp"/>
+          <include name="scriptStart"/>
+          <include name="testCreateOrderWithInvalidStatus"/>
+        </methods>
+      </class> <!-- com.n26.functional.store.CreateOrder -->
+      <class name="com.n26.functional.user.DeleteUser">
+        <methods>
+          <include name="setUp"/>
+          <include name="testDeleteUserWithInValidName"/>
+          <include name="scriptStart"/>
+        </methods>
+      </class> <!-- com.n26.functional.user.DeleteUser -->
+      <class name="com.n26.functional.user.LoginLogout">
+        <methods>
+          <include name="scriptStart"/>
+          <include name="testUserLoginwithOnlyPassword"/>
+          <include name="setUp"/>
+          <include name="testUserLoginwithOnlyUserName"/>
+        </methods>
+      </class> <!-- com.n26.functional.user.LoginLogout -->
+      <class name="com.n26.functional.store.DeleteOrder">
+        <methods>
+          <include name="setUp"/>
+          <include name="scriptStart"/>
+          <include name="testDeleteOrderByInValidId"/>
+        </methods>
+      </class> <!-- com.n26.functional.store.DeleteOrder -->
+      <class name="com.n26.functional.pets.UplodPetImage">
+        <methods>
+          <include name="scriptStart"/>
+          <include name="setUp"/>
+          <include name="testUploadingPetImage"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.UplodPetImage -->
       <class name="com.n26.functional.pets.DeletePetById">
         <methods>
           <include name="testDeletePetByInvalidId"/>
-          <include name="testDeletePetByValidId"/>
           <include name="scriptStart"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.n26.functional.pets.DeletePetById -->
-      <class name="com.n26.functional.pets.FindByTags">
-        <methods>
-          <include name="testGetPetByValidTag"/>
-          <include name="tesGetPetByInvalidTags"/>
-          <include name="setUp"/>
-          <include name="scriptStart"/>
-        </methods>
-      </class> <!-- com.n26.functional.pets.FindByTags -->
-      <class name="com.n26.functional.pets.UpdateAndGetPetById">
-        <methods>
-          <include name="scriptStart"/>
-          <include name="setUp"/>
-          <include name="testUpdatePetById"/>
-          <include name="testUpdatePetByInvaidId"/>
-        </methods>
-      </class> <!-- com.n26.functional.pets.UpdateAndGetPetById -->
-      <class name="com.n26.functional.pets.FindPetByStatus">
-        <methods>
-          <include name="scriptStart"/>
-          <include name="testValidPetBySoldStatus"/>
-          <include name="setUp"/>
-          <include name="testValidPetByAvailableStatus"/>
-          <include name="testGetPetByInvalidStatus"/>
-          <include name="testValidPetByPendingStatus"/>
-        </methods>
-      </class> <!-- com.n26.functional.pets.FindPetByStatus -->
     </classes>
   </test> <!-- Sample test1(failed) -->
 </suite> <!-- Failed suite [Functinal_Execution] -->

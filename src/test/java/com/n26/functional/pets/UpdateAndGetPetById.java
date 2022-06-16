@@ -65,7 +65,7 @@ public class UpdateAndGetPetById extends BaseTest{
         Assert.assertEquals(putRespsonse.statusCode()==200, true);
 
         //getting updated pet data by id
-        Response getResponse=Request.getRequest("id",id);
+        Response getResponse=Request.getRequestUsingPath("id",id);
        
         //comparing PUT response and GET response for the same Id
         Assert.assertEquals(putRespsonse.asString().equals(getResponse.asString()),true);
@@ -98,7 +98,7 @@ public class UpdateAndGetPetById extends BaseTest{
         Assert.assertEquals(putRespsonse.statusCode()==404, true);
 
         //getting updated pet data by id
-        Response getResponse=Request.getRequest("id",id);
+        Response getResponse=Request.getRequestUsingPath("id",id);
        
         //comparing PUT response and GET response for the same Id
         Assert.assertEquals(postRespsonse.asString().equals(getResponse.asString()),true);

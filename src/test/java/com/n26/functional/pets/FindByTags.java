@@ -50,10 +50,9 @@ public class FindByTags extends BaseTest{
         JSONObject updatedRequest=Pet.updateJsonBody(testData,6);
         Request.postRequest(updatedRequest.toString());
 
-
-        //fetching pet record using GET by status
+        //fetching pet record using GET by tags
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYTAG);
-        Response getResponse=Request.getRequest("tags","own");
+        Response getResponse=Request.getRequestUsingQuery("tags","own");
         Log.scriptInfo("Status Code : "+getResponse.statusCode());
         String subString=getResponse.jsonPath().getString("tags.name");
         Log.scriptInfo("Pet tags : "+subString);
@@ -76,7 +75,7 @@ public class FindByTags extends BaseTest{
 
         //fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYTAG);
-        Response getResponse=Request.getRequest("tags","own1");
+        Response getResponse=Request.getRequestUsingQuery("tags","own1");
         Log.scriptInfo("Status Code : "+getResponse.statusCode());
         boolean boolVal=getResponse.body().jsonPath().getList("$").isEmpty();
         Log.scriptInfo("There is no pet available for the tag : "+boolVal);
