@@ -119,6 +119,60 @@ The framework is designed using various object oriented patterns. The structure 
 * Running tests generates new report for each time with name containing the right timestamp.
 * Each module request data is maintined as seperate JSON file which increases modularity, readability and is easier to maintain. 
 
+### Test cases proposed for PetStore automation
+* Pet
+ * Scenario 1:Adding pet to the store
+   * Test case 1: Validate success 200 response code when valid request sent with all the required parameter
+   * Test case 2: Validate error response 400/405 as invalid input when request sent without madandatory parameters like – name ,id,photoUrls
+   * Test case 3: Send request with invalid http method Ex: instead of POST use PATCH then valdiate error reponse 405 says method not allowed
+   * Test case 4: Error response should be received when invalid data types passed to request parameters.
+
+ * Scenario 2: Updating existing pet
+   * Test case 1: Update a Pet with name and categories details, success response should be displayed with updated name and categories details
+ * Scenario 3 : Finding pet by status, End point : /pet/findByStatus
+   * Test case 1: Pass valid status Ex: available,pending,sold in the request. Respose should have only pets with status passed.
+   * Test case 2: Pass invalid status other than available,penidng and sold. Error message should be displayed
+ * Scenario 4 : Finding pets using tags, End points : pet/findByTags/tags?tag=tag1&tag=tag2
+   * Test case 1: Create pet with one tag with valid id and name.Try to find the pet using same tags, response should be displayed with pet which has same tags
+   * Test case 2: Send a request with invalid tag, error message should be displayed in response
+ * Scenario 5: Finding pet by id
+   * Test case 1: Find pet by providing valid pet id,successfully pet details should be retrieved
+   * Test case 2: Create a request with invalid pet id, error response as “Pet not found”
+ * Scenario 6: Delete existing pet
+   * Test case 1: Enter valid pet id and send delete request , pet should be successfully deleted
+   * Test case 2: Enter invalid pet id and send delete request. Pet not found should be displayed
+ * Scenario 7: Update pet using id
+   * Test case 1: Update the existing pet id with new name and status , successfully pets name and status should be updated
+   * Test case 2: Provide invalid pet id and add new name and status , error response should be displayed with no name and status updation
+ * Scenario 8: Uploading pet image
+   * Test case 1: add jpg formated image and try to upload image to existing pet,success response should be displayed
+* Store 
+ * Scenario 1: Create a pet store
+   * Test case 1: Create a order with all the required parameter and send request, store should be created successfully
+   * Test case 2: Create a order without madandatory request parameters, error response should be displayed  
+ * Scenario 2: Get order details for a pet 
+   * Test case 1: Enter valid order id and send GET request , order details for a pet should be displayed
+   * Test case 2: Enter invalid order and send request, “Order not found” response should be displayed
+ * Scenario 3: Delete order by id
+   * Test case 1: Pass valid order id and send request , order should be deleted
+   * Test case 2: Try to retrieve deleted order and order not found response should be displayed
+   * Test case 3: Pass invalid order id and send request ,error response should be displayed
+* User
+ * Scenario 1: Create User
+   * Test case 1: Create a user with all the request parameter with valid data, succesful response should be displayed
+   * Test case 2: Create a list of user , pass two or more user request object in array and send request , success response should be displayed  
+ * Scenario 2: User login/logout
+   * Test case 1: Send request with valid user name, password parameters , logged in seession response shuld be displayed  
+   * Test case 2: Send request with only uer name , error response should be displayed
+   * Test case 3: Send request with only password , error response should be displayed
+   * Test case 4: Logout, logged in user and validate success response
+ * Scenario 3: Update user by name
+   * Test case 1: Update user with valid name, Success response should be returned
+   * Test case 2: Update user with invalid name, Error response should be returned.
+ * Scenario : Delete user using user name
+   * Test case 1: Delete existing user using valid user name, success response should be returned
+   * Test case 2: Delete user using invalid user name , error response should be returned
+
 ## Screenshots
 #### Regression 
 ![App Screenshot](/Images/R1.png)
