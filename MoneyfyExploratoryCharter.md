@@ -1,5 +1,8 @@
 # Moneyfy Exploratory Testing Charter (Android)
 #### Monefy is a personal finance application that makes money management easy. The app is designed to streamline expense tracking and help you save money.
+### Tester
+- [@Likhitha NR](https://github.com/likhithanr)
+
 ### Areas Covered
 * Addition of income and expenses.
 * Categorizing the income and expenses.
@@ -10,9 +13,6 @@
 * Currency validation in differenct sections of application
 * General application settings.
 * Synchronizing and databackup of the applications.
-
-### Tester
-- [@Likhitha NR](https://github.com/likhithanr)
 
 ## Test Scenarios
 ### Monefy Home screen validation (High)
