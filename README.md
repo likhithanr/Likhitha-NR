@@ -37,4 +37,6 @@ Example: test_11_06_2022_18_55_24.html
 
 ## Screenshots
 
-![App Screenshot](/Images/Report1.png))
+![App Screenshot](/Images/Report1.png)
+![App Screenshot](/Images/Report2.png)
+![App Screenshot](/Images/Report3.png)
