@@ -21,27 +21,24 @@ import io.restassured.response.Response;
  */
 
 public class CreateOrder extends BaseTest {
-
     public String base_URI = "";
     public Map<String, String> testData = new HashMap<String, String>();
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("POST - Order creation ", "Validating pet store order creation", "Likhitha");
+        TestInfo.scriptInfo("Create new order (POST) ", "Validating pet store order creation", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
-
         Log.scriptInfo("Setting up configurations");
         base_URI = ConfigManager.gsEnvironment;
         Request.setApiURI(base_URI, EndPoints.POST_STOREORDER);
         Request.setHeader(Constants.CONTENT_TYPE, Constants.CONTENT_TYPE_JSON);
-
     }
 
-    @Test(priority = 1,groups = {"Regression"})
+    @Test(priority = 1, groups = { "regression" })
     public void testCreatePetOrder() {
         Log.scriptInfo("TestCase 1 : Test case toValidate pet order creation ");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.STORE_JSON);
@@ -52,7 +49,7 @@ public class CreateOrder extends BaseTest {
                 + response.jsonPath().getInt("quantity"));
     }
 
-    @Test(priority = 2,groups = {"Smoke","Regression"})
+    @Test(priority = 2, groups = { "smoke", "regression" })
     public void testCreatePlacedPetOrder() {
         Log.scriptInfo("TestCase 2 : Test case to validate order creation with placed status ");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.STORE_JSON);
@@ -75,7 +72,7 @@ public class CreateOrder extends BaseTest {
 
     }
 
-    @Test(priority = 3,groups = {"Regression"})
+    @Test(priority = 3, groups = { "regression" })
     public void testCreateDeliveredPetOrder() {
         Log.scriptInfo("TestCase 3 : Test case to validate order creation with delivered status ");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.STORE_JSON);
@@ -100,7 +97,7 @@ public class CreateOrder extends BaseTest {
 
     }
 
-    @Test(priority = 4,groups = {"Regression"})
+    @Test(priority = 4, groups = { "regression" })
     public void testCreateOrderWithInvalidStatus() {
         Log.scriptInfo("TestCase 4 : Test case to validate order creation with invalid status ");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.STORE_JSON);

@@ -21,30 +21,27 @@ import io.restassured.response.Response;
  */
 
 public class UplodPetImage extends BaseTest {
-
     public String base_URI = "";
     public String jsonFile = "Pet.json";
     public Map<String, String> testData = new HashMap<String, String>();
     public Map<String, String> headers = new HashMap<String, String>();
     public File uploadImage = new File(System.getProperty("user.dir") + "/Images/dog1.jpg");
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("POST - Upload pet image", "Validating pet image uplaod functionality", "Likhitha");
+        TestInfo.scriptInfo("Upload pet image (POST)", "Validating pet image uplaod functionality", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
-
         Log.scriptInfo("Setting up configurations");
         base_URI = ConfigManager.gsEnvironment;
         Request.setApiURI(base_URI, EndPoints.POST_PET);
         Request.setHeader(Constants.CONTENT_TYPE, Constants.CONTENT_TYPE_JSON);
-
     }
 
-    @Test(priority = 1,groups = {"Regression"})
+    @Test(priority = 1, groups = { "regression" })
     public void testUploadingPetImage() {
         Log.scriptInfo("TestCase 1 : Test case to validate pet image uploading");
         JSONObject updatedRequest = Request.readJsonObjectFile(jsonFile);

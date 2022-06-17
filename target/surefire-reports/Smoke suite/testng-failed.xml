@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Smoke suite]">
+  <parameter name="reportName" value="PetStore smoke report : Series Execution"/>
+  <test thread-count="5" verbose="0" name="Smoke test cases(failed)">
+    <classes>
+      <class name="com.n26.functional.pets.DeletePetById">
+        <methods>
+          <include name="testDeletePetByInvalidId"/>
+          <include name="scriptStart"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.n26.functional.pets.DeletePetById -->
+    </classes>
+  </test> <!-- Smoke test cases(failed) -->
+</suite> <!-- Failed suite [Smoke suite] -->

@@ -18,16 +18,15 @@ import io.restassured.response.Response;
  */
 
 public class FindPetByStatus extends BaseTest {
-
     public String base_URI = "";
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("GET - Retrieving pet by status", "Validating pet retrieval by status", "Likhitha");
+        TestInfo.scriptInfo("Find pets by status (GET)", "Validating pet retrieval by status", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
 
         Log.scriptInfo("Setting up configurations");
@@ -37,7 +36,7 @@ public class FindPetByStatus extends BaseTest {
 
     }
 
-    @Test(priority = 1,groups = {"Smoke","Regression"})
+    @Test(priority = 1, groups = { "smoke", "regression" })
     public void testGetPetByAvailableStatus() {
         Log.scriptInfo("TestCase 1 : Test case to retrieve valid Pet by available status");
 
@@ -58,15 +57,14 @@ public class FindPetByStatus extends BaseTest {
 
     }
 
-    @Test(priority = 2,groups = {"Regression"})
+    @Test(priority = 2, groups = { "regression" })
     public void testValidPetByPendingStatus() {
         Log.scriptInfo("TestCase 2 : Test case to retrieve valid Pet by pending status");
 
         // fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);
         Response getResponse = Request.getRequestUsingQuery("status", "pending");
-        Log.scriptInfo("Response : " + getResponse.asString());
-        Log.scriptInfo("Status Code : " + getResponse.statusCode());
+        Utility.getInstance().printStatusCodeAndResp(getResponse);
         String subString = getResponse.jsonPath().getString("status")
                 .substring(1, getResponse.jsonPath().getString("status").length() - 1).trim();
         String[] status = subString.split(",");
@@ -80,9 +78,9 @@ public class FindPetByStatus extends BaseTest {
 
     }
 
-    @Test(priority = 3,groups = {"Regression"})
+    @Test(priority = 3, groups = { "regression" })
     public void testValidPetBySoldStatus() {
-        Log.scriptInfo("TestCase 1 : Test case to retrieve valid Pet by sold status");
+        Log.scriptInfo("TestCase 3: Test case to retrieve valid Pet by sold status");
 
         // fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);
@@ -101,9 +99,9 @@ public class FindPetByStatus extends BaseTest {
 
     }
 
-    @Test(priority = 4,groups = {"Regression"})
+    @Test(priority = 4, groups = { "regression" })
     public void testGetPetByInvalidStatus() {
-        Log.scriptInfo("TestCase 1 : Test case to validate find pet by invalid status");
+        Log.scriptInfo("TestCase 4 : Test case to validate find pet by invalid status");
 
         // fetching pet record using GET by status
         Request.setApiURI(base_URI, EndPoints.GET_FINDBYSTATUS);

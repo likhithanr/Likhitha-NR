@@ -1,7 +1,4 @@
 com/n26/functional/pets/FindByTags.class
 com/n26/functional/pets/UplodPetImage.class
-com/n26/functional/pets/DeletePetById.class
-com/n26/functional/pets/UpdateAndGetPetById.class
-com/n26/functional/pets/CreatePet_POST.class
 com/n26/functional/pets/UpdatePetById.class
 com/n26/functional/pets/FindPetByStatus.class

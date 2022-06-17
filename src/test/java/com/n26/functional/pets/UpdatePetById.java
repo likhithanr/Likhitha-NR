@@ -21,73 +21,85 @@ import io.restassured.response.Response;
  */
 
 public class UpdatePetById extends BaseTest {
-
     public String base_URI = "";
-    public String jsonFile = "Pet.json";
     public Map<String, String> testData = new HashMap<String, String>();
-    public Map<String, String> queryParam = new HashMap<String, String>();
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("POST - Update pet by ID", "Validating pet by id with name and status", "Likhitha");
+        TestInfo.scriptInfo("Update existing pet (PUT)", "Validating pet updation", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
-
         Log.scriptInfo("Setting up configurations");
         base_URI = ConfigManager.gsEnvironment;
         Request.setApiURI(base_URI, EndPoints.POST_PET);
         Request.setHeader(Constants.CONTENT_TYPE, Constants.CONTENT_TYPE_JSON);
-
     }
 
-    @Test(priority = 1,groups = {"Regression"})
-    public void testValidPetUpdateWithNameStatus() {
-        Log.scriptInfo("TestCase 1 : Test case to validate updating pet with valid name and status");
-        // reating pet and getting the id
-        JSONObject updatedRequest = Request.readJsonObjectFile(jsonFile);
-        Response respsonse = Request.postRequest(updatedRequest.toString());
-        int id = respsonse.jsonPath().getInt("id");
-        queryParam.put("name", "Retriever");
-        queryParam.put("status", "sold");
-        Response postRespsonse = Request.postRequest(updatedRequest.toString(), "id", id, queryParam);
+    @Test(priority = 1, groups = { "smoke", "regression" })
+    public void testUpdatePetById() {
+        Log.scriptInfo("TestCase 1 : Test case to validate pet updation by Id ");
 
-        Assert.assertEquals(postRespsonse.statusCode() == 200, true);
-        Utility.getInstance().printStatusCodeAndResp(postRespsonse);
-        Assert.assertEquals((postRespsonse.jsonPath().getString("name").equals("Retriever")), true);
-        Assert.assertEquals((postRespsonse.jsonPath().getString("status").equals("sold")), true);
+        // creating pet
+        JSONObject updatedRequest = Request.readJsonObjectFile(Constants.PET_JSON);
+        Response postRespsonse = Request.postRequest(updatedRequest.toString());
+        int id = postRespsonse.jsonPath().getInt("id");
+        String name = postRespsonse.jsonPath().getString("name");
 
-        Assert.assertEquals(!(respsonse.jsonPath().getString("name").equals("Retriever")), true);
-        Log.scriptInfo("old pet name " + respsonse.jsonPath().getString("name")
-                + " is successfully updated with new name as : " + postRespsonse.jsonPath().getString("name"));
-        Log.scriptInfo("old pet status " + respsonse.jsonPath().getString("status")
-                + " is successfully updated with new status as : " + postRespsonse.jsonPath().getString("status"));
+        // updating id
+        JSONObject updatedJson = updatedRequest.put("name", "Lab");
+        System.out.println(updatedJson);
+        String updatedName = updatedJson.getString("name");
+        Response putRespsonse = Request.putRequest(updatedJson.toString());
 
-        Log.scriptInfo(respsonse.jsonPath().getString("name") + " : Pet upated with new name");
-        Log.scriptInfo(respsonse.jsonPath().getString("status") + " : Pet upated with new status");
-
-        // getting updated pet details by id
-        Response getResponse = Request.getRequestUsingPath("id", id);
-        Assert.assertEquals(getResponse.jsonPath().getString("name").equals(getResponse.jsonPath().getString("name")),
-                true);
+        // PUT call response
+        Utility.getInstance().printStatusCodeAndResp(putRespsonse);
+        Assert.assertEquals(putRespsonse.jsonPath().getInt("id") == id, true);
+        Assert.assertEquals((putRespsonse.jsonPath().getString("name").equals(updatedName)), true);
         Assert.assertEquals(
-                getResponse.jsonPath().getString("status").equals(getResponse.jsonPath().getString("status")), true);
+                !(putRespsonse.jsonPath().getString("name").equals(postRespsonse.jsonPath().getString("name"))), true);
 
+        Assert.assertEquals(putRespsonse.statusCode() == 200, true);
+
+        // getting updated pet data by id
+        Response getResponse = Request.getRequestUsingPath("id", id);
+
+        // comparing PUT response and GET response for the same Id
+        Assert.assertEquals(putRespsonse.asString().equals(getResponse.asString()), true);
+        Log.scriptInfo("Old name ---> " + name + " and updated name-->: " + putRespsonse.jsonPath().getString("name")
+                + " : Pet updated succesfully for the ID : " + id);
     }
 
-    @Test(priority = 2,groups = {"Regression"})
-    public void testInavlidPetUpdate() {
-        Log.scriptInfo("TestCase 2 : Test case to udpate invalid pet with name and status ");
-        // reating pet and getting the id
-        JSONObject updatedRequest = Request.readJsonObjectFile(jsonFile);
-        queryParam.put("name", "Retriever");
-        queryParam.put("status", "sold");
-        Response postRespsonse = Request.postRequest(updatedRequest.toString(), "id", 999, queryParam);
-        Assert.assertEquals(postRespsonse.statusCode() == 404, true);
-        Utility.getInstance().printStatusCodeAndResp(postRespsonse);
-        Assert.assertEquals((postRespsonse.asString().equals("Pet not found")), true);
+    @Test(priority = 2, groups = { "regression" })
+    public void testUpdatePetByInvaidId() {
+        Log.scriptInfo("TestCase 2 : Test case to validate unsuccesful Pet updation by invalid id");
+        Request.setApiURI(base_URI, EndPoints.POST_PET);
+        Request.setHeader(Constants.CONTENT_TYPE, Constants.CONTENT_TYPE_JSON);
+        JSONObject updatedRequest = Request.readJsonObjectFile(Constants.PET_JSON);
+        Response postRespsonse = Request.postRequest(updatedRequest.toString());
+        int id = postRespsonse.jsonPath().getInt("id");
+        String name = postRespsonse.jsonPath().getString("name");
 
+        // updating id
+        JSONObject updatedIdJson = updatedRequest.put("id", id + 1);
+        JSONObject updatedNameJson = updatedIdJson.put("name", "cow");
+        Response putRespsonse = Request.putRequest(updatedNameJson.toString());
+
+        // PUT call response
+        Utility.getInstance().printStatusCodeAndResp(putRespsonse);
+        Assert.assertEquals(putRespsonse.statusCode() == 404, true);
+
+        // getting updated pet data by id
+        Response getResponse = Request.getRequestUsingPath("id", id);
+
+        // comparing PUT response and GET response for the same Id
+        Assert.assertEquals(postRespsonse.asString().equals(getResponse.asString()), true);
+
+        // ensuring data has not updated for that id
+        Log.scriptInfo("Old name ---> " + name + " and updated name-->: " + getResponse.jsonPath().getString("name")
+                + " : Pet not updated as invalid ID Passed: ");
     }
+
 }

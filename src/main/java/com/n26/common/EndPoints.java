@@ -1,5 +1,9 @@
 package com.n26.common;
 
+/**
+ * @author Likhitha NR
+ */
+
 public class EndPoints {
     // pet
     public static final String POST_PET = "/pet";

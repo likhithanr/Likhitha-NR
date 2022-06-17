@@ -27,7 +27,7 @@ public class ExtentManager extends TestListener {
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(htmlReportPath + ".html").viewConfigurer().viewOrder()
                 .as(new ViewName[] { ViewName.DASHBOARD, ViewName.TEST, ViewName.CATEGORY, ViewName.AUTHOR,
-                        ViewName.EXCEPTION })
+                        ViewName.EXCEPTION ,ViewName.LOG })
                 .apply();
 
         reporter.config().setDocumentTitle(ConfigManager.gsDocumentTitle);

@@ -29,7 +29,7 @@ public class TestInfo {
      * @return ExtentTest
      */
     public static synchronized ExtentTest scriptInfo(String testName, String desc, String author) {
-        Log.log("******************************Execution of " + testName + " started*******************************");
+        Log.log("**************Script " + testName + " started***********");
         ExtentTest test = extent.createTest(testName, desc).assignAuthor(author);
         threadtest.set(test);
         extentTestMap.put((int) Thread.currentThread().getId(), test);
@@ -52,5 +52,14 @@ public class TestInfo {
     public static void info(String testDesc) {
 
         TestInfo.getTest().info(MarkupHelper.createLabel(testDesc, ExtentColor.BLUE));
+    }
+
+    /**
+     * @param testName
+     * @param suitName
+     */
+    public static void printSuiteName(String testName, String suitName) {
+        extent.createTest(testName).assignCategory(suitName);
+
     }
 }

@@ -22,17 +22,16 @@ import io.restassured.response.Response;
  */
 
 public class FindByTags extends BaseTest {
-
     public String base_URI = "";
     public Map<String, String> testData = new HashMap<String, String>();
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("GET - Retrieving pet by tags", "Validating retrieving pet by tags", "Likhitha");
+        TestInfo.scriptInfo("Find pets by tags (GET)", "Validating retrieving pet by tags", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
 
         Log.scriptInfo("Setting up configurations");
@@ -42,7 +41,7 @@ public class FindByTags extends BaseTest {
 
     }
 
-    @Test(priority = 1,groups = {"Smoke","Regression"})
+    @Test(priority = 1, groups = { "smoke", "regression" })
     public void testGetPetByValidTag() {
         Log.scriptInfo("TestCase 1 : Test case to retrieve valid Pet by tags");
         testData = Excel.getTestData("Pet", 6);
@@ -63,9 +62,9 @@ public class FindByTags extends BaseTest {
 
     }
 
-    @Test(priority = 2,groups = {"Regression"})
+    @Test(priority = 2, groups = { "regression" })
     public void tesGetPetByInvalidTags() {
-        Log.scriptInfo("TestCase 2 : Test case to retrieve invalid Pet by tags");
+        Log.scriptInfo("TestCase 2 : Test case to retrieve pet by invalid tags");
         testData = Excel.getTestData("Pet", 6);
         JSONObject updatedRequest = Pet.updateJsonBody(testData, 6);
         Request.postRequest(updatedRequest.toString());

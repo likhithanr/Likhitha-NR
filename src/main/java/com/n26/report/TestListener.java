@@ -24,6 +24,7 @@ public class TestListener implements ITestListener {
         className = iTestContext.getCurrentXmlTest().getClasses().stream()
                 .findFirst().get().getName().substring(iTestContext.getCurrentXmlTest().getClasses().stream()
                         .findFirst().get().getName().lastIndexOf(".") + 1);
+        TestInfo.printSuiteName(suiteName+"_tests",suiteName);
 
     }
 
@@ -39,7 +40,7 @@ public class TestListener implements ITestListener {
      * @param result
      */
     public void onTestStart(ITestResult result) {
-        Log.log("**************************************Test case started**************************");
+        Log.log("***************************Test case started********************");
         startMethod(result);
     }
 

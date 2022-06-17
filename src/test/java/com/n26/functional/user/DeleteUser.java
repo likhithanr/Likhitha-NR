@@ -22,29 +22,27 @@ import io.restassured.response.Response;
  */
 
 public class DeleteUser extends BaseTest {
-
     public String base_URI = "";
     public Map<String, String> testData = new HashMap<String, String>();
     public static String user = "user";
     public static String password = "loginPassword";
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("DELETE - User deletion ", "Validating user deletion", "Likhitha");
+        TestInfo.scriptInfo("Delete existing user (DELETE) ", "Validating user deletion", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
 
         Log.scriptInfo("Setting up configurations");
         base_URI = ConfigManager.gsEnvironment;
         testData = Excel.getTestData("User", 1);
         User.loginLogout(base_URI, "Y", testData.get(user), testData.get(password));
-
     }
 
-    @Test(priority = 1,groups = {"Regression"})
+    @Test(priority = 1, groups = { "smoke", "regression" })
     public void testDeleteUserWithValidName() {
         Log.scriptInfo("TestCase 1 : Test case to validate  user deletion with valid name");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.USER_JSON);
@@ -70,7 +68,7 @@ public class DeleteUser extends BaseTest {
 
     }
 
-    @Test(priority = 2,groups = {"Regression"})
+    @Test(priority = 2, groups = { "regression" })
     public void testDeleteUserWithInValidName() {
         Log.scriptInfo("TestCase 2 : Test case to validate user deletion with invalid name");
 

@@ -22,29 +22,27 @@ import io.restassured.response.Response;
  */
 
 public class UpdateUser extends BaseTest {
-
     public String base_URI = "";
     public Map<String, String> testData = new HashMap<String, String>();
     public static String user = "user";
     public static String password = "loginPassword";
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("PUT - User update", "Validating  user updation", "Likhitha");
+        TestInfo.scriptInfo("Update existing user (PUT)", "Validating  user updation", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
 
         Log.scriptInfo("Setting up configurations");
         base_URI = ConfigManager.gsEnvironment;
         testData = Excel.getTestData("User", 1);
         User.loginLogout(base_URI, "Y", testData.get(user), testData.get(password));
-
     }
 
-    @Test(priority = 1,groups = {"Smoke","Regression"})
+    @Test(priority = 1, groups = { "smoke", "regression" })
     public void testUpdateUserWithValidName() {
         Log.scriptInfo("TestCase 1 : Test case to validate update user with valid name");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.USER_JSON);
@@ -73,7 +71,7 @@ public class UpdateUser extends BaseTest {
         Log.scriptInfo("Succesfully retrieved user details");
     }
 
-    @Test(priority = 2,groups = {"Regression"})
+    @Test(priority = 2, groups = { "regression" })
     public void testUpdateUserWIthInvalidUserName() {
         Log.scriptInfo("TestCase 2 : Test case to valdiate update user with invalid user name");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.USER_JSON);

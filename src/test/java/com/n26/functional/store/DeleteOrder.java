@@ -25,13 +25,13 @@ public class DeleteOrder extends BaseTest {
     public String base_URI = "";
     public Map<String, String> testData = new HashMap<String, String>();
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     @Override
     public void scriptStart() {
-        TestInfo.scriptInfo("DELETE - Deleting created order ", "Validating store order deletion", "Likhitha");
+        TestInfo.scriptInfo("Delete existing order (DELETE) ", "Validating store order deletion", "Likhitha");
     }
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setUp() {
 
         Log.scriptInfo("Setting up configurations");
@@ -41,7 +41,7 @@ public class DeleteOrder extends BaseTest {
 
     }
 
-    @Test(priority = 1,groups = {"Smoke","Regression"})
+    @Test(priority = 1, groups = { "smoke", "regression" })
     public void testDeleteOrderByValidId() {
         Log.scriptInfo("TestCase 1 : Test case to validate deleting order from store with valid id ");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.STORE_JSON);
@@ -68,7 +68,7 @@ public class DeleteOrder extends BaseTest {
         Log.scriptInfo("Order does not exist for deleted id :  " + id + " says " + getResponse.asString());
     }
 
-    @Test(priority = 2,groups = {"Regression"})
+    @Test(priority = 2, groups = { "regression" })
     public void testDeleteOrderByInValidId() {
         Log.scriptInfo("TestCase 2 : Test case to validate deleting order from store with invalid id ");
         Request.setApiURI(base_URI, EndPoints.GET_ORDER);
