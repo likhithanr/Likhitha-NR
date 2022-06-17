@@ -1,0 +1,114 @@
+[1][INFO ] 2022-06-17 18:36:29.633 : Project Name        : PetStore
+[3][INFO ] 2022-06-17 18:36:29.705 : Test Environment    : http://localhost:8080/api/v3
+[5][INFO ] 2022-06-17 18:36:29.705 : Executed on OS      : Linux
+[7][INFO ] 2022-06-17 18:36:29.705 : Executed By         : likhithanr
+[9][INFO ] 2022-06-17 18:36:29.731 : **************Script Update existing pet (PUT) started***********
+[11][INFO ] 2022-06-17 18:36:29.732 : Setting up configurations
+[13][INFO ] 2022-06-17 18:36:30.142 : ***************************Test case started********************
+[15][INFO ] 2022-06-17 18:36:30.144 : TestCase 1 : Test case to validate pet updation by Id 
+[17][INFO ] 2022-06-17 18:36:31.318 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Lab","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[19][INFO ] 2022-06-17 18:36:31.319 : Status Code : 200
+[21][INFO ] 2022-06-17 18:36:31.450 : Old name ---> Beagal and updated name-->: Lab : Pet updated succesfully for the ID : 111
+[23][INFO ] 2022-06-17 18:36:31.451 : testUpdatePetById : PASSED
+[25][INFO ] 2022-06-17 18:36:31.454 : **************Script Create new order (POST)  started***********
+[27][INFO ] 2022-06-17 18:36:31.454 : Setting up configurations
+[29][INFO ] 2022-06-17 18:36:31.455 : ***************************Test case started********************
+[31][INFO ] 2022-06-17 18:36:31.456 : TestCase 2 : Test case to validate order creation with placed status 
+[33][INFO ] 2022-06-17 18:36:31.473 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"placed","complete":true}
+[35][INFO ] 2022-06-17 18:36:31.473 : Status Code : 200
+[37][INFO ] 2022-06-17 18:36:31.497 : Order created for the pet id : 198772 with status : placed
+[39][INFO ] 2022-06-17 18:36:31.525 : order succesfully created with id : 10 and with status as : placed
+[41][INFO ] 2022-06-17 18:36:31.527 : testCreatePlacedPetOrder : PASSED
+[43][INFO ] 2022-06-17 18:36:31.532 : **************Script Delete existing order (DELETE)  started***********
+[45][INFO ] 2022-06-17 18:36:31.533 : Setting up configurations
+[47][INFO ] 2022-06-17 18:36:31.534 : ***************************Test case started********************
+[49][INFO ] 2022-06-17 18:36:31.534 : TestCase 1 : Test case to validate deleting order from store with valid id 
+[51][INFO ] 2022-06-17 18:36:31.553 : Pet created sucesfully with id : 10
+[53][INFO ] 2022-06-17 18:36:31.564 : Retrieved order succesfully for the id : 10
+[55][INFO ] 2022-06-17 18:36:31.580 : Response : 
+[57][INFO ] 2022-06-17 18:36:31.580 : Status Code : 200
+[59][INFO ] 2022-06-17 18:36:31.580 : Order deleted succesfully for the id : 10
+[61][INFO ] 2022-06-17 18:36:31.587 : Order does not exist for deleted id :  10 says Order not found
+[63][INFO ] 2022-06-17 18:36:31.587 : testDeleteOrderByValidId : PASSED
+[65][INFO ] 2022-06-17 18:36:31.588 : **************Script Delete a pet (DELETE) started***********
+[67][INFO ] 2022-06-17 18:36:31.588 : Setting up configurations
+[69][INFO ] 2022-06-17 18:36:31.589 : ***************************Test case started********************
+[71][INFO ] 2022-06-17 18:36:31.590 : TestCase 1 : Test case to validate pet deletion by valid id
+[73][INFO ] 2022-06-17 18:36:31.621 : Pet delete response : Pet deleted
+[75][INFO ] 2022-06-17 18:36:31.640 : Get response for deleted Pet : Pet not found
+[77][INFO ] 2022-06-17 18:36:31.641 : testDeletePetByValidId : PASSED
+[79][INFO ] 2022-06-17 18:36:31.643 : **************Script Find pets by status (GET) started***********
+[81][INFO ] 2022-06-17 18:36:31.644 : Setting up configurations
+[83][INFO ] 2022-06-17 18:36:31.646 : ***************************Test case started********************
+[85][INFO ] 2022-06-17 18:36:31.647 : TestCase 1 : Test case to retrieve valid Pet by available status
+[87][INFO ] 2022-06-17 18:36:31.671 : Response : [{"id":1,"category":{"id":2,"name":"Cats"},"name":"Cat 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":8,"category":{"id":4,"name":"Lions"},"name":"Lion 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":10,"category":{"id":1,"name":"Dogs"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}]
+[89][INFO ] 2022-06-17 18:36:31.674 : Status Code : 200
+[91][INFO ] 2022-06-17 18:36:31.719 : Pet status : [available, available, available, available, available, available, available]
+[93][INFO ] 2022-06-17 18:36:31.720 : testGetPetByAvailableStatus : PASSED
+[95][INFO ] 2022-06-17 18:36:31.721 : **************Script Delete existing user (DELETE)  started***********
+[97][INFO ] 2022-06-17 18:36:31.721 : Setting up configurations
+[99][INFO ] 2022-06-17 18:36:32.064 : User succesfully logged in
+[101][INFO ] 2022-06-17 18:36:32.065 : ***************************Test case started********************
+[103][INFO ] 2022-06-17 18:36:32.065 : TestCase 1 : Test case to validate  user deletion with valid name
+[105][INFO ] 2022-06-17 18:36:32.101 : Succesfully retrieved user details
+[107][INFO ] 2022-06-17 18:36:32.108 : Succesfully deleted the user with status code : 200
+[109][INFO ] 2022-06-17 18:36:32.109 : User John deleted succesfully with message : 
+[111][INFO ] 2022-06-17 18:36:32.109 : testDeleteUserWithValidName : PASSED
+[113][INFO ] 2022-06-17 18:36:32.110 : **************Script  User login-logout (GET) started***********
+[115][INFO ] 2022-06-17 18:36:32.111 : Setting up configurations
+[117][INFO ] 2022-06-17 18:36:32.111 : ***************************Test case started********************
+[119][INFO ] 2022-06-17 18:36:32.112 : TestCase 1 : Test case to Validate user login 
+[121][INFO ] 2022-06-17 18:36:32.155 : User succesfully logged in
+[123][INFO ] 2022-06-17 18:36:32.156 : Response : Logged in user session: 4384084762511044608
+[125][INFO ] 2022-06-17 18:36:32.156 : Status Code : 200
+[127][INFO ] 2022-06-17 18:36:32.157 : testUserLogin : PASSED
+[129][INFO ] 2022-06-17 18:36:32.157 : ***************************Test case started********************
+[131][INFO ] 2022-06-17 18:36:32.158 : TestCase 4 : Test case to Validate succesfull logout
+[133][INFO ] 2022-06-17 18:36:32.167 : User succesfully logged out
+[135][INFO ] 2022-06-17 18:36:32.168 : Response : User logged out
+[137][INFO ] 2022-06-17 18:36:32.168 : Status Code : 200
+[139][INFO ] 2022-06-17 18:36:32.169 : testUserLogout : PASSED
+[141][INFO ] 2022-06-17 18:36:32.170 : **************Script Update existing user (PUT) started***********
+[143][INFO ] 2022-06-17 18:36:32.170 : Setting up configurations
+[145][INFO ] 2022-06-17 18:36:32.214 : User succesfully logged in
+[147][INFO ] 2022-06-17 18:36:32.215 : ***************************Test case started********************
+[149][INFO ] 2022-06-17 18:36:32.215 : TestCase 1 : Test case to validate update user with valid name
+[151][INFO ] 2022-06-17 18:36:32.287 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[153][INFO ] 2022-06-17 18:36:32.300 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[155][INFO ] 2022-06-17 18:36:32.300 : Succesfully retrieved user details
+[157][INFO ] 2022-06-17 18:36:32.301 : testUpdateUserWithValidName : PASSED
+[159][INFO ] 2022-06-17 18:36:32.301 : **************Script Create new user (POST) started***********
+[161][INFO ] 2022-06-17 18:36:32.302 : Setting up configurations
+[163][INFO ] 2022-06-17 18:36:32.337 : User succesfully logged in
+[165][INFO ] 2022-06-17 18:36:32.338 : ***************************Test case started********************
+[167][INFO ] 2022-06-17 18:36:32.339 : TestCase 2 : Test case to validate multiple user creation
+[169][INFO ] 2022-06-17 18:36:32.382 : Created list of users  : [{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1},{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}]
+[171][INFO ] 2022-06-17 18:36:32.382 : User succesfully created with status code : 200
+[173][INFO ] 2022-06-17 18:36:32.383 : testMultipleUserCreation : PASSED
+[175][INFO ] 2022-06-17 18:36:32.383 : **************Script Find pets by tags (GET) started***********
+[177][INFO ] 2022-06-17 18:36:32.383 : Setting up configurations
+[179][INFO ] 2022-06-17 18:36:32.384 : ***************************Test case started********************
+[181][INFO ] 2022-06-17 18:36:32.384 : TestCase 1 : Test case to retrieve valid Pet by tags
+[183][INFO ] 2022-06-17 18:36:32.437 : Status Code : 200
+[185][INFO ] 2022-06-17 18:36:32.446 : Pet tags : [[own]]
+[187][INFO ] 2022-06-17 18:36:32.453 : Expected filered tags pet are displaying : [{"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":111,"name":"own"}],"status":"available"}]
+[189][INFO ] 2022-06-17 18:36:32.453 : testGetPetByValidTag : PASSED
+[191][INFO ] 2022-06-17 18:36:32.454 : **************Script Update existing pet (POST) started***********
+[193][INFO ] 2022-06-17 18:36:32.455 : Setting up configurations
+[195][INFO ] 2022-06-17 18:36:32.456 : ***************************Test case started********************
+[197][INFO ] 2022-06-17 18:36:32.456 : TestCase 1 : Test case to validate updating pet by id with valid name and status
+[199][INFO ] 2022-06-17 18:36:32.478 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Retriever","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"sold"}
+[201][INFO ] 2022-06-17 18:36:32.479 : Status Code : 200
+[203][INFO ] 2022-06-17 18:36:32.520 : old pet name Beagal is successfully updated with new name as : Retriever
+[205][INFO ] 2022-06-17 18:36:32.539 : old pet status available is successfully updated with new status as : sold
+[207][INFO ] 2022-06-17 18:36:32.580 : testUpdatePetById : PASSED
+[209][INFO ] 2022-06-17 18:36:32.813 : ***********************************Test execution ended************************************
+
+[211][INFO ] 2022-06-17 18:36:32.834 : Total Class        : 11
+[213][INFO ] 2022-06-17 18:36:32.834 : Start Time         : Fri Jun 17 18:36:29 IST 2022
+[215][INFO ] 2022-06-17 18:36:32.835 : Passed tests count : 12.0
+[217][INFO ] 2022-06-17 18:36:32.835 : Failed tests count : 0.0
+[219][INFO ] 2022-06-17 18:36:32.835 : Skipped tests count: 0
+[221][INFO ] 2022-06-17 18:36:32.835 : Pass percentage    : 100.0%
+[223][INFO ] 2022-06-17 18:36:32.835 : Fail percentage    : 0.0%
+[225][INFO ] 2022-06-17 18:36:32.835 : End Time           : Fri Jun 17 18:36:32 IST 2022
