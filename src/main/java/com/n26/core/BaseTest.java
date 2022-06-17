@@ -8,22 +8,19 @@ import com.n26.utils.ConfigManager;
 
 import org.testng.annotations.Listeners;
 
-
-@Listeners({TestListener.class,ReportListener.class})
+@Listeners({ TestListener.class, ReportListener.class })
 public abstract class BaseTest {
-    
-  //constructor to intinalize logger
-   public BaseTest()
-   {
-        Log.startLogger();
-        try {
-          ConfigManager.loadProperties();
-      } catch (IOException e) {
-          e.printStackTrace();
-      }
-   }
 
-   public abstract void scriptStart();
-    
+  // constructor to intinalize logger
+  public BaseTest() {
+    Log.startLogger();
+    try {
+      ConfigManager.loadProperties();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public abstract void scriptStart();
+
 }
-

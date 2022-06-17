@@ -1,23 +1,25 @@
-[1][INFO ] 2022-06-16 13:24:20.477 : Project Name        : PetStore
-[3][INFO ] 2022-06-16 13:24:20.553 : Test Environment    : http://localhost:8080/api/v3
-[5][INFO ] 2022-06-16 13:24:20.553 : Executed on OS      : Linux
-[7][INFO ] 2022-06-16 13:24:20.553 : Executed By         : likhithanr
-[9][INFO ] 2022-06-16 13:24:20.553 : ******************************Execution of POST - Pet creation started*******************************
-[11][INFO ] 2022-06-16 13:24:20.558 : Setting up configurations
-[13][INFO ] 2022-06-16 13:24:20.884 : TestCase 1 : Test case to validate successful pet creation 
-[15][INFO ] 2022-06-16 13:24:21.481 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
-[17][INFO ] 2022-06-16 13:24:21.481 : Status Code : 200
-[19][INFO ] 2022-06-16 13:24:21.958 : Beagal : Pet created
-[21][INFO ] 2022-06-16 13:24:21.960 : testCreatePet : PASSED
-[23][INFO ] 2022-06-16 13:24:21.961 : TestCase 2: Test case to validate bad request when request sent without mandatory field
-[25][ERROR] 2022-06-16 13:24:22.347 : testCreatePetwWithoutMandatoryParams : FAILED : 
+[1][INFO ] 2022-06-17 13:19:49.189 : Project Name        : PetStore
+[3][INFO ] 2022-06-17 13:19:49.270 : Test Environment    : http://localhost:8080/api/v3
+[5][INFO ] 2022-06-17 13:19:49.270 : Executed on OS      : Linux
+[7][INFO ] 2022-06-17 13:19:49.270 : Executed By         : likhithanr
+[9][INFO ] 2022-06-17 13:19:49.270 : ******************************Execution of POST - Pet creation started*******************************
+[11][INFO ] 2022-06-17 13:19:49.275 : Setting up configurations
+[13][INFO ] 2022-06-17 13:19:49.703 : **************************************Test case started**************************
+[15][INFO ] 2022-06-17 13:19:49.705 : TestCase 1 : Test case to validate successful pet creation 
+[17][INFO ] 2022-06-17 13:19:50.235 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[19][INFO ] 2022-06-17 13:19:50.236 : Status Code : 200
+[21][INFO ] 2022-06-17 13:19:50.690 : Beagal : Pet created
+[23][INFO ] 2022-06-17 13:19:50.691 : testCreatePet : PASSED
+[25][INFO ] 2022-06-17 13:19:50.693 : **************************************Test case started**************************
+[27][INFO ] 2022-06-17 13:19:50.694 : TestCase 2: Test case to validate bad request when request sent without mandatory field
+[29][ERROR] 2022-06-17 13:19:51.103 : testCreatePetwWithoutMandatoryParams : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.pets.CreatePet_POST.testCreatePetwWithoutMandatoryParams(CreatePet_POST.java:68) ~[test-classes/:?]
+	at com.n26.functional.pets.CreatePet_POST.testCreatePetwWithoutMandatoryParams(CreatePet_POST.java:64) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -50,28 +52,31 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[27][INFO ] 2022-06-16 13:24:22.355 : TestCase 3: Test case to validate 405 bad request
-[29][INFO ] 2022-06-16 13:24:22.383 : Response : {"code":405,"message":"HTTP 405 Method Not Allowed"}
-[31][INFO ] 2022-06-16 13:24:22.383 : Status Code : 405
-[33][INFO ] 2022-06-16 13:24:22.393 : 405 : Bad Request status code
-[35][INFO ] 2022-06-16 13:24:22.403 : HTTP 405 Method Not Allowed : Invalid Value
-[37][INFO ] 2022-06-16 13:24:22.403 : testCreatePetWithInvalidRequestMethod : PASSED
-[39][INFO ] 2022-06-16 13:24:22.404 : TestCase 4: Test case to validate ID param with Inavalid data types
-[41][INFO ] 2022-06-16 13:24:22.461 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
-[43][INFO ] 2022-06-16 13:24:22.479 : Response : {"code":400,"message":"Input error: unable to convert input to io.swagger.petstore.model.Pet"}
-[45][INFO ] 2022-06-16 13:24:22.480 : Status Code : 400
-[47][INFO ] 2022-06-16 13:24:22.486 : 400 : Bad Request status code
-[49][INFO ] 2022-06-16 13:24:22.493 : Input error: unable to convert input to io.swagger.petstore.model.Pet : Invalid Value
-[51][INFO ] 2022-06-16 13:24:22.494 : testCreatePetWithInvalidDataType_Id : PASSED
-[53][INFO ] 2022-06-16 13:24:22.495 : TestCase 5: Test case to validate Name param with Inavalid data types
-[55][ERROR] 2022-06-16 13:24:22.509 : testCreatePetWithInvalidDataType_name : FAILED : 
+[31][INFO ] 2022-06-17 13:19:51.109 : **************************************Test case started**************************
+[33][INFO ] 2022-06-17 13:19:51.109 : TestCase 3: Test case to validate error response when invalid request method used
+[35][INFO ] 2022-06-17 13:19:51.142 : Response : {"code":405,"message":"HTTP 405 Method Not Allowed"}
+[37][INFO ] 2022-06-17 13:19:51.142 : Status Code : 405
+[39][INFO ] 2022-06-17 13:19:51.163 : 405 : Bad Request status code
+[41][INFO ] 2022-06-17 13:19:51.181 : HTTP 405 Method Not Allowed : Invalid Value
+[43][INFO ] 2022-06-17 13:19:51.182 : testCreatePetWithInvalidRequestMethod : PASSED
+[45][INFO ] 2022-06-17 13:19:51.182 : **************************************Test case started**************************
+[47][INFO ] 2022-06-17 13:19:51.183 : TestCase 4: Test case to validate ID param with Inavalid data types
+[49][INFO ] 2022-06-17 13:19:51.256 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[51][INFO ] 2022-06-17 13:19:51.268 : Response : {"code":400,"message":"Input error: unable to convert input to io.swagger.petstore.model.Pet"}
+[53][INFO ] 2022-06-17 13:19:51.269 : Status Code : 400
+[55][INFO ] 2022-06-17 13:19:51.276 : 400 : Bad Request status code
+[57][INFO ] 2022-06-17 13:19:51.284 : Input error: unable to convert input to io.swagger.petstore.model.Pet : Invalid Value
+[59][INFO ] 2022-06-17 13:19:51.285 : testCreatePetWithInvalidDataType_Id : PASSED
+[61][INFO ] 2022-06-17 13:19:51.286 : **************************************Test case started**************************
+[63][INFO ] 2022-06-17 13:19:51.286 : TestCase 5: Test case to validate Name param with Inavalid data types
+[65][ERROR] 2022-06-17 13:19:51.301 : testCreatePetWithInvalidDataType_name : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.pets.CreatePet_POST.testCreatePetWithInvalidDataType_name(CreatePet_POST.java:114) ~[test-classes/:?]
+	at com.n26.functional.pets.CreatePet_POST.testCreatePetWithInvalidDataType_name(CreatePet_POST.java:101) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -104,48 +109,54 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[57][INFO ] 2022-06-16 13:24:22.512 : ******************************Execution of PUT - UPdating existing pet started*******************************
-[59][INFO ] 2022-06-16 13:24:22.512 : Setting up configurations
-[61][INFO ] 2022-06-16 13:24:22.513 : TestCase 1 : Test case to validate successful pet creation 
-[63][INFO ] 2022-06-16 13:24:22.543 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Lab","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
-[65][INFO ] 2022-06-16 13:24:22.543 : Status Code : 200
-[67][INFO ] 2022-06-16 13:24:22.585 : Old name ---> Beagal and updated name-->: Lab : Pet updated succesfully for the ID : 111
-[69][INFO ] 2022-06-16 13:24:22.586 : testUpdatePetById : PASSED
-[71][INFO ] 2022-06-16 13:24:22.587 : TestCase 2 : Test case to validate unsuccesful Pet updation for invalid id
-[73][INFO ] 2022-06-16 13:24:22.618 : Response : Pet not found
-[75][INFO ] 2022-06-16 13:24:22.618 : Status Code : 404
-[77][INFO ] 2022-06-16 13:24:22.639 : Old name ---> Beagal and updated name-->: Beagal : Pet not updated as invalid ID Passed: 
-[79][INFO ] 2022-06-16 13:24:22.639 : testUpdatePetByInvaidId : PASSED
-[81][INFO ] 2022-06-16 13:24:22.640 : ******************************Execution of POST - Order creation  started*******************************
-[83][INFO ] 2022-06-16 13:24:22.641 : Setting up configurations
-[85][INFO ] 2022-06-16 13:24:22.642 : TestCase 1 : Test case toValidate pet order creation 
-[87][INFO ] 2022-06-16 13:24:22.655 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"approved","complete":true}
-[89][INFO ] 2022-06-16 13:24:22.655 : Status Code : 200
-[91][INFO ] 2022-06-16 13:24:22.669 : Order created for the pet id : 198772 with quantity : 7
-[93][INFO ] 2022-06-16 13:24:22.670 : testCreatePetOrder : PASSED
-[95][INFO ] 2022-06-16 13:24:22.671 : TestCase 2 : Test case to validate order creation with pending status 
-[97][INFO ] 2022-06-16 13:24:22.687 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"placed","complete":true}
-[99][INFO ] 2022-06-16 13:24:22.688 : Status Code : 200
-[101][INFO ] 2022-06-16 13:24:22.708 : Order created for the pet id : 198772 with status : placed
-[103][INFO ] 2022-06-16 13:24:22.732 : order succesfully created with id : 10 and with status as : placed
-[105][INFO ] 2022-06-16 13:24:22.732 : testCreatePlacedPetOrder : PASSED
-[107][INFO ] 2022-06-16 13:24:22.733 : TestCase 3 : Test case to validate order creation with delivered status 
-[109][INFO ] 2022-06-16 13:24:22.747 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"delivered","complete":true}
-[111][INFO ] 2022-06-16 13:24:22.748 : Status Code : 200
-[113][INFO ] 2022-06-16 13:24:22.768 : Order created for the pet id : 198772 with status : delivered
-[115][INFO ] 2022-06-16 13:24:22.795 : order succesfully created with id : 10 and with status as : delivered
-[117][INFO ] 2022-06-16 13:24:22.796 : testCreateDeliveredPetOrder : PASSED
-[119][INFO ] 2022-06-16 13:24:22.797 : TestCase 4 : Test case to validate order creation with invalid status 
-[121][INFO ] 2022-06-16 13:24:22.804 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"pending","complete":true}
-[123][INFO ] 2022-06-16 13:24:22.805 : Status Code : 200
-[125][ERROR] 2022-06-16 13:24:22.805 : testCreateOrderWithInvalidStatus : FAILED : 
+[67][INFO ] 2022-06-17 13:19:51.304 : ******************************Execution of PUT - Updating existing pet started*******************************
+[69][INFO ] 2022-06-17 13:19:51.304 : Setting up configurations
+[71][INFO ] 2022-06-17 13:19:51.305 : **************************************Test case started**************************
+[73][INFO ] 2022-06-17 13:19:51.306 : TestCase 1 : Test case to validate to validate pet updation by Id 
+[75][INFO ] 2022-06-17 13:19:51.360 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Lab","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[77][INFO ] 2022-06-17 13:19:51.360 : Status Code : 200
+[79][INFO ] 2022-06-17 13:19:51.425 : Old name ---> Beagal and updated name-->: Lab : Pet updated succesfully for the ID : 111
+[81][INFO ] 2022-06-17 13:19:51.425 : testUpdatePetById : PASSED
+[83][INFO ] 2022-06-17 13:19:51.426 : **************************************Test case started**************************
+[85][INFO ] 2022-06-17 13:19:51.426 : TestCase 2 : Test case to validate unsuccesful Pet updation for invalid id
+[87][INFO ] 2022-06-17 13:19:51.462 : Response : Pet not found
+[89][INFO ] 2022-06-17 13:19:51.463 : Status Code : 404
+[91][INFO ] 2022-06-17 13:19:51.485 : Old name ---> Beagal and updated name-->: Beagal : Pet not updated as invalid ID Passed: 
+[93][INFO ] 2022-06-17 13:19:51.486 : testUpdatePetByInvaidId : PASSED
+[95][INFO ] 2022-06-17 13:19:51.486 : ******************************Execution of POST - Order creation  started*******************************
+[97][INFO ] 2022-06-17 13:19:51.487 : Setting up configurations
+[99][INFO ] 2022-06-17 13:19:51.488 : **************************************Test case started**************************
+[101][INFO ] 2022-06-17 13:19:51.488 : TestCase 1 : Test case toValidate pet order creation 
+[103][INFO ] 2022-06-17 13:19:51.501 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"approved","complete":true}
+[105][INFO ] 2022-06-17 13:19:51.502 : Status Code : 200
+[107][INFO ] 2022-06-17 13:19:51.523 : Order created for the pet id : 198772 with quantity : 7
+[109][INFO ] 2022-06-17 13:19:51.523 : testCreatePetOrder : PASSED
+[111][INFO ] 2022-06-17 13:19:51.524 : **************************************Test case started**************************
+[113][INFO ] 2022-06-17 13:19:51.525 : TestCase 2 : Test case to validate order creation with placed status 
+[115][INFO ] 2022-06-17 13:19:51.543 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"placed","complete":true}
+[117][INFO ] 2022-06-17 13:19:51.543 : Status Code : 200
+[119][INFO ] 2022-06-17 13:19:51.568 : Order created for the pet id : 198772 with status : placed
+[121][INFO ] 2022-06-17 13:19:51.594 : order succesfully created with id : 10 and with status as : placed
+[123][INFO ] 2022-06-17 13:19:51.595 : testCreatePlacedPetOrder : PASSED
+[125][INFO ] 2022-06-17 13:19:51.597 : **************************************Test case started**************************
+[127][INFO ] 2022-06-17 13:19:51.598 : TestCase 3 : Test case to validate order creation with delivered status 
+[129][INFO ] 2022-06-17 13:19:51.620 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"delivered","complete":true}
+[131][INFO ] 2022-06-17 13:19:51.620 : Status Code : 200
+[133][INFO ] 2022-06-17 13:19:51.647 : Order created for the pet id : 198772 with status : delivered
+[135][INFO ] 2022-06-17 13:19:51.679 : order succesfully created with id : 10 and with status as : delivered
+[137][INFO ] 2022-06-17 13:19:51.680 : testCreateDeliveredPetOrder : PASSED
+[139][INFO ] 2022-06-17 13:19:51.681 : **************************************Test case started**************************
+[141][INFO ] 2022-06-17 13:19:51.682 : TestCase 4 : Test case to validate order creation with invalid status 
+[143][INFO ] 2022-06-17 13:19:51.692 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"pending","complete":true}
+[145][INFO ] 2022-06-17 13:19:51.692 : Status Code : 200
+[147][ERROR] 2022-06-17 13:19:51.693 : testCreateOrderWithInvalidStatus : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.store.CreateOrder.testCreateOrderWithInvalidStatus(CreateOrder.java:117) ~[test-classes/:?]
+	at com.n26.functional.store.CreateOrder.testCreateOrderWithInvalidStatus(CreateOrder.java:114) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -178,26 +189,28 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[127][INFO ] 2022-06-16 13:24:22.806 : ******************************Execution of DELETE - Deleting created order  started*******************************
-[129][INFO ] 2022-06-16 13:24:22.807 : Setting up configurations
-[131][INFO ] 2022-06-16 13:24:22.807 : TestCase 1 : Test case to validate deleting order from store with valid id 
-[133][INFO ] 2022-06-16 13:24:22.820 : Pet created sucesfully with id : 10
-[135][INFO ] 2022-06-16 13:24:22.843 : Retrieved order succesfully for the id : 10
-[137][INFO ] 2022-06-16 13:24:22.852 : Response : 
-[139][INFO ] 2022-06-16 13:24:22.852 : Status Code : 200
-[141][INFO ] 2022-06-16 13:24:22.852 : Order deleted succesfully for the id : 10
-[143][INFO ] 2022-06-16 13:24:22.860 : Order does not exist for deleted id :  10 says Order not found
-[145][INFO ] 2022-06-16 13:24:22.860 : testDeleteOrderByValidId : PASSED
-[147][INFO ] 2022-06-16 13:24:22.861 : TestCase 2 : Test case to validate deleting order from store with invalid id 
-[149][INFO ] 2022-06-16 13:24:22.877 : Status Code : 200
-[151][ERROR] 2022-06-16 13:24:22.878 : testDeleteOrderByInValidId : FAILED : 
+[149][INFO ] 2022-06-17 13:19:51.695 : ******************************Execution of DELETE - Deleting created order  started*******************************
+[151][INFO ] 2022-06-17 13:19:51.696 : Setting up configurations
+[153][INFO ] 2022-06-17 13:19:51.698 : **************************************Test case started**************************
+[155][INFO ] 2022-06-17 13:19:51.699 : TestCase 1 : Test case to validate deleting order from store with valid id 
+[157][INFO ] 2022-06-17 13:19:51.718 : Pet created sucesfully with id : 10
+[159][INFO ] 2022-06-17 13:19:51.737 : Retrieved order succesfully for the id : 10
+[161][INFO ] 2022-06-17 13:19:51.758 : Response : 
+[163][INFO ] 2022-06-17 13:19:51.759 : Status Code : 200
+[165][INFO ] 2022-06-17 13:19:51.759 : Order deleted succesfully for the id : 10
+[167][INFO ] 2022-06-17 13:19:51.770 : Order does not exist for deleted id :  10 says Order not found
+[169][INFO ] 2022-06-17 13:19:51.771 : testDeleteOrderByValidId : PASSED
+[171][INFO ] 2022-06-17 13:19:51.772 : **************************************Test case started**************************
+[173][INFO ] 2022-06-17 13:19:51.772 : TestCase 2 : Test case to validate deleting order from store with invalid id 
+[175][INFO ] 2022-06-17 13:19:51.801 : Status Code : 200
+[177][ERROR] 2022-06-17 13:19:51.803 : testDeleteOrderByInValidId : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.store.DeleteOrder.testDeleteOrderByInValidId(DeleteOrder.java:87) ~[test-classes/:?]
+	at com.n26.functional.store.DeleteOrder.testDeleteOrderByInValidId(DeleteOrder.java:84) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -230,29 +243,32 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[153][INFO ] 2022-06-16 13:24:22.879 : ******************************Execution of GET - Get order details   started*******************************
-[155][INFO ] 2022-06-16 13:24:22.880 : Setting up configurations
-[157][INFO ] 2022-06-16 13:24:22.881 : TestCase 1 : Test case to validate get order by invalid id 
-[159][INFO ] 2022-06-16 13:24:22.899 : Pet created sucesfully with id : 10
-[161][INFO ] 2022-06-16 13:24:22.915 : Response : Order not found
-[163][INFO ] 2022-06-16 13:24:22.917 : Status Code : 404
-[165][INFO ] 2022-06-16 13:24:22.917 : Order does not exist for the id :  121 says Order not found
-[167][INFO ] 2022-06-16 13:24:22.918 : testGetOrderByInvalidId : PASSED
-[169][INFO ] 2022-06-16 13:24:22.919 : ******************************Execution of DELETE - Deleting pet by Id started*******************************
-[171][INFO ] 2022-06-16 13:24:22.919 : Setting up configurations
-[173][INFO ] 2022-06-16 13:24:22.921 : TestCase 1 : Test case to validate pet deletion by id
-[175][INFO ] 2022-06-16 13:24:22.945 : Pet delete response : Pet deleted
-[177][INFO ] 2022-06-16 13:24:22.952 : Get response for deleted Pet : Pet not found
-[179][INFO ] 2022-06-16 13:24:22.953 : testDeletePetByValidId : PASSED
-[181][INFO ] 2022-06-16 13:24:22.962 : Pet delete response : Pet deleted
-[183][ERROR] 2022-06-16 13:24:22.963 : testDeletePetByInvalidId : FAILED : 
+[179][INFO ] 2022-06-17 13:19:51.805 : ******************************Execution of GET - Get order details   started*******************************
+[181][INFO ] 2022-06-17 13:19:51.805 : Setting up configurations
+[183][INFO ] 2022-06-17 13:19:51.806 : **************************************Test case started**************************
+[185][INFO ] 2022-06-17 13:19:51.806 : TestCase 1 : Test case to validate get order by invalid id 
+[187][INFO ] 2022-06-17 13:19:51.827 : Pet created sucesfully with id : 10
+[189][INFO ] 2022-06-17 13:19:51.834 : Response : Order not found
+[191][INFO ] 2022-06-17 13:19:51.835 : Status Code : 404
+[193][INFO ] 2022-06-17 13:19:51.835 : Order does not exist for the id :  121 says Order not found
+[195][INFO ] 2022-06-17 13:19:51.835 : testGetOrderByInvalidId : PASSED
+[197][INFO ] 2022-06-17 13:19:51.836 : ******************************Execution of DELETE - Deleting pet by Id started*******************************
+[199][INFO ] 2022-06-17 13:19:51.836 : Setting up configurations
+[201][INFO ] 2022-06-17 13:19:51.837 : **************************************Test case started**************************
+[203][INFO ] 2022-06-17 13:19:51.838 : TestCase 1 : Test case to validate pet deletion by valid id
+[205][INFO ] 2022-06-17 13:19:51.859 : Pet delete response : Pet deleted
+[207][INFO ] 2022-06-17 13:19:51.866 : Get response for deleted Pet : Pet not found
+[209][INFO ] 2022-06-17 13:19:51.867 : testDeletePetByValidId : PASSED
+[211][INFO ] 2022-06-17 13:19:51.868 : **************************************Test case started**************************
+[213][INFO ] 2022-06-17 13:19:51.875 : Pet delete response : Pet deleted
+[215][ERROR] 2022-06-17 13:19:51.876 : testDeletePetByInvalidId : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.pets.DeletePetById.testDeletePetByInvalidId(DeletePetById.java:73) ~[test-classes/:?]
+	at com.n26.functional.pets.DeletePetById.testDeletePetByInvalidId(DeletePetById.java:71) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -285,45 +301,51 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[185][INFO ] 2022-06-16 13:24:22.964 : ******************************Execution of GET - UPdating existing pet started*******************************
-[187][INFO ] 2022-06-16 13:24:22.965 : Setting up configurations
-[189][INFO ] 2022-06-16 13:24:22.966 : TestCase 1 : Test case to retrieve valid Pet by status
-[191][INFO ] 2022-06-16 13:24:22.981 : Response : [{"id":1,"category":{"id":2,"name":"Cats"},"name":"Cat 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":8,"category":{"id":4,"name":"Lions"},"name":"Lion 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":10,"category":{"id":3,"name":"Rabbits"},"name":"Rabbit 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"}]
-[193][INFO ] 2022-06-16 13:24:22.982 : Status Code : 200
-[195][INFO ] 2022-06-16 13:24:23.008 : Pet status : [available, available, available, available, available, available, available]
-[197][INFO ] 2022-06-16 13:24:23.008 : testValidPetByAvailableStatus : PASSED
-[199][INFO ] 2022-06-16 13:24:23.009 : TestCase 2 : Test case to retrieve valid Pet by status
-[201][INFO ] 2022-06-16 13:24:23.017 : Response : [{"id":3,"category":{"id":2,"name":"Cats"},"name":"Cat 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"},{"id":6,"category":{"id":1,"name":"Dogs"},"name":"Dog 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"}]
-[203][INFO ] 2022-06-16 13:24:23.017 : Status Code : 200
-[205][INFO ] 2022-06-16 13:24:23.037 : Pet status : [pending, pending]
-[207][INFO ] 2022-06-16 13:24:23.037 : testValidPetByPendingStatus : PASSED
-[209][INFO ] 2022-06-16 13:24:23.038 : TestCase 1 : Test case to retrieve valid Pet by status
-[211][INFO ] 2022-06-16 13:24:23.049 : Response : [{"id":5,"category":{"id":1,"name":"Dogs"},"name":"Dog 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"sold"}]
-[213][INFO ] 2022-06-16 13:24:23.050 : Status Code : 200
-[215][INFO ] 2022-06-16 13:24:23.068 : Pet status : [sold]
-[217][INFO ] 2022-06-16 13:24:23.068 : testValidPetBySoldStatus : PASSED
-[219][INFO ] 2022-06-16 13:24:23.069 : TestCase 1 : Test case to validate find pet by invalid status
-[221][INFO ] 2022-06-16 13:24:23.080 : Response : {"code":400,"message":"Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`"}
-[223][INFO ] 2022-06-16 13:24:23.080 : Status Code : 400
-[225][INFO ] 2022-06-16 13:24:23.087 : Inavlid status value : Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`
-[227][INFO ] 2022-06-16 13:24:23.087 : testGetPetByInvalidStatus : PASSED
-[229][INFO ] 2022-06-16 13:24:23.088 : ******************************Execution of DELETE - User deletion  started*******************************
-[231][INFO ] 2022-06-16 13:24:23.088 : Setting up configurations
-[233][INFO ] 2022-06-16 13:24:23.130 : User succesfully logged in
-[235][INFO ] 2022-06-16 13:24:23.131 : TestCase 1 : Test case to validate single user creation
-[237][INFO ] 2022-06-16 13:24:23.170 : Succesfully retrieved user details
-[239][INFO ] 2022-06-16 13:24:23.177 : Succesfully deleted the user with status code : 200
-[241][INFO ] 2022-06-16 13:24:23.178 : User John deleted succesfully with message : 
-[243][INFO ] 2022-06-16 13:24:23.178 : testDeleteUserWithValidName : PASSED
-[245][INFO ] 2022-06-16 13:24:23.179 : TestCase 2 : Test case to validate single user creation
-[247][ERROR] 2022-06-16 13:24:23.186 : testDeleteUserWithInValidName : FAILED : 
+[217][INFO ] 2022-06-17 13:19:51.877 : ******************************Execution of GET - Retrieving pet by status started*******************************
+[219][INFO ] 2022-06-17 13:19:51.877 : Setting up configurations
+[221][INFO ] 2022-06-17 13:19:51.878 : **************************************Test case started**************************
+[223][INFO ] 2022-06-17 13:19:51.878 : TestCase 1 : Test case to retrieve valid Pet by available status
+[225][INFO ] 2022-06-17 13:19:51.890 : Response : [{"id":1,"category":{"id":2,"name":"Cats"},"name":"Cat 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":8,"category":{"id":4,"name":"Lions"},"name":"Lion 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":10,"category":{"id":3,"name":"Rabbits"},"name":"Rabbit 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"}]
+[227][INFO ] 2022-06-17 13:19:51.890 : Status Code : 200
+[229][INFO ] 2022-06-17 13:19:51.927 : Pet status : [available, available, available, available, available, available, available]
+[231][INFO ] 2022-06-17 13:19:51.928 : testGetPetByAvailableStatus : PASSED
+[233][INFO ] 2022-06-17 13:19:51.929 : **************************************Test case started**************************
+[235][INFO ] 2022-06-17 13:19:51.929 : TestCase 2 : Test case to retrieve valid Pet by pending status
+[237][INFO ] 2022-06-17 13:19:51.938 : Response : [{"id":3,"category":{"id":2,"name":"Cats"},"name":"Cat 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"},{"id":6,"category":{"id":1,"name":"Dogs"},"name":"Dog 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"}]
+[239][INFO ] 2022-06-17 13:19:51.938 : Status Code : 200
+[241][INFO ] 2022-06-17 13:19:51.960 : Pet status : [pending, pending]
+[243][INFO ] 2022-06-17 13:19:51.960 : testValidPetByPendingStatus : PASSED
+[245][INFO ] 2022-06-17 13:19:51.960 : **************************************Test case started**************************
+[247][INFO ] 2022-06-17 13:19:51.961 : TestCase 1 : Test case to retrieve valid Pet by sold status
+[249][INFO ] 2022-06-17 13:19:51.966 : Response : [{"id":5,"category":{"id":1,"name":"Dogs"},"name":"Dog 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"sold"}]
+[251][INFO ] 2022-06-17 13:19:51.966 : Status Code : 200
+[253][INFO ] 2022-06-17 13:19:51.988 : Pet status : [sold]
+[255][INFO ] 2022-06-17 13:19:51.989 : testValidPetBySoldStatus : PASSED
+[257][INFO ] 2022-06-17 13:19:51.990 : **************************************Test case started**************************
+[259][INFO ] 2022-06-17 13:19:51.990 : TestCase 1 : Test case to validate find pet by invalid status
+[261][INFO ] 2022-06-17 13:19:52.001 : Response : {"code":400,"message":"Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`"}
+[263][INFO ] 2022-06-17 13:19:52.001 : Status Code : 400
+[265][INFO ] 2022-06-17 13:19:52.007 : Inavlid status value : Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`
+[267][INFO ] 2022-06-17 13:19:52.007 : testGetPetByInvalidStatus : PASSED
+[269][INFO ] 2022-06-17 13:19:52.007 : ******************************Execution of DELETE - User deletion  started*******************************
+[271][INFO ] 2022-06-17 13:19:52.008 : Setting up configurations
+[273][INFO ] 2022-06-17 13:19:52.048 : User succesfully logged in
+[275][INFO ] 2022-06-17 13:19:52.049 : **************************************Test case started**************************
+[277][INFO ] 2022-06-17 13:19:52.049 : TestCase 1 : Test case to validate  user deletion with valid name
+[279][INFO ] 2022-06-17 13:19:52.073 : Succesfully retrieved user details
+[281][INFO ] 2022-06-17 13:19:52.080 : Succesfully deleted the user with status code : 200
+[283][INFO ] 2022-06-17 13:19:52.081 : User John deleted succesfully with message : 
+[285][INFO ] 2022-06-17 13:19:52.081 : testDeleteUserWithValidName : PASSED
+[287][INFO ] 2022-06-17 13:19:52.082 : **************************************Test case started**************************
+[289][INFO ] 2022-06-17 13:19:52.082 : TestCase 2 : Test case to validate user deletion with invalid name
+[291][ERROR] 2022-06-17 13:19:52.090 : testDeleteUserWithInValidName : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.user.DeleteUser.testDeleteUserWithInValidName(DeleteUser.java:82) ~[test-classes/:?]
+	at com.n26.functional.user.DeleteUser.testDeleteUserWithInValidName(DeleteUser.java:79) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -356,23 +378,25 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[249][INFO ] 2022-06-16 13:24:23.187 : ******************************Execution of GET - User login-logout  started*******************************
-[251][INFO ] 2022-06-16 13:24:23.187 : Setting up configurations
-[253][INFO ] 2022-06-16 13:24:23.188 : TestCase 1 : Test case toValidate user login 
-[255][INFO ] 2022-06-16 13:24:23.218 : User succesfully logged in
-[257][INFO ] 2022-06-16 13:24:23.219 : Response : Logged in user session: 5611136982309847040
-[259][INFO ] 2022-06-16 13:24:23.219 : Status Code : 200
-[261][INFO ] 2022-06-16 13:24:23.219 : testUserLogin : PASSED
-[263][INFO ] 2022-06-16 13:24:23.220 : TestCase 2 : Test case to Validate error message when invalid password is passed
-[265][INFO ] 2022-06-16 13:24:23.243 : User succesfully logged in
-[267][ERROR] 2022-06-16 13:24:23.244 : testUserLoginwithOnlyUserName : FAILED : 
+[293][INFO ] 2022-06-17 13:19:52.092 : ******************************Execution of GET - User login-logout  started*******************************
+[295][INFO ] 2022-06-17 13:19:52.093 : Setting up configurations
+[297][INFO ] 2022-06-17 13:19:52.094 : **************************************Test case started**************************
+[299][INFO ] 2022-06-17 13:19:52.094 : TestCase 1 : Test case to Validate user login 
+[301][INFO ] 2022-06-17 13:19:52.131 : User succesfully logged in
+[303][INFO ] 2022-06-17 13:19:52.132 : Response : Logged in user session: 2864624959924472832
+[305][INFO ] 2022-06-17 13:19:52.132 : Status Code : 200
+[307][INFO ] 2022-06-17 13:19:52.132 : testUserLogin : PASSED
+[309][INFO ] 2022-06-17 13:19:52.135 : **************************************Test case started**************************
+[311][INFO ] 2022-06-17 13:19:52.135 : TestCase 2 : Test case to Validate error message when only user name is passed
+[313][INFO ] 2022-06-17 13:19:52.191 : User succesfully logged in
+[315][ERROR] 2022-06-17 13:19:52.192 : testUserLoginwithOnlyUserName : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.user.LoginLogout.testUserLoginwithOnlyUserName(LoginLogout.java:60) ~[test-classes/:?]
+	at com.n26.functional.user.LoginLogout.testUserLoginwithOnlyUserName(LoginLogout.java:59) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -405,16 +429,17 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[269][INFO ] 2022-06-16 13:24:23.245 : TestCase 3 : Test case to Validate error message when invalid user name is passed
-[271][INFO ] 2022-06-16 13:24:23.266 : User succesfully logged in
-[273][ERROR] 2022-06-16 13:24:23.266 : testUserLoginwithOnlyPassword : FAILED : 
+[317][INFO ] 2022-06-17 13:19:52.195 : **************************************Test case started**************************
+[319][INFO ] 2022-06-17 13:19:52.200 : TestCase 3 : Test case to Validate error message when only password is passed
+[321][INFO ] 2022-06-17 13:19:52.228 : User succesfully logged in
+[323][ERROR] 2022-06-17 13:19:52.228 : testUserLoginwithOnlyPassword : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.user.LoginLogout.testUserLoginwithOnlyPassword(LoginLogout.java:74) ~[test-classes/:?]
+	at com.n26.functional.user.LoginLogout.testUserLoginwithOnlyPassword(LoginLogout.java:72) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -447,76 +472,85 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[275][INFO ] 2022-06-16 13:24:23.268 : TestCase 4 : Test case to Validate succesfull logout
-[277][INFO ] 2022-06-16 13:24:23.274 : User succesfully logged out
-[279][INFO ] 2022-06-16 13:24:23.275 : Response : User logged out
-[281][INFO ] 2022-06-16 13:24:23.275 : Status Code : 200
-[283][INFO ] 2022-06-16 13:24:23.275 : testUserLogout : PASSED
-[285][INFO ] 2022-06-16 13:24:23.276 : ******************************Execution of POST - User creation  started*******************************
-[287][INFO ] 2022-06-16 13:24:23.276 : Setting up configurations
-[289][INFO ] 2022-06-16 13:24:23.296 : User succesfully logged in
-[291][INFO ] 2022-06-16 13:24:23.297 : TestCase 1 : Test case to validate single user creation
-[293][INFO ] 2022-06-16 13:24:23.357 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
-[295][INFO ] 2022-06-16 13:24:23.372 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
-[297][INFO ] 2022-06-16 13:24:23.373 : Succesfully retrieved user details
-[299][INFO ] 2022-06-16 13:24:23.373 : testSingleUserCreation : PASSED
-[301][INFO ] 2022-06-16 13:24:23.374 : TestCase 2 : Test case to valdiate update user with invalid user name
-[303][INFO ] 2022-06-16 13:24:23.382 : response : User not found
-[305][INFO ] 2022-06-16 13:24:23.383 : Succesfully retrieved user details
-[307][INFO ] 2022-06-16 13:24:23.383 : testUpdateUserWIthInvalidUserName : PASSED
-[309][INFO ] 2022-06-16 13:24:23.384 : ******************************Execution of POST - User creation  started*******************************
-[311][INFO ] 2022-06-16 13:24:23.384 : Setting up configurations
-[313][INFO ] 2022-06-16 13:24:23.409 : User succesfully logged in
-[315][INFO ] 2022-06-16 13:24:23.410 : TestCase 1 : Test case to validate single user creation
-[317][INFO ] 2022-06-16 13:24:23.420 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
-[319][INFO ] 2022-06-16 13:24:23.421 : User succesfully created with status code : 200
-[321][INFO ] 2022-06-16 13:24:23.421 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
-[323][INFO ] 2022-06-16 13:24:23.429 : username : John
-[325][INFO ] 2022-06-16 13:24:23.443 : Get user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
-[327][INFO ] 2022-06-16 13:24:23.444 : Succesfully retrieved user details
-[329][INFO ] 2022-06-16 13:24:23.444 : testSingleUserCreation : PASSED
-[331][INFO ] 2022-06-16 13:24:23.445 : TestCase 2 : Test case to validate multiple user creation
-[333][INFO ] 2022-06-16 13:24:23.492 : Created list of users  : [{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1},{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}]
-[335][INFO ] 2022-06-16 13:24:23.492 : User succesfully created with status code : 200
-[337][INFO ] 2022-06-16 13:24:23.492 : testMultipleUserCreation : PASSED
-[339][INFO ] 2022-06-16 13:24:23.493 : ******************************Execution of GET - Retrieving pet by tags started*******************************
-[341][INFO ] 2022-06-16 13:24:23.493 : Setting up configurations
-[343][INFO ] 2022-06-16 13:24:23.494 : TestCase 1 : Test case to retrieve valid Pet by tags
-[345][INFO ] 2022-06-16 13:24:23.546 : Status Code : 200
-[347][INFO ] 2022-06-16 13:24:23.552 : Pet tags : [[own]]
-[349][INFO ] 2022-06-16 13:24:23.559 : Expected filered tags pet are displaying : [{"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":111,"name":"own"}],"status":"available"}]
-[351][INFO ] 2022-06-16 13:24:23.560 : testGetPetByValidTag : PASSED
-[353][INFO ] 2022-06-16 13:24:23.560 : TestCase 2 : Test case to retrieve invalid Pet by tags
-[355][INFO ] 2022-06-16 13:24:23.603 : Status Code : 200
-[357][INFO ] 2022-06-16 13:24:23.605 : There is no pet available for the tag : true
-[359][INFO ] 2022-06-16 13:24:23.605 : Expected empty tag array is displaying : []
-[361][INFO ] 2022-06-16 13:24:23.605 : tesGetPetByInvalidTags : PASSED
-[363][INFO ] 2022-06-16 13:24:23.606 : ******************************Execution of POST - Update pet by ID started*******************************
-[365][INFO ] 2022-06-16 13:24:23.607 : Setting up configurations
-[367][INFO ] 2022-06-16 13:24:23.608 : TestCase 1 : Test case to validate updating pet with valid name and status
-[369][INFO ] 2022-06-16 13:24:23.630 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Retriever","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"sold"}
-[371][INFO ] 2022-06-16 13:24:23.630 : Status Code : 200
-[373][INFO ] 2022-06-16 13:24:23.657 : old pet name Beagal is successfully updated with new name as : Retriever
-[375][INFO ] 2022-06-16 13:24:23.667 : old pet status available is successfully updated with new status as : sold
-[377][INFO ] 2022-06-16 13:24:23.672 : Beagal : Pet upated with new name
-[379][INFO ] 2022-06-16 13:24:23.677 : available : Pet upated with new status
-[381][INFO ] 2022-06-16 13:24:23.721 : testValidPetUpdateWithNameStatus : PASSED
-[383][INFO ] 2022-06-16 13:24:23.722 : TestCase 2 : Test case to udpate invalid pet with name and status 
-[385][INFO ] 2022-06-16 13:24:23.730 : Response : Pet not found
-[387][INFO ] 2022-06-16 13:24:23.731 : Status Code : 404
-[389][INFO ] 2022-06-16 13:24:23.731 : testInavlidPetUpdate : PASSED
-[391][INFO ] 2022-06-16 13:24:23.731 : ******************************Execution of POST - Upload pet image started*******************************
-[393][INFO ] 2022-06-16 13:24:23.732 : Setting up configurations
-[395][INFO ] 2022-06-16 13:24:23.732 : TestCase 1 : Test case to validate pet image upload
-[397][INFO ] 2022-06-16 13:24:23.761 : Response : {"code":500,"message":"There was an error processing your request. It has been logged (ID: f354bc9c6b48b9a7)"}
-[399][ERROR] 2022-06-16 13:24:23.762 : testUploadingPetImage : FAILED : 
+[325][INFO ] 2022-06-17 13:19:52.229 : **************************************Test case started**************************
+[327][INFO ] 2022-06-17 13:19:52.230 : TestCase 4 : Test case to Validate succesfull logout
+[329][INFO ] 2022-06-17 13:19:52.240 : User succesfully logged out
+[331][INFO ] 2022-06-17 13:19:52.240 : Response : User logged out
+[333][INFO ] 2022-06-17 13:19:52.240 : Status Code : 200
+[335][INFO ] 2022-06-17 13:19:52.241 : testUserLogout : PASSED
+[337][INFO ] 2022-06-17 13:19:52.241 : ******************************Execution of PUT - User update started*******************************
+[339][INFO ] 2022-06-17 13:19:52.242 : Setting up configurations
+[341][INFO ] 2022-06-17 13:19:52.273 : User succesfully logged in
+[343][INFO ] 2022-06-17 13:19:52.274 : **************************************Test case started**************************
+[345][INFO ] 2022-06-17 13:19:52.274 : TestCase 1 : Test case to validate update user with valid name
+[347][INFO ] 2022-06-17 13:19:52.356 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[349][INFO ] 2022-06-17 13:19:52.369 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[351][INFO ] 2022-06-17 13:19:52.369 : Succesfully retrieved user details
+[353][INFO ] 2022-06-17 13:19:52.370 : testUpdateUserWithValidName : PASSED
+[355][INFO ] 2022-06-17 13:19:52.370 : **************************************Test case started**************************
+[357][INFO ] 2022-06-17 13:19:52.370 : TestCase 2 : Test case to valdiate update user with invalid user name
+[359][INFO ] 2022-06-17 13:19:52.378 : response : User not found
+[361][INFO ] 2022-06-17 13:19:52.379 : testUpdateUserWIthInvalidUserName : PASSED
+[363][INFO ] 2022-06-17 13:19:52.379 : ******************************Execution of POST - User creation  started*******************************
+[365][INFO ] 2022-06-17 13:19:52.380 : Setting up configurations
+[367][INFO ] 2022-06-17 13:19:52.412 : User succesfully logged in
+[369][INFO ] 2022-06-17 13:19:52.412 : **************************************Test case started**************************
+[371][INFO ] 2022-06-17 13:19:52.413 : TestCase 1 : Test case to validate single user creation
+[373][INFO ] 2022-06-17 13:19:52.422 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[375][INFO ] 2022-06-17 13:19:52.423 : User succesfully created with status code : 200
+[377][INFO ] 2022-06-17 13:19:52.423 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[379][INFO ] 2022-06-17 13:19:52.432 : username : John
+[381][INFO ] 2022-06-17 13:19:52.449 : Get user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[383][INFO ] 2022-06-17 13:19:52.450 : Succesfully retrieved user details
+[385][INFO ] 2022-06-17 13:19:52.451 : testSingleUserCreation : PASSED
+[387][INFO ] 2022-06-17 13:19:52.452 : **************************************Test case started**************************
+[389][INFO ] 2022-06-17 13:19:52.452 : TestCase 2 : Test case to validate multiple user creation
+[391][INFO ] 2022-06-17 13:19:52.508 : Created list of users  : [{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1},{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}]
+[393][INFO ] 2022-06-17 13:19:52.508 : User succesfully created with status code : 200
+[395][INFO ] 2022-06-17 13:19:52.508 : testMultipleUserCreation : PASSED
+[397][INFO ] 2022-06-17 13:19:52.509 : ******************************Execution of GET - Retrieving pet by tags started*******************************
+[399][INFO ] 2022-06-17 13:19:52.509 : Setting up configurations
+[401][INFO ] 2022-06-17 13:19:52.510 : **************************************Test case started**************************
+[403][INFO ] 2022-06-17 13:19:52.510 : TestCase 1 : Test case to retrieve valid Pet by tags
+[405][INFO ] 2022-06-17 13:19:52.581 : Status Code : 200
+[407][INFO ] 2022-06-17 13:19:52.590 : Pet tags : [[own]]
+[409][INFO ] 2022-06-17 13:19:52.600 : Expected filered tags pet are displaying : [{"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":111,"name":"own"}],"status":"available"}]
+[411][INFO ] 2022-06-17 13:19:52.601 : testGetPetByValidTag : PASSED
+[413][INFO ] 2022-06-17 13:19:52.602 : **************************************Test case started**************************
+[415][INFO ] 2022-06-17 13:19:52.602 : TestCase 2 : Test case to retrieve invalid Pet by tags
+[417][INFO ] 2022-06-17 13:19:52.652 : Status Code : 200
+[419][INFO ] 2022-06-17 13:19:52.653 : There is no pet available for the tag : true
+[421][INFO ] 2022-06-17 13:19:52.653 : Expected empty tag array is displaying : []
+[423][INFO ] 2022-06-17 13:19:52.653 : tesGetPetByInvalidTags : PASSED
+[425][INFO ] 2022-06-17 13:19:52.654 : ******************************Execution of POST - Update pet by ID started*******************************
+[427][INFO ] 2022-06-17 13:19:52.654 : Setting up configurations
+[429][INFO ] 2022-06-17 13:19:52.655 : **************************************Test case started**************************
+[431][INFO ] 2022-06-17 13:19:52.655 : TestCase 1 : Test case to validate updating pet with valid name and status
+[433][INFO ] 2022-06-17 13:19:52.675 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Retriever","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"sold"}
+[435][INFO ] 2022-06-17 13:19:52.675 : Status Code : 200
+[437][INFO ] 2022-06-17 13:19:52.716 : old pet name Beagal is successfully updated with new name as : Retriever
+[439][INFO ] 2022-06-17 13:19:52.741 : old pet status available is successfully updated with new status as : sold
+[441][INFO ] 2022-06-17 13:19:52.754 : Beagal : Pet upated with new name
+[443][INFO ] 2022-06-17 13:19:52.768 : available : Pet upated with new status
+[445][INFO ] 2022-06-17 13:19:52.847 : testValidPetUpdateWithNameStatus : PASSED
+[447][INFO ] 2022-06-17 13:19:52.848 : **************************************Test case started**************************
+[449][INFO ] 2022-06-17 13:19:52.849 : TestCase 2 : Test case to udpate invalid pet with name and status 
+[451][INFO ] 2022-06-17 13:19:52.858 : Response : Pet not found
+[453][INFO ] 2022-06-17 13:19:52.858 : Status Code : 404
+[455][INFO ] 2022-06-17 13:19:52.859 : testInavlidPetUpdate : PASSED
+[457][INFO ] 2022-06-17 13:19:52.860 : ******************************Execution of POST - Upload pet image started*******************************
+[459][INFO ] 2022-06-17 13:19:52.861 : Setting up configurations
+[461][INFO ] 2022-06-17 13:19:52.862 : **************************************Test case started**************************
+[463][INFO ] 2022-06-17 13:19:52.862 : TestCase 1 : Test case to validate pet image uploading
+[465][INFO ] 2022-06-17 13:19:52.893 : Response : {"code":500,"message":"There was an error processing your request. It has been logged (ID: a76280079a228b39)"}
+[467][ERROR] 2022-06-17 13:19:52.894 : testUploadingPetImage : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:118) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:751) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEquals(Assert.java:761) ~[testng-7.0.0.jar:?]
-	at com.n26.functional.pets.UplodPetImage.testUploadingPetImage(UplodPetImage.java:60) ~[test-classes/:?]
+	at com.n26.functional.pets.UplodPetImage.testUploadingPetImage(UplodPetImage.java:58) ~[test-classes/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_312]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_312]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_312]
@@ -549,13 +583,13 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[401][INFO ] 2022-06-16 13:24:23.980 : ***********************************Test execution ended************************************
+[469][INFO ] 2022-06-17 13:19:53.138 : ***********************************Test execution ended************************************
 
-[403][INFO ] 2022-06-16 13:24:24.003 : Total Class        : 14
-[405][INFO ] 2022-06-16 13:24:24.003 : Start Time         : Thu Jun 16 13:24:20 IST 2022
-[407][INFO ] 2022-06-16 13:24:24.003 : Passed tests count : 26.0
-[409][INFO ] 2022-06-16 13:24:24.003 : Failed tests count : 9.0
-[411][INFO ] 2022-06-16 13:24:24.003 : Skipped tests count: 0
-[413][INFO ] 2022-06-16 13:24:24.003 : Pass percentage    : 74.28571428571429%
-[415][INFO ] 2022-06-16 13:24:24.003 : Fail percentage    : 25.71428571428571%
-[417][INFO ] 2022-06-16 13:24:24.003 : End Time           : Thu Jun 16 13:24:23 IST 2022
+[471][INFO ] 2022-06-17 13:19:53.160 : Total Class        : 14
+[473][INFO ] 2022-06-17 13:19:53.160 : Start Time         : Fri Jun 17 13:19:49 IST 2022
+[475][INFO ] 2022-06-17 13:19:53.160 : Passed tests count : 26.0
+[477][INFO ] 2022-06-17 13:19:53.160 : Failed tests count : 9.0
+[479][INFO ] 2022-06-17 13:19:53.161 : Skipped tests count: 0
+[481][INFO ] 2022-06-17 13:19:53.161 : Pass percentage    : 74.28571428571429%
+[483][INFO ] 2022-06-17 13:19:53.161 : Fail percentage    : 25.71428571428571%
+[485][INFO ] 2022-06-17 13:19:53.161 : End Time           : Fri Jun 17 13:19:52 IST 2022
