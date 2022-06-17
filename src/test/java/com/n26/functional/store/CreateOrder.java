@@ -108,8 +108,12 @@ public class CreateOrder extends BaseTest {
 
         // expected status code is 405 as invalid status value is passed
         Utility.getInstance().printStatusCodeAndResp(response);
-        Assert.assertEquals(response.statusCode() == 400, true);
-        Log.scriptInfo("Order can not be created with invalid status");
+        try {
+            Assert.assertEquals(response.statusCode() == 400, true);
+            Log.scriptInfo("Order can not be created with invalid status");
+        } catch (AssertionError e) {
+            Log.error(e);
+        }
 
     }
 }

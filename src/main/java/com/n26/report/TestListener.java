@@ -78,5 +78,4 @@ public class TestListener implements ITestListener {
     public void startMethod(ITestResult result) {
         TestInfo.testInfo(result.getMethod().getMethodName());
     }
-
 }

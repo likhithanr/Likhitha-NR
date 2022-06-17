@@ -74,8 +74,12 @@ public class DeleteUser extends BaseTest {
 
         // deleting the user
         Response deleteRespone = Request.deleteRequest("username", "abcdef");
-        Assert.assertEquals(deleteRespone.statusCode() == 404, true);
-        Log.scriptInfo("User does not exist");
+        try {
+            Assert.assertEquals(deleteRespone.statusCode() == 404, true);
+            Log.scriptInfo("User does not exist");
+        } catch (AssertionError e) {
+            Log.error(e);
+        }
 
     }
 }

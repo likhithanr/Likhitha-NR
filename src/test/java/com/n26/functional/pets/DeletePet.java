@@ -68,8 +68,12 @@ public class DeletePet extends BaseTest {
         Request.setApiURI(base_URI, EndPoints.DETELE_BYID);
         Response deleteResponse = Request.deleteRequest("id", -1);
         Log.scriptInfo("Pet delete response : " + deleteResponse.asString());
-        Assert.assertEquals(deleteResponse.statusCode() == 400, true);
-        Assert.assertEquals(deleteResponse.asString().equals("Invalid pet value"), true);
+        try {
+            Assert.assertEquals(deleteResponse.statusCode() == 400, true);
+            Assert.assertEquals(deleteResponse.asString().equals("Invalid pet value"), true);
+        } catch (AssertionError e) {
+            Log.error(e);
+        }
 
     }
 

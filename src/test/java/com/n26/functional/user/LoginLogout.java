@@ -52,9 +52,13 @@ public class LoginLogout extends BaseTest {
         Response response = User.loginLogout(base_URI, "Y", testData.get(user), "");
 
         // expected error message for invalid user name and password
-        Assert.assertEquals(response.statusCode() == 400, true);
-        Utility.getInstance().printStatusCodeAndResp(response);
-        Log.scriptInfo("user succesfully logged out");
+        try {
+            Assert.assertEquals(response.statusCode() == 400, true);
+            Utility.getInstance().printInvalidParamStatus(response);
+        } catch (AssertionError e) {
+            Log.error(e);
+        }
+
     }
 
     @Test(priority = 3, groups = { "regression" })
@@ -64,8 +68,12 @@ public class LoginLogout extends BaseTest {
         Response response = User.loginLogout(base_URI, "Y", "", testData.get(password));
 
         // expected error message for invalid user name and password
-        Assert.assertEquals(response.statusCode() == 400, true);
-        Utility.getInstance().printStatusCodeAndResp(response);
+        try {
+            Assert.assertEquals(response.statusCode() == 400, true);
+            Utility.getInstance().printInvalidParamStatus(response);
+        } catch (AssertionError e) {
+            Log.error(e);
+        }
     }
 
     @Test(priority = 4, groups = { "smoke", "regression" })

@@ -45,7 +45,7 @@ public class CreateUser extends BaseTest {
 
     }
 
-    @Test(priority = 1,groups = {"regression"})
+    @Test(priority = 1, groups = { "regression" })
     public void testSingleUserCreation() {
         Log.scriptInfo("TestCase 1 : Test case to validate single user creation");
         JSONObject updatedRequest = Request.readJsonObjectFile(Constants.USER_JSON);
@@ -59,7 +59,7 @@ public class CreateUser extends BaseTest {
         Log.scriptInfo("User succesfully created with status code : " + response.getStatusCode());
         Log.scriptInfo("Created user response : " + response.asString());
         Log.scriptInfo("username : " + response.jsonPath().getString("username"));
-        
+
         // retrieving created user using GET user
         Request.setApiURI(base_URI, EndPoints.GET_USERBYNAME);
         Response getResponse = Request.getRequestUsingPath("username", response.jsonPath().getString("username"));
@@ -68,7 +68,7 @@ public class CreateUser extends BaseTest {
         Log.scriptInfo("Succesfully retrieved user details");
     }
 
-    @Test(priority = 2,groups = {"smoke","regression"})
+    @Test(priority = 2, groups = { "smoke", "regression" })
     public void testMultipleUserCreation() {
         Log.scriptInfo("TestCase 2 : Test case to validate multiple user creation");
         JSONArray userList = new JSONArray();
@@ -84,7 +84,6 @@ public class CreateUser extends BaseTest {
         Log.scriptInfo("Created list of users  : " + response.asString());
         Assert.assertEquals(response.getStatusCode() == 200, true);
         Log.scriptInfo("User succesfully created with status code : " + response.getStatusCode());
-
     }
 
 }

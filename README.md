@@ -1,7 +1,7 @@
 # PetStore API automation
 ## Overview
 This is a rest assured API automation for PetStore and exploratory testing charter for MoneyFy
-
+### Exploratory testing charter for Moneyfy is documented under MoneyfyExploratoryCharter.md
 ## Prerequisites 
 * Make sure Java is installed and right environment variables are set in you system. If not please follow [Java Installation](https://www.oracle.com/java/technologies/downloads/)
 * Check if Maven is installed in the system. If not plese follow [Maven Installation](https://maven.apache.org/install.html)
@@ -119,7 +119,7 @@ The framework is designed using various object oriented patterns. The structure 
 * Running tests generates new report for each time with name containing the right timestamp.
 * Each module request data is maintined as seperate JSON file which increases modularity, readability and is easier to maintain. 
 
-### Test cases proposed for PetStore automation
+### Proposed scenarios for PetStore automation
 * Pet
  * Scenario 1:Adding pet to the store
    * Test case 1: Validate success 200 response code when valid request sent with all the required parameter

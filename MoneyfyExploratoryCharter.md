@@ -1,4 +1,4 @@
-# Moneyfy Exploratory Testing Charter
+# Moneyfy Exploratory Testing Charter (Android)
 #### Monefy is a personal finance application that makes money management easy. The app is designed to streamline expense tracking and help you save money.
 ### Areas Covered
 * Addition of income and expenses.
@@ -14,8 +14,6 @@
 ### Tester
 - [@Likhitha NR](https://github.com/likhithanr)
 
-### Duration
-There are total of 99 test cases with 66 (High) , 24 (Medium), 9(Low) priority testcases. Total duration for a single tester to run the cases would be 120 minutes.
 ## Test Scenarios
 ### Monefy Home screen validation (High)
 * Monefy app heading should be displayed on the leftside of the header as “monefy”.
@@ -155,3 +153,30 @@ There are total of 99 test cases with 66 (High) , 24 (Medium), 9(Low) priority t
 * Add expense on each category type in the home screen, links(line connecting) from center circle to category type is missing for some of the categories.
 * Expense percentage does not display decimal points, hence is not accurate value.
 * Adding new expense on home screen by selecting invidual category, rearranges the category around the center circle.
+
+### Time planned for Charter
+There are total of 99 test cases with 66 (High) , 24 (Medium), 9(Low) priority testcases. Total duration for a single tester to run the exploratory test cases would be 120 minutes.
+* Monefy home screen validation (20 min)
+* Add income validation (20 min)
+* Add expense validation (20 min)
+* Accounts (30 min)
+* Validate new transfer (20 min)
+* Validate right top corner menu (10 min)
+* Validate Settings (20 min) 
+### Prioritisation
+#### Test cases mention below are prioritised in ascending order
+* Monefy home screen validation, because it is the starting screen of the app
+* Add income validation ,because it is core operation
+* Add expense validation,because it is core operation
+* Accounts
+* Validate synchronization of data
+* Validate new transfer 
+* Validate right top corner menu 
+* Validate Settings 
+### Risk and Mitigation
+ * Risks
+   * Loosing of data. Since data is not backed up automatically or there is no data synchronization locally , there is good chance of loosing data
+   * Home screen is not very user friendly. User might be confused and might stop using the application
+ * Mitigation
+   * Storing data in timely manner or allowing generic user to synchronize data locally should be allowed. 
+   * Better UI/UX design could help user to understand app faster and use it extensively

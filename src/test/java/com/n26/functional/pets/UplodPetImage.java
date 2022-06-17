@@ -10,6 +10,8 @@ import com.n26.core.BaseTest;
 import com.n26.report.Log;
 import com.n26.report.TestInfo;
 import com.n26.utils.ConfigManager;
+import com.n26.utils.Utility;
+
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -47,13 +49,13 @@ public class UplodPetImage extends BaseTest {
         JSONObject updatedRequest = Request.readJsonObjectFile(jsonFile);
         Response respsonse = Request.postRequest(updatedRequest.toString());
         int id = respsonse.jsonPath().getInt("id");
-
-        // Request.setApiURI(base_URI, EndPoints.POST_PET);
-        Request.setHeader("Content-Type", "application/octet-stream");
         Response postRespsonse = Request.uploadImage("id", id, uploadImage);
-        Log.scriptInfo("Response : " + postRespsonse.asString());
-        Assert.assertEquals(postRespsonse.statusCode() == 200, true);
-        Log.scriptInfo("Status Code : " + postRespsonse.statusCode());
+        Utility.getInstance().printInvalidParamStatus(postRespsonse);
+        try {
+            Assert.assertEquals(postRespsonse.statusCode() == 200, true);
+        } catch (AssertionError e) {
+            Log.error(e);
+        }
     }
 
 }
