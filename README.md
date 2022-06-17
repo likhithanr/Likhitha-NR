@@ -173,6 +173,11 @@ The framework is designed using various object oriented patterns. The structure 
    * Test case 1: Delete existing user using valid user name, success response should be returned
    * Test case 2: Delete user using invalid user name , error response should be returned
 
+### PetStore Swagger API Observations
+ * Create and send a request without mandatory fields, receiving success response, expected to recieve error. Ex: Creating a pet without name
+ * Create and send a request to delete with invalid id, receiving success response, expected to recieve error.
+ * JSON validation is not woking as expected. Ex: Adding duplicate fields and invalid data type etc.
+
 ## Screenshots
 #### Regression 
 ![App Screenshot](/Images/R1.png)
