@@ -1,0 +1,248 @@
+[1][INFO ] 2022-06-20 09:38:13.346 : Project Name        : PetStore
+[3][INFO ] 2022-06-20 09:38:13.416 : Test Environment    : http://localhost:8080/api/v3
+[5][INFO ] 2022-06-20 09:38:13.417 : Executed on OS      : Linux
+[7][INFO ] 2022-06-20 09:38:13.417 : Executed By         : likhithanr
+[9][INFO ] 2022-06-20 09:38:13.436 : **************Script Add a new pet to the store (POST) started***********
+[11][INFO ] 2022-06-20 09:38:13.437 : Setting up configurations
+[13][INFO ] 2022-06-20 09:38:13.763 : ***************************Test case started********************
+[15][INFO ] 2022-06-20 09:38:13.766 : TestCase 1 : Test case to validate successful pet creation 
+[17][INFO ] 2022-06-20 09:38:14.415 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[19][INFO ] 2022-06-20 09:38:14.416 : Status Code : 200
+[21][INFO ] 2022-06-20 09:38:14.864 : Beagal : Pet created
+[23][INFO ] 2022-06-20 09:38:14.866 : testCreatePet : PASSED
+[25][INFO ] 2022-06-20 09:38:14.868 : ***************************Test case started********************
+[27][INFO ] 2022-06-20 09:38:14.868 : TestCase 2: Test case to validate bad request when request sent without mandatory field
+[29][ERROR] 2022-06-20 09:38:15.315 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[31][INFO ] 2022-06-20 09:38:15.315 : testCreatePetwWithoutMandatoryParams : PASSED
+[33][INFO ] 2022-06-20 09:38:15.316 : ***************************Test case started********************
+[35][INFO ] 2022-06-20 09:38:15.316 : TestCase 3: Test case to validate error response when invalid request method used
+[37][INFO ] 2022-06-20 09:38:15.361 : 405 : Bad Request status code
+[39][INFO ] 2022-06-20 09:38:15.372 : HTTP 405 Method Not Allowed : Invalid Value
+[41][INFO ] 2022-06-20 09:38:15.373 : testCreatePetWithInvalidRequestMethod : PASSED
+[43][INFO ] 2022-06-20 09:38:15.375 : ***************************Test case started********************
+[45][INFO ] 2022-06-20 09:38:15.375 : TestCase 4: Test case to validate ID param with Inavalid data types
+[47][INFO ] 2022-06-20 09:38:15.445 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[49][INFO ] 2022-06-20 09:38:15.472 : 400 : Bad Request status code
+[51][INFO ] 2022-06-20 09:38:15.481 : Input error: unable to convert input to io.swagger.petstore.model.Pet : Invalid Value
+[53][INFO ] 2022-06-20 09:38:15.481 : testCreatePetWithInvalidDataType_Id : PASSED
+[55][INFO ] 2022-06-20 09:38:15.482 : ***************************Test case started********************
+[57][INFO ] 2022-06-20 09:38:15.482 : TestCase 5: Test case to validate Name param with Inavalid data types
+[59][ERROR] 2022-06-20 09:38:15.495 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[61][INFO ] 2022-06-20 09:38:15.496 : testCreatePetWithInvalidDataType_name : PASSED
+[63][INFO ] 2022-06-20 09:38:15.497 : **************Script Update existing pet (POST) started***********
+[65][INFO ] 2022-06-20 09:38:15.498 : Setting up configurations
+[67][INFO ] 2022-06-20 09:38:15.499 : ***************************Test case started********************
+[69][INFO ] 2022-06-20 09:38:15.499 : TestCase 1 : Test case to validate updating pet by id with valid name and status
+[71][INFO ] 2022-06-20 09:38:15.543 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Retriever","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"sold"}
+[73][INFO ] 2022-06-20 09:38:15.543 : Status Code : 200
+[75][INFO ] 2022-06-20 09:38:15.583 : old pet name Beagal is successfully updated with new name as : Retriever
+[77][INFO ] 2022-06-20 09:38:15.596 : old pet status available is successfully updated with new status as : sold
+[79][INFO ] 2022-06-20 09:38:15.639 : testUpdatePetById : PASSED
+[81][INFO ] 2022-06-20 09:38:15.640 : ***************************Test case started********************
+[83][INFO ] 2022-06-20 09:38:15.641 : TestCase 2 : Test case to udpate invalid pet with name and status 
+[85][INFO ] 2022-06-20 09:38:15.655 : Response : Pet not found
+[87][INFO ] 2022-06-20 09:38:15.655 : Status Code : 404
+[89][INFO ] 2022-06-20 09:38:15.656 : testUpdatePetByInvalidId : PASSED
+[91][INFO ] 2022-06-20 09:38:15.657 : **************Script Create new order (POST)  started***********
+[93][INFO ] 2022-06-20 09:38:15.657 : Setting up configurations
+[95][INFO ] 2022-06-20 09:38:15.658 : ***************************Test case started********************
+[97][INFO ] 2022-06-20 09:38:15.659 : TestCase 1 : Test case toValidate pet order creation 
+[99][INFO ] 2022-06-20 09:38:15.681 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"approved","complete":true}
+[101][INFO ] 2022-06-20 09:38:15.681 : Status Code : 200
+[103][INFO ] 2022-06-20 09:38:15.702 : Order created for the pet id : 198772 with quantity : 7
+[105][INFO ] 2022-06-20 09:38:15.703 : testCreatePetOrder : PASSED
+[107][INFO ] 2022-06-20 09:38:15.704 : ***************************Test case started********************
+[109][INFO ] 2022-06-20 09:38:15.704 : TestCase 2 : Test case to validate order creation with placed status 
+[111][INFO ] 2022-06-20 09:38:15.731 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"placed","complete":true}
+[113][INFO ] 2022-06-20 09:38:15.732 : Status Code : 200
+[115][INFO ] 2022-06-20 09:38:15.763 : Order created for the pet id : 198772 with status : placed
+[117][INFO ] 2022-06-20 09:38:15.800 : order succesfully created with id : 10 and with status as : placed
+[119][INFO ] 2022-06-20 09:38:15.800 : testCreatePlacedPetOrder : PASSED
+[121][INFO ] 2022-06-20 09:38:15.801 : ***************************Test case started********************
+[123][INFO ] 2022-06-20 09:38:15.802 : TestCase 3 : Test case to validate order creation with delivered status 
+[125][INFO ] 2022-06-20 09:38:15.828 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"delivered","complete":true}
+[127][INFO ] 2022-06-20 09:38:15.829 : Status Code : 200
+[129][INFO ] 2022-06-20 09:38:15.860 : Order created for the pet id : 198772 with status : delivered
+[131][INFO ] 2022-06-20 09:38:15.912 : order succesfully created with id : 10 and with status as : delivered
+[133][INFO ] 2022-06-20 09:38:15.913 : testCreateDeliveredPetOrder : PASSED
+[135][INFO ] 2022-06-20 09:38:15.914 : ***************************Test case started********************
+[137][INFO ] 2022-06-20 09:38:15.914 : TestCase 4 : Test case to validate order creation with invalid status 
+[139][INFO ] 2022-06-20 09:38:15.928 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"pending","complete":true}
+[141][INFO ] 2022-06-20 09:38:15.928 : Status Code : 200
+[143][ERROR] 2022-06-20 09:38:15.929 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[145][INFO ] 2022-06-20 09:38:15.929 : testCreateOrderWithInvalidStatus : PASSED
+[147][INFO ] 2022-06-20 09:38:15.930 : **************Script Delete existing order (DELETE)  started***********
+[149][INFO ] 2022-06-20 09:38:15.931 : Setting up configurations
+[151][INFO ] 2022-06-20 09:38:15.932 : ***************************Test case started********************
+[153][INFO ] 2022-06-20 09:38:15.933 : TestCase 1 : Test case to validate deleting order from store with valid id 
+[155][INFO ] 2022-06-20 09:38:15.962 : Pet created sucesfully with id : 10
+[157][INFO ] 2022-06-20 09:38:15.973 : Retrieved order succesfully for the id : 10
+[159][INFO ] 2022-06-20 09:38:15.986 : Response : 
+[161][INFO ] 2022-06-20 09:38:15.986 : Status Code : 200
+[163][INFO ] 2022-06-20 09:38:15.986 : Order deleted succesfully for the id : 10
+[165][INFO ] 2022-06-20 09:38:15.998 : Order does not exist for deleted id :  10 says Order not found
+[167][INFO ] 2022-06-20 09:38:15.998 : testDeleteOrderByValidId : PASSED
+[169][INFO ] 2022-06-20 09:38:15.999 : ***************************Test case started********************
+[171][INFO ] 2022-06-20 09:38:15.999 : TestCase 2 : Test case to validate deleting order from store with invalid id 
+[173][INFO ] 2022-06-20 09:38:16.021 : Status Code : 200
+[175][ERROR] 2022-06-20 09:38:16.022 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[177][INFO ] 2022-06-20 09:38:16.022 : testDeleteOrderByInValidId : PASSED
+[179][INFO ] 2022-06-20 09:38:16.024 : **************Script Get existing orders (GET) started***********
+[181][INFO ] 2022-06-20 09:38:16.024 : Setting up configurations
+[183][INFO ] 2022-06-20 09:38:16.025 : ***************************Test case started********************
+[185][INFO ] 2022-06-20 09:38:16.026 : TestCase 1 : Test case to validate get order by invalid id 
+[187][INFO ] 2022-06-20 09:38:16.045 : Pet created sucesfully with id : 10
+[189][INFO ] 2022-06-20 09:38:16.056 : Response : Order not found
+[191][INFO ] 2022-06-20 09:38:16.057 : Status Code : 404
+[193][INFO ] 2022-06-20 09:38:16.058 : Order does not exist for the id :  121 says Order not found
+[195][INFO ] 2022-06-20 09:38:16.058 : testGetOrderByInvalidId : PASSED
+[197][INFO ] 2022-06-20 09:38:16.060 : **************Script Delete a pet (DELETE) started***********
+[199][INFO ] 2022-06-20 09:38:16.060 : Setting up configurations
+[201][INFO ] 2022-06-20 09:38:16.062 : ***************************Test case started********************
+[203][INFO ] 2022-06-20 09:38:16.063 : TestCase 1 : Test case to validate pet deletion by valid id
+[205][INFO ] 2022-06-20 09:38:16.095 : Pet delete response : Pet deleted
+[207][INFO ] 2022-06-20 09:38:16.102 : Get response for deleted Pet : Pet not found
+[209][INFO ] 2022-06-20 09:38:16.103 : testDeletePetByValidId : PASSED
+[211][INFO ] 2022-06-20 09:38:16.104 : ***************************Test case started********************
+[213][INFO ] 2022-06-20 09:38:16.116 : Pet delete response : Pet deleted
+[215][ERROR] 2022-06-20 09:38:16.118 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[217][INFO ] 2022-06-20 09:38:16.119 : testDeletePetByInvalidId : PASSED
+[219][INFO ] 2022-06-20 09:38:16.121 : **************Script Find pets by status (GET) started***********
+[221][INFO ] 2022-06-20 09:38:16.122 : Setting up configurations
+[223][INFO ] 2022-06-20 09:38:16.124 : ***************************Test case started********************
+[225][INFO ] 2022-06-20 09:38:16.124 : TestCase 1 : Test case to retrieve valid Pet by available status
+[227][INFO ] 2022-06-20 09:38:16.136 : Response : [{"id":1,"category":{"id":2,"name":"Cats"},"name":"Cat 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":8,"category":{"id":4,"name":"Lions"},"name":"Lion 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":10,"category":{"id":3,"name":"Rabbits"},"name":"Rabbit 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"}]
+[229][INFO ] 2022-06-20 09:38:16.137 : Status Code : 200
+[231][INFO ] 2022-06-20 09:38:16.169 : Pet status : [available, available, available, available, available, available, available]
+[233][INFO ] 2022-06-20 09:38:16.170 : testGetPetByAvailableStatus : PASSED
+[235][INFO ] 2022-06-20 09:38:16.171 : ***************************Test case started********************
+[237][INFO ] 2022-06-20 09:38:16.172 : TestCase 2 : Test case to retrieve valid Pet by pending status
+[239][INFO ] 2022-06-20 09:38:16.183 : Response : [{"id":3,"category":{"id":2,"name":"Cats"},"name":"Cat 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"},{"id":6,"category":{"id":1,"name":"Dogs"},"name":"Dog 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"pending"}]
+[241][INFO ] 2022-06-20 09:38:16.184 : Status Code : 200
+[243][INFO ] 2022-06-20 09:38:16.215 : Pet status : [pending, pending]
+[245][INFO ] 2022-06-20 09:38:16.215 : testValidPetByPendingStatus : PASSED
+[247][INFO ] 2022-06-20 09:38:16.216 : ***************************Test case started********************
+[249][INFO ] 2022-06-20 09:38:16.216 : TestCase 3: Test case to retrieve valid Pet by sold status
+[251][INFO ] 2022-06-20 09:38:16.227 : Response : [{"id":5,"category":{"id":1,"name":"Dogs"},"name":"Dog 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"sold"}]
+[253][INFO ] 2022-06-20 09:38:16.228 : Status Code : 200
+[255][INFO ] 2022-06-20 09:38:16.252 : Pet status : [sold]
+[257][INFO ] 2022-06-20 09:38:16.253 : testValidPetBySoldStatus : PASSED
+[259][INFO ] 2022-06-20 09:38:16.254 : ***************************Test case started********************
+[261][INFO ] 2022-06-20 09:38:16.254 : TestCase 4 : Test case to validate find pet by invalid status
+[263][INFO ] 2022-06-20 09:38:16.266 : Response : {"code":400,"message":"Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`"}
+[265][INFO ] 2022-06-20 09:38:16.266 : Status Code : 400
+[267][INFO ] 2022-06-20 09:38:16.275 : Inavlid status value : Input error: query parameter `status value `Deleted` is not in the allowable values `[available, pending, sold]`
+[269][INFO ] 2022-06-20 09:38:16.275 : testGetPetByInvalidStatus : PASSED
+[271][INFO ] 2022-06-20 09:38:16.276 : **************Script Delete existing user (DELETE)  started***********
+[273][INFO ] 2022-06-20 09:38:16.277 : Setting up configurations
+[275][INFO ] 2022-06-20 09:38:16.312 : User succesfully logged in
+[277][INFO ] 2022-06-20 09:38:16.313 : ***************************Test case started********************
+[279][INFO ] 2022-06-20 09:38:16.314 : TestCase 1 : Test case to validate  user deletion with valid name
+[281][INFO ] 2022-06-20 09:38:16.363 : Succesfully retrieved user details
+[283][INFO ] 2022-06-20 09:38:16.374 : Succesfully deleted the user with status code : 200
+[285][INFO ] 2022-06-20 09:38:16.374 : User John deleted succesfully with message : 
+[287][INFO ] 2022-06-20 09:38:16.374 : testDeleteUserWithValidName : PASSED
+[289][INFO ] 2022-06-20 09:38:16.375 : ***************************Test case started********************
+[291][INFO ] 2022-06-20 09:38:16.375 : TestCase 2 : Test case to validate user deletion with invalid name
+[293][ERROR] 2022-06-20 09:38:16.382 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[295][INFO ] 2022-06-20 09:38:16.383 : testDeleteUserWithInValidName : PASSED
+[297][INFO ] 2022-06-20 09:38:16.384 : **************Script  User login-logout (GET) started***********
+[299][INFO ] 2022-06-20 09:38:16.384 : Setting up configurations
+[301][INFO ] 2022-06-20 09:38:16.384 : ***************************Test case started********************
+[303][INFO ] 2022-06-20 09:38:16.385 : TestCase 1 : Test case to Validate user login 
+[305][INFO ] 2022-06-20 09:38:16.421 : User succesfully logged in
+[307][INFO ] 2022-06-20 09:38:16.421 : Response : Logged in user session: 949584556965215232
+[309][INFO ] 2022-06-20 09:38:16.422 : Status Code : 200
+[311][INFO ] 2022-06-20 09:38:16.422 : testUserLogin : PASSED
+[313][INFO ] 2022-06-20 09:38:16.422 : ***************************Test case started********************
+[315][INFO ] 2022-06-20 09:38:16.423 : TestCase 2 : Test case to Validate error message when only user name is passed
+[317][INFO ] 2022-06-20 09:38:16.448 : User succesfully logged in
+[319][ERROR] 2022-06-20 09:38:16.448 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[321][INFO ] 2022-06-20 09:38:16.449 : testUserLoginwithOnlyUserName : PASSED
+[323][INFO ] 2022-06-20 09:38:16.449 : ***************************Test case started********************
+[325][INFO ] 2022-06-20 09:38:16.450 : TestCase 3 : Test case to Validate error message when only password is passed
+[327][INFO ] 2022-06-20 09:38:16.476 : User succesfully logged in
+[329][ERROR] 2022-06-20 09:38:16.477 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[331][INFO ] 2022-06-20 09:38:16.477 : testUserLoginwithOnlyPassword : PASSED
+[333][INFO ] 2022-06-20 09:38:16.478 : ***************************Test case started********************
+[335][INFO ] 2022-06-20 09:38:16.478 : TestCase 4 : Test case to Validate succesfull logout
+[337][INFO ] 2022-06-20 09:38:16.485 : User succesfully logged out
+[339][INFO ] 2022-06-20 09:38:16.485 : Response : User logged out
+[341][INFO ] 2022-06-20 09:38:16.486 : Status Code : 200
+[343][INFO ] 2022-06-20 09:38:16.486 : testUserLogout : PASSED
+[345][INFO ] 2022-06-20 09:38:16.488 : **************Script Update existing user (PUT) started***********
+[347][INFO ] 2022-06-20 09:38:16.489 : Setting up configurations
+[349][INFO ] 2022-06-20 09:38:16.514 : User succesfully logged in
+[351][INFO ] 2022-06-20 09:38:16.514 : ***************************Test case started********************
+[353][INFO ] 2022-06-20 09:38:16.515 : TestCase 1 : Test case to validate update user with valid name
+[355][INFO ] 2022-06-20 09:38:16.572 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[357][INFO ] 2022-06-20 09:38:16.593 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[359][INFO ] 2022-06-20 09:38:16.593 : Succesfully retrieved user details
+[361][INFO ] 2022-06-20 09:38:16.594 : testUpdateUserWithValidName : PASSED
+[363][INFO ] 2022-06-20 09:38:16.595 : ***************************Test case started********************
+[365][INFO ] 2022-06-20 09:38:16.596 : TestCase 2 : Test case to valdiate update user with invalid user name
+[367][INFO ] 2022-06-20 09:38:16.609 : response : User not found
+[369][INFO ] 2022-06-20 09:38:16.610 : testUpdateUserWIthInvalidUserName : PASSED
+[371][INFO ] 2022-06-20 09:38:16.611 : **************Script Create new user (POST) started***********
+[373][INFO ] 2022-06-20 09:38:16.611 : Setting up configurations
+[375][INFO ] 2022-06-20 09:38:16.651 : User succesfully logged in
+[377][INFO ] 2022-06-20 09:38:16.652 : ***************************Test case started********************
+[379][INFO ] 2022-06-20 09:38:16.652 : TestCase 1 : Test case to validate single user creation
+[381][INFO ] 2022-06-20 09:38:16.663 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[383][INFO ] 2022-06-20 09:38:16.664 : User succesfully created with status code : 200
+[385][INFO ] 2022-06-20 09:38:16.664 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[387][INFO ] 2022-06-20 09:38:16.672 : username : John
+[389][INFO ] 2022-06-20 09:38:16.692 : Get user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[391][INFO ] 2022-06-20 09:38:16.693 : Succesfully retrieved user details
+[393][INFO ] 2022-06-20 09:38:16.693 : testSingleUserCreation : PASSED
+[395][INFO ] 2022-06-20 09:38:16.694 : ***************************Test case started********************
+[397][INFO ] 2022-06-20 09:38:16.694 : TestCase 2 : Test case to validate multiple user creation
+[399][INFO ] 2022-06-20 09:38:16.745 : Created list of users  : [{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1},{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}]
+[401][INFO ] 2022-06-20 09:38:16.746 : User succesfully created with status code : 200
+[403][INFO ] 2022-06-20 09:38:16.746 : testMultipleUserCreation : PASSED
+[405][INFO ] 2022-06-20 09:38:16.747 : **************Script Find pets by tags (GET) started***********
+[407][INFO ] 2022-06-20 09:38:16.747 : Setting up configurations
+[409][INFO ] 2022-06-20 09:38:16.748 : ***************************Test case started********************
+[411][INFO ] 2022-06-20 09:38:16.748 : TestCase 1 : Test case to retrieve valid Pet by tags
+[413][INFO ] 2022-06-20 09:38:16.795 : Status Code : 200
+[415][INFO ] 2022-06-20 09:38:16.802 : Pet tags : [[own]]
+[417][INFO ] 2022-06-20 09:38:16.809 : Expected filered tags pet are displaying : [{"id":111,"category":{"id":1,"name":"Dogs"},"name":"Beagal","photoUrls":["url1"],"tags":[{"id":111,"name":"own"}],"status":"available"}]
+[419][INFO ] 2022-06-20 09:38:16.809 : testGetPetByValidTag : PASSED
+[421][INFO ] 2022-06-20 09:38:16.810 : ***************************Test case started********************
+[423][INFO ] 2022-06-20 09:38:16.810 : TestCase 2 : Test case to retrieve pet by invalid tags
+[425][INFO ] 2022-06-20 09:38:16.855 : Status Code : 200
+[427][INFO ] 2022-06-20 09:38:16.857 : There is no pet available for the tag : true
+[429][INFO ] 2022-06-20 09:38:16.857 : Expected empty tag array is displaying : []
+[431][INFO ] 2022-06-20 09:38:16.858 : tesGetPetByInvalidTags : PASSED
+[433][INFO ] 2022-06-20 09:38:16.859 : **************Script Update existing pet (PUT) started***********
+[435][INFO ] 2022-06-20 09:38:16.859 : Setting up configurations
+[437][INFO ] 2022-06-20 09:38:16.860 : ***************************Test case started********************
+[439][INFO ] 2022-06-20 09:38:16.860 : TestCase 1 : Test case to validate pet updation by Id 
+[441][INFO ] 2022-06-20 09:38:16.890 : Response : {"id":111,"category":{"id":1,"name":"Dogs"},"name":"Lab","photoUrls":["url1"],"tags":[{"id":1,"name":"tag1"}],"status":"available"}
+[443][INFO ] 2022-06-20 09:38:16.891 : Status Code : 200
+[445][INFO ] 2022-06-20 09:38:16.927 : Old name ---> Beagal and updated name-->: Lab : Pet updated succesfully for the ID : 111
+[447][INFO ] 2022-06-20 09:38:16.928 : testUpdatePetById : PASSED
+[449][INFO ] 2022-06-20 09:38:16.928 : ***************************Test case started********************
+[451][INFO ] 2022-06-20 09:38:16.928 : TestCase 2 : Test case to validate unsuccesful Pet updation by invalid id
+[453][INFO ] 2022-06-20 09:38:16.951 : Response : Pet not found
+[455][INFO ] 2022-06-20 09:38:16.951 : Status Code : 404
+[457][INFO ] 2022-06-20 09:38:16.963 : Old name ---> Beagal and updated name-->: Beagal : Pet not updated as invalid ID Passed: 
+[459][INFO ] 2022-06-20 09:38:16.964 : testUpdatePetByInvaidId : PASSED
+[461][INFO ] 2022-06-20 09:38:16.964 : **************Script Upload pet image (POST) started***********
+[463][INFO ] 2022-06-20 09:38:16.965 : Setting up configurations
+[465][INFO ] 2022-06-20 09:38:16.965 : ***************************Test case started********************
+[467][INFO ] 2022-06-20 09:38:16.966 : TestCase 1 : Test case to validate pet image uploading
+[469][INFO ] 2022-06-20 09:38:17.027 : 415 : Bad Request status code
+[471][INFO ] 2022-06-20 09:38:17.034 : HTTP 415 Unsupported Media Type : Invalid Value
+[473][ERROR] 2022-06-20 09:38:17.034 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[475][INFO ] 2022-06-20 09:38:17.035 : testUploadingPetImage : PASSED
+[477][INFO ] 2022-06-20 09:38:17.263 : ***********************************Test execution ended************************************
+
+[479][INFO ] 2022-06-20 09:38:17.326 : Total Class        : 14
+[481][INFO ] 2022-06-20 09:38:17.326 : Start Time         : Mon Jun 20 09:38:13 IST 2022
+[483][INFO ] 2022-06-20 09:38:17.326 : Passed tests count : 35.0
+[485][INFO ] 2022-06-20 09:38:17.326 : Failed tests count : 0.0
+[487][INFO ] 2022-06-20 09:38:17.326 : Skipped tests count: 0
+[489][INFO ] 2022-06-20 09:38:17.326 : Pass percentage    : 100.0%
+[491][INFO ] 2022-06-20 09:38:17.326 : Fail percentage    : 0.0%
+[493][INFO ] 2022-06-20 09:38:17.326 : End Time           : Mon Jun 20 09:38:17 IST 2022
