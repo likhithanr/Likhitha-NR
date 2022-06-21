@@ -10,7 +10,6 @@ This is a rest assured API automation for PetStore and exploratory testing chart
 * Visual Studio Code : 1.63.2
 * jdk version : "1.8.0_312"
 * linux version : Ubuntu 20.04.3 LTS
-* due to time constraints framework tested only in linux
 
 ## Getting Started
 ### Setting up the local API Server

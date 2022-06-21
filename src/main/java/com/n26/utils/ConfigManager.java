@@ -108,7 +108,7 @@ public class ConfigManager {
 	 */
 	// Description: method to get the required formatted date and time
 	public static String getDate() {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_YYYY_HH:mm:ss");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd_MM_YYYY_HH_mm_ss");
 		Date date = new Date();
 		return dateFormat.format(date);
 	}
