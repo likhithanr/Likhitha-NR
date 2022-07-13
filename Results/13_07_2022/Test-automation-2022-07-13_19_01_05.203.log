@@ -1,12 +1,12 @@
-[1][INFO ] 2022-07-13_19_02_27.189 : Project Name        : PetStore
-[3][INFO ] 2022-07-13_19_02_27.271 : Test Environment    : http://localhost:8080/api/v3
-[5][INFO ] 2022-07-13_19_02_27.271 : Executed on OS      : Linux
-[7][INFO ] 2022-07-13_19_02_27.271 : Executed By         : likhithanr
-[9][INFO ] 2022-07-13_19_02_27.289 : **************Script Add a new pet to the store (POST) started***********
-[11][INFO ] 2022-07-13_19_02_27.290 : Setting up configurations
-[13][INFO ] 2022-07-13_19_02_27.612 : ***************************Test case started********************
-[15][INFO ] 2022-07-13_19_02_27.613 : TestCase 1 : Test case to validate successful pet creation 
-[17][ERROR] 2022-07-13_19_02_28.044 : testCreatePet : FAILED : 
+[1][INFO ] 2022-07-13_19_01_02.461 : Project Name        : PetStore
+[3][INFO ] 2022-07-13_19_01_02.547 : Test Environment    : http://localhost:8080/api/v3
+[5][INFO ] 2022-07-13_19_01_02.548 : Executed on OS      : Linux
+[7][INFO ] 2022-07-13_19_01_02.548 : Executed By         : likhithanr
+[9][INFO ] 2022-07-13_19_01_02.572 : **************Script Add a new pet to the store (POST) started***********
+[11][INFO ] 2022-07-13_19_01_02.573 : Setting up configurations
+[13][INFO ] 2022-07-13_19_01_02.905 : ***************************Test case started********************
+[15][INFO ] 2022-07-13_19_01_02.908 : TestCase 1 : Test case to validate successful pet creation 
+[17][ERROR] 2022-07-13_19_01_03.447 : testCreatePet : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -46,13 +46,13 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[19][INFO ] 2022-07-13_19_02_28.074 : ***************************Test case started********************
-[21][INFO ] 2022-07-13_19_02_28.075 : TestCase 2: Test case to validate bad request when request sent without mandatory field
-[23][ERROR] 2022-07-13_19_02_28.569 : Failed due to java.lang.AssertionError: expected [true] but found [false]
-[25][INFO ] 2022-07-13_19_02_28.569 : testCreatePetwWithoutMandatoryParams : PASSED
-[27][INFO ] 2022-07-13_19_02_28.570 : ***************************Test case started********************
-[29][INFO ] 2022-07-13_19_02_28.571 : TestCase 3: Test case to validate error response when invalid request method used
-[31][ERROR] 2022-07-13_19_02_28.586 : testCreatePetWithInvalidRequestMethod : FAILED : 
+[19][INFO ] 2022-07-13_19_01_03.490 : ***************************Test case started********************
+[21][INFO ] 2022-07-13_19_01_03.491 : TestCase 2: Test case to validate bad request when request sent without mandatory field
+[23][ERROR] 2022-07-13_19_01_03.997 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[25][INFO ] 2022-07-13_19_01_03.997 : testCreatePetwWithoutMandatoryParams : PASSED
+[27][INFO ] 2022-07-13_19_01_03.998 : ***************************Test case started********************
+[29][INFO ] 2022-07-13_19_01_03.998 : TestCase 3: Test case to validate error response when invalid request method used
+[31][ERROR] 2022-07-13_19_01_04.015 : testCreatePetWithInvalidRequestMethod : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -92,20 +92,20 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[33][INFO ] 2022-07-13_19_02_28.588 : ***************************Test case started********************
-[35][INFO ] 2022-07-13_19_02_28.588 : TestCase 4: Test case to validate ID param with Inavalid data types
-[37][INFO ] 2022-07-13_19_02_28.645 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
-[39][ERROR] 2022-07-13_19_02_28.655 : Failed due to java.lang.AssertionError: expected [true] but found [false]
-[41][INFO ] 2022-07-13_19_02_28.655 : testCreatePetWithInvalidDataType_Id : PASSED
-[43][INFO ] 2022-07-13_19_02_28.656 : ***************************Test case started********************
-[45][INFO ] 2022-07-13_19_02_28.657 : TestCase 5: Test case to validate Name param with Inavalid data types
-[47][ERROR] 2022-07-13_19_02_28.666 : Failed due to java.lang.AssertionError: expected [true] but found [false]
-[49][INFO ] 2022-07-13_19_02_28.666 : testCreatePetWithInvalidDataType_name : PASSED
-[51][INFO ] 2022-07-13_19_02_28.667 : **************Script Update existing pet (POST) started***********
-[53][INFO ] 2022-07-13_19_02_28.668 : Setting up configurations
-[55][INFO ] 2022-07-13_19_02_28.669 : ***************************Test case started********************
-[57][INFO ] 2022-07-13_19_02_28.669 : TestCase 1 : Test case to validate updating pet by id with valid name and status
-[59][ERROR] 2022-07-13_19_02_28.744 : testUpdatePetById : FAILED : 
+[33][INFO ] 2022-07-13_19_01_04.017 : ***************************Test case started********************
+[35][INFO ] 2022-07-13_19_01_04.017 : TestCase 4: Test case to validate ID param with Inavalid data types
+[37][INFO ] 2022-07-13_19_01_04.085 : {"photoUrls":["url1"],"name":"Beagal","id":"abc","category":{"name":"Dogs","id":1},"tags":[{"name":"tag1","id":1}],"status":"available"}
+[39][ERROR] 2022-07-13_19_01_04.099 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[41][INFO ] 2022-07-13_19_01_04.099 : testCreatePetWithInvalidDataType_Id : PASSED
+[43][INFO ] 2022-07-13_19_01_04.101 : ***************************Test case started********************
+[45][INFO ] 2022-07-13_19_01_04.101 : TestCase 5: Test case to validate Name param with Inavalid data types
+[47][ERROR] 2022-07-13_19_01_04.116 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[49][INFO ] 2022-07-13_19_01_04.116 : testCreatePetWithInvalidDataType_name : PASSED
+[51][INFO ] 2022-07-13_19_01_04.118 : **************Script Update existing pet (POST) started***********
+[53][INFO ] 2022-07-13_19_01_04.119 : Setting up configurations
+[55][INFO ] 2022-07-13_19_01_04.120 : ***************************Test case started********************
+[57][INFO ] 2022-07-13_19_01_04.121 : TestCase 1 : Test case to validate updating pet by id with valid name and status
+[59][ERROR] 2022-07-13_19_01_04.236 : testUpdatePetById : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -160,11 +160,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[61][INFO ] 2022-07-13_19_02_28.747 : ***************************Test case started********************
-[63][INFO ] 2022-07-13_19_02_28.748 : TestCase 2 : Test case to udpate invalid pet with name and status 
-[65][INFO ] 2022-07-13_19_02_28.770 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;999] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[67][INFO ] 2022-07-13_19_02_28.770 : Status Code : 404
-[69][ERROR] 2022-07-13_19_02_28.771 : testUpdatePetByInvalidId : FAILED : 
+[61][INFO ] 2022-07-13_19_01_04.244 : ***************************Test case started********************
+[63][INFO ] 2022-07-13_19_01_04.245 : TestCase 2 : Test case to udpate invalid pet with name and status 
+[65][INFO ] 2022-07-13_19_01_04.277 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;999] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[67][INFO ] 2022-07-13_19_01_04.278 : Status Code : 404
+[69][ERROR] 2022-07-13_19_01_04.279 : testUpdatePetByInvalidId : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -204,11 +204,11 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[71][INFO ] 2022-07-13_19_02_28.773 : **************Script Create new order (POST)  started***********
-[73][INFO ] 2022-07-13_19_02_28.773 : Setting up configurations
-[75][INFO ] 2022-07-13_19_02_28.775 : ***************************Test case started********************
-[77][INFO ] 2022-07-13_19_02_28.775 : TestCase 1 : Test case toValidate pet order creation 
-[79][ERROR] 2022-07-13_19_02_28.790 : testCreatePetOrder : FAILED : 
+[71][INFO ] 2022-07-13_19_01_04.280 : **************Script Create new order (POST)  started***********
+[73][INFO ] 2022-07-13_19_01_04.281 : Setting up configurations
+[75][INFO ] 2022-07-13_19_01_04.282 : ***************************Test case started********************
+[77][INFO ] 2022-07-13_19_01_04.284 : TestCase 1 : Test case toValidate pet order creation 
+[79][ERROR] 2022-07-13_19_01_04.300 : testCreatePetOrder : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -248,9 +248,9 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[81][INFO ] 2022-07-13_19_02_28.792 : ***************************Test case started********************
-[83][INFO ] 2022-07-13_19_02_28.792 : TestCase 2 : Test case to validate order creation with placed status 
-[85][ERROR] 2022-07-13_19_02_28.804 : testCreatePlacedPetOrder : FAILED : 
+[81][INFO ] 2022-07-13_19_01_04.302 : ***************************Test case started********************
+[83][INFO ] 2022-07-13_19_01_04.303 : TestCase 2 : Test case to validate order creation with placed status 
+[85][ERROR] 2022-07-13_19_01_04.314 : testCreatePlacedPetOrder : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -299,9 +299,9 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[87][INFO ] 2022-07-13_19_02_28.807 : ***************************Test case started********************
-[89][INFO ] 2022-07-13_19_02_28.808 : TestCase 3 : Test case to validate order creation with delivered status 
-[91][ERROR] 2022-07-13_19_02_28.820 : testCreateDeliveredPetOrder : FAILED : 
+[87][INFO ] 2022-07-13_19_01_04.316 : ***************************Test case started********************
+[89][INFO ] 2022-07-13_19_01_04.318 : TestCase 3 : Test case to validate order creation with delivered status 
+[91][ERROR] 2022-07-13_19_01_04.334 : testCreateDeliveredPetOrder : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -350,17 +350,17 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[93][INFO ] 2022-07-13_19_02_28.823 : ***************************Test case started********************
-[95][INFO ] 2022-07-13_19_02_28.824 : TestCase 4 : Test case to validate order creation with invalid status 
-[97][INFO ] 2022-07-13_19_02_28.833 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;store&#47;order] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[99][INFO ] 2022-07-13_19_02_28.834 : Status Code : 404
-[101][ERROR] 2022-07-13_19_02_28.834 : Failed due to java.lang.AssertionError: expected [true] but found [false]
-[103][INFO ] 2022-07-13_19_02_28.834 : testCreateOrderWithInvalidStatus : PASSED
-[105][INFO ] 2022-07-13_19_02_28.836 : **************Script Delete existing order (DELETE)  started***********
-[107][INFO ] 2022-07-13_19_02_28.837 : Setting up configurations
-[109][INFO ] 2022-07-13_19_02_28.838 : ***************************Test case started********************
-[111][INFO ] 2022-07-13_19_02_28.838 : TestCase 1 : Test case to validate deleting order from store with valid id 
-[113][ERROR] 2022-07-13_19_02_28.847 : testDeleteOrderByValidId : FAILED : 
+[93][INFO ] 2022-07-13_19_01_04.337 : ***************************Test case started********************
+[95][INFO ] 2022-07-13_19_01_04.338 : TestCase 4 : Test case to validate order creation with invalid status 
+[97][INFO ] 2022-07-13_19_01_04.349 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;store&#47;order] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[99][INFO ] 2022-07-13_19_01_04.349 : Status Code : 404
+[101][ERROR] 2022-07-13_19_01_04.350 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[103][INFO ] 2022-07-13_19_01_04.350 : testCreateOrderWithInvalidStatus : PASSED
+[105][INFO ] 2022-07-13_19_01_04.351 : **************Script Delete existing order (DELETE)  started***********
+[107][INFO ] 2022-07-13_19_01_04.352 : Setting up configurations
+[109][INFO ] 2022-07-13_19_01_04.353 : ***************************Test case started********************
+[111][INFO ] 2022-07-13_19_01_04.353 : TestCase 1 : Test case to validate deleting order from store with valid id 
+[113][ERROR] 2022-07-13_19_01_04.364 : testDeleteOrderByValidId : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -409,9 +409,9 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[115][INFO ] 2022-07-13_19_02_28.851 : ***************************Test case started********************
-[117][INFO ] 2022-07-13_19_02_28.851 : TestCase 2 : Test case to validate deleting order from store with invalid id 
-[119][ERROR] 2022-07-13_19_02_28.863 : testDeleteOrderByInValidId : FAILED : 
+[115][INFO ] 2022-07-13_19_01_04.366 : ***************************Test case started********************
+[117][INFO ] 2022-07-13_19_01_04.367 : TestCase 2 : Test case to validate deleting order from store with invalid id 
+[119][ERROR] 2022-07-13_19_01_04.381 : testDeleteOrderByInValidId : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -451,11 +451,11 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[121][INFO ] 2022-07-13_19_02_28.865 : **************Script Get existing orders (GET) started***********
-[123][INFO ] 2022-07-13_19_02_28.866 : Setting up configurations
-[125][INFO ] 2022-07-13_19_02_28.867 : ***************************Test case started********************
-[127][INFO ] 2022-07-13_19_02_28.867 : TestCase 1 : Test case to validate get order by invalid id 
-[129][ERROR] 2022-07-13_19_02_28.877 : testGetOrderByInvalidId : FAILED : 
+[121][INFO ] 2022-07-13_19_01_04.383 : **************Script Get existing orders (GET) started***********
+[123][INFO ] 2022-07-13_19_01_04.383 : Setting up configurations
+[125][INFO ] 2022-07-13_19_01_04.385 : ***************************Test case started********************
+[127][INFO ] 2022-07-13_19_01_04.385 : TestCase 1 : Test case to validate get order by invalid id 
+[129][ERROR] 2022-07-13_19_01_04.397 : testGetOrderByInvalidId : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -504,11 +504,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[131][INFO ] 2022-07-13_19_02_28.880 : **************Script Delete a pet (DELETE) started***********
-[133][INFO ] 2022-07-13_19_02_28.881 : Setting up configurations
-[135][INFO ] 2022-07-13_19_02_28.883 : ***************************Test case started********************
-[137][INFO ] 2022-07-13_19_02_28.883 : TestCase 1 : Test case to validate pet deletion by valid id
-[139][ERROR] 2022-07-13_19_02_28.892 : testDeletePetByValidId : FAILED : 
+[131][INFO ] 2022-07-13_19_01_04.400 : **************Script Delete a pet (DELETE) started***********
+[133][INFO ] 2022-07-13_19_01_04.400 : Setting up configurations
+[135][INFO ] 2022-07-13_19_01_04.401 : ***************************Test case started********************
+[137][INFO ] 2022-07-13_19_01_04.401 : TestCase 1 : Test case to validate pet deletion by valid id
+[139][ERROR] 2022-07-13_19_01_04.412 : testDeletePetByValidId : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -557,17 +557,17 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[141][INFO ] 2022-07-13_19_02_28.895 : ***************************Test case started********************
-[143][INFO ] 2022-07-13_19_02_28.915 : Pet delete response : <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The method received in the request-line is known by the origin server but not supported by the target resource.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[145][ERROR] 2022-07-13_19_02_28.916 : Failed due to java.lang.AssertionError: expected [true] but found [false]
-[147][INFO ] 2022-07-13_19_02_28.916 : testDeletePetByInvalidId : PASSED
-[149][INFO ] 2022-07-13_19_02_28.917 : **************Script Find pets by status (GET) started***********
-[151][INFO ] 2022-07-13_19_02_28.918 : Setting up configurations
-[153][INFO ] 2022-07-13_19_02_28.919 : ***************************Test case started********************
-[155][INFO ] 2022-07-13_19_02_28.920 : TestCase 1 : Test case to retrieve valid Pet by available status
-[157][INFO ] 2022-07-13_19_02_28.929 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[159][INFO ] 2022-07-13_19_02_28.929 : Status Code : 404
-[161][ERROR] 2022-07-13_19_02_28.930 : testGetPetByAvailableStatus : FAILED : 
+[141][INFO ] 2022-07-13_19_01_04.414 : ***************************Test case started********************
+[143][INFO ] 2022-07-13_19_01_04.436 : Pet delete response : <!doctype html><html lang="en"><head><title>HTTP Status 405 – Method Not Allowed</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 405 – Method Not Allowed</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Description</b> The method received in the request-line is known by the origin server but not supported by the target resource.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[145][ERROR] 2022-07-13_19_01_04.437 : Failed due to java.lang.AssertionError: expected [true] but found [false]
+[147][INFO ] 2022-07-13_19_01_04.437 : testDeletePetByInvalidId : PASSED
+[149][INFO ] 2022-07-13_19_01_04.438 : **************Script Find pets by status (GET) started***********
+[151][INFO ] 2022-07-13_19_01_04.439 : Setting up configurations
+[153][INFO ] 2022-07-13_19_01_04.440 : ***************************Test case started********************
+[155][INFO ] 2022-07-13_19_01_04.440 : TestCase 1 : Test case to retrieve valid Pet by available status
+[157][INFO ] 2022-07-13_19_01_04.450 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[159][INFO ] 2022-07-13_19_01_04.450 : Status Code : 404
+[161][ERROR] 2022-07-13_19_01_04.452 : testGetPetByAvailableStatus : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -616,11 +616,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[163][INFO ] 2022-07-13_19_02_28.933 : ***************************Test case started********************
-[165][INFO ] 2022-07-13_19_02_28.934 : TestCase 2 : Test case to retrieve valid Pet by pending status
-[167][INFO ] 2022-07-13_19_02_28.941 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[169][INFO ] 2022-07-13_19_02_28.941 : Status Code : 404
-[171][ERROR] 2022-07-13_19_02_28.942 : testValidPetByPendingStatus : FAILED : 
+[163][INFO ] 2022-07-13_19_01_04.461 : ***************************Test case started********************
+[165][INFO ] 2022-07-13_19_01_04.462 : TestCase 2 : Test case to retrieve valid Pet by pending status
+[167][INFO ] 2022-07-13_19_01_04.483 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[169][INFO ] 2022-07-13_19_01_04.484 : Status Code : 404
+[171][ERROR] 2022-07-13_19_01_04.485 : testValidPetByPendingStatus : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -669,11 +669,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[173][INFO ] 2022-07-13_19_02_28.945 : ***************************Test case started********************
-[175][INFO ] 2022-07-13_19_02_28.945 : TestCase 3: Test case to retrieve valid Pet by sold status
-[177][INFO ] 2022-07-13_19_02_28.954 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[179][INFO ] 2022-07-13_19_02_28.954 : Status Code : 404
-[181][ERROR] 2022-07-13_19_02_28.956 : testValidPetBySoldStatus : FAILED : 
+[173][INFO ] 2022-07-13_19_01_04.498 : ***************************Test case started********************
+[175][INFO ] 2022-07-13_19_01_04.499 : TestCase 3: Test case to retrieve valid Pet by sold status
+[177][INFO ] 2022-07-13_19_01_04.508 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[179][INFO ] 2022-07-13_19_01_04.508 : Status Code : 404
+[181][ERROR] 2022-07-13_19_01_04.510 : testValidPetBySoldStatus : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -722,11 +722,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[183][INFO ] 2022-07-13_19_02_28.958 : ***************************Test case started********************
-[185][INFO ] 2022-07-13_19_02_28.959 : TestCase 4 : Test case to validate find pet by invalid status
-[187][INFO ] 2022-07-13_19_02_28.968 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
-[189][INFO ] 2022-07-13_19_02_28.969 : Status Code : 404
-[191][ERROR] 2022-07-13_19_02_28.971 : testGetPetByInvalidStatus : FAILED : 
+[183][INFO ] 2022-07-13_19_01_04.514 : ***************************Test case started********************
+[185][INFO ] 2022-07-13_19_01_04.522 : TestCase 4 : Test case to validate find pet by invalid status
+[187][INFO ] 2022-07-13_19_01_04.534 : Response : <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;api&#47;v3&#47;pet&#47;findByStatus] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/8.5.81</h3></body></html>
+[189][INFO ] 2022-07-13_19_01_04.535 : Status Code : 404
+[191][ERROR] 2022-07-13_19_01_04.536 : testGetPetByInvalidStatus : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -775,17 +775,17 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[193][INFO ] 2022-07-13_19_02_28.973 : **************Script Delete existing user (DELETE)  started***********
-[195][INFO ] 2022-07-13_19_02_28.974 : Setting up configurations
-[197][INFO ] 2022-07-13_19_02_29.014 : ***************************Test case started********************
-[199][INFO ] 2022-07-13_19_02_29.015 : testDeleteUserWithValidName : SKIPPED
-[201][INFO ] 2022-07-13_19_02_29.017 : ***************************Test case started********************
-[203][INFO ] 2022-07-13_19_02_29.019 : testDeleteUserWithInValidName : SKIPPED
-[205][INFO ] 2022-07-13_19_02_29.023 : **************Script  User login-logout (GET) started***********
-[207][INFO ] 2022-07-13_19_02_29.024 : Setting up configurations
-[209][INFO ] 2022-07-13_19_02_29.024 : ***************************Test case started********************
-[211][INFO ] 2022-07-13_19_02_29.025 : TestCase 1 : Test case to Validate user login 
-[213][ERROR] 2022-07-13_19_02_29.058 : testUserLogin : FAILED : 
+[193][INFO ] 2022-07-13_19_01_04.542 : **************Script Delete existing user (DELETE)  started***********
+[195][INFO ] 2022-07-13_19_01_04.543 : Setting up configurations
+[197][INFO ] 2022-07-13_19_01_04.596 : ***************************Test case started********************
+[199][INFO ] 2022-07-13_19_01_04.598 : testDeleteUserWithValidName : SKIPPED
+[201][INFO ] 2022-07-13_19_01_04.600 : ***************************Test case started********************
+[203][INFO ] 2022-07-13_19_01_04.601 : testDeleteUserWithInValidName : SKIPPED
+[205][INFO ] 2022-07-13_19_01_04.602 : **************Script  User login-logout (GET) started***********
+[207][INFO ] 2022-07-13_19_01_04.602 : Setting up configurations
+[209][INFO ] 2022-07-13_19_01_04.603 : ***************************Test case started********************
+[211][INFO ] 2022-07-13_19_01_04.603 : TestCase 1 : Test case to Validate user login 
+[213][ERROR] 2022-07-13_19_01_04.631 : testUserLogin : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -826,9 +826,9 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[215][INFO ] 2022-07-13_19_02_29.060 : ***************************Test case started********************
-[217][INFO ] 2022-07-13_19_02_29.060 : TestCase 2 : Test case to Validate error message when only user name is passed
-[219][ERROR] 2022-07-13_19_02_29.090 : testUserLoginwithOnlyUserName : FAILED : 
+[215][INFO ] 2022-07-13_19_01_04.634 : ***************************Test case started********************
+[217][INFO ] 2022-07-13_19_01_04.634 : TestCase 2 : Test case to Validate error message when only user name is passed
+[219][ERROR] 2022-07-13_19_01_04.662 : testUserLoginwithOnlyUserName : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -869,9 +869,9 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[221][INFO ] 2022-07-13_19_02_29.092 : ***************************Test case started********************
-[223][INFO ] 2022-07-13_19_02_29.092 : TestCase 3 : Test case to Validate error message when only password is passed
-[225][ERROR] 2022-07-13_19_02_29.121 : testUserLoginwithOnlyPassword : FAILED : 
+[221][INFO ] 2022-07-13_19_01_04.663 : ***************************Test case started********************
+[223][INFO ] 2022-07-13_19_01_04.663 : TestCase 3 : Test case to Validate error message when only password is passed
+[225][ERROR] 2022-07-13_19_01_04.688 : testUserLoginwithOnlyPassword : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -912,9 +912,9 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[227][INFO ] 2022-07-13_19_02_29.123 : ***************************Test case started********************
-[229][INFO ] 2022-07-13_19_02_29.123 : TestCase 4 : Test case to Validate succesfull logout
-[231][ERROR] 2022-07-13_19_02_29.130 : testUserLogout : FAILED : 
+[227][INFO ] 2022-07-13_19_01_04.690 : ***************************Test case started********************
+[229][INFO ] 2022-07-13_19_01_04.690 : TestCase 4 : Test case to Validate succesfull logout
+[231][ERROR] 2022-07-13_19_01_04.697 : testUserLogout : FAILED : 
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97) ~[testng-7.0.0.jar:?]
 	at org.testng.Assert.assertEqualsImpl(Assert.java:136) ~[testng-7.0.0.jar:?]
@@ -955,24 +955,24 @@ java.lang.AssertionError: expected [true] but found [false]
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) ~[surefire-booter-3.0.0-M6.jar:3.0.0-M6]
-[233][INFO ] 2022-07-13_19_02_29.132 : **************Script Update existing user (PUT) started***********
-[235][INFO ] 2022-07-13_19_02_29.133 : Setting up configurations
-[237][INFO ] 2022-07-13_19_02_29.161 : ***************************Test case started********************
-[239][INFO ] 2022-07-13_19_02_29.162 : testUpdateUserWithValidName : SKIPPED
-[241][INFO ] 2022-07-13_19_02_29.163 : ***************************Test case started********************
-[243][INFO ] 2022-07-13_19_02_29.163 : testUpdateUserWIthInvalidUserName : SKIPPED
-[245][INFO ] 2022-07-13_19_02_29.164 : **************Script Create new user (POST) started***********
-[247][INFO ] 2022-07-13_19_02_29.164 : Setting up configurations
-[249][INFO ] 2022-07-13_19_02_29.192 : ***************************Test case started********************
-[251][INFO ] 2022-07-13_19_02_29.193 : testSingleUserCreation : SKIPPED
-[253][INFO ] 2022-07-13_19_02_29.195 : ***************************Test case started********************
-[255][INFO ] 2022-07-13_19_02_29.195 : testMultipleUserCreation : SKIPPED
-[257][INFO ] 2022-07-13_19_02_29.196 : **************Script Find pets by tags (GET) started***********
-[259][INFO ] 2022-07-13_19_02_29.196 : Setting up configurations
-[261][INFO ] 2022-07-13_19_02_29.197 : ***************************Test case started********************
-[263][INFO ] 2022-07-13_19_02_29.197 : TestCase 1 : Test case to retrieve valid Pet by tags
-[265][INFO ] 2022-07-13_19_02_29.250 : Status Code : 404
-[267][ERROR] 2022-07-13_19_02_29.252 : testGetPetByValidTag : FAILED : 
+[233][INFO ] 2022-07-13_19_01_04.700 : **************Script Update existing user (PUT) started***********
+[235][INFO ] 2022-07-13_19_01_04.700 : Setting up configurations
+[237][INFO ] 2022-07-13_19_01_04.725 : ***************************Test case started********************
+[239][INFO ] 2022-07-13_19_01_04.726 : testUpdateUserWithValidName : SKIPPED
+[241][INFO ] 2022-07-13_19_01_04.727 : ***************************Test case started********************
+[243][INFO ] 2022-07-13_19_01_04.728 : testUpdateUserWIthInvalidUserName : SKIPPED
+[245][INFO ] 2022-07-13_19_01_04.729 : **************Script Create new user (POST) started***********
+[247][INFO ] 2022-07-13_19_01_04.729 : Setting up configurations
+[249][INFO ] 2022-07-13_19_01_04.750 : ***************************Test case started********************
+[251][INFO ] 2022-07-13_19_01_04.751 : testSingleUserCreation : SKIPPED
+[253][INFO ] 2022-07-13_19_01_04.751 : ***************************Test case started********************
+[255][INFO ] 2022-07-13_19_01_04.752 : testMultipleUserCreation : SKIPPED
+[257][INFO ] 2022-07-13_19_01_04.753 : **************Script Find pets by tags (GET) started***********
+[259][INFO ] 2022-07-13_19_01_04.753 : Setting up configurations
+[261][INFO ] 2022-07-13_19_01_04.754 : ***************************Test case started********************
+[263][INFO ] 2022-07-13_19_01_04.754 : TestCase 1 : Test case to retrieve valid Pet by tags
+[265][INFO ] 2022-07-13_19_01_04.798 : Status Code : 404
+[267][ERROR] 2022-07-13_19_01_04.799 : testGetPetByValidTag : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -1021,10 +1021,10 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[269][INFO ] 2022-07-13_19_02_29.255 : ***************************Test case started********************
-[271][INFO ] 2022-07-13_19_02_29.255 : TestCase 2 : Test case to retrieve pet by invalid tags
-[273][INFO ] 2022-07-13_19_02_29.308 : Status Code : 404
-[275][ERROR] 2022-07-13_19_02_29.310 : tesGetPetByInvalidTags : FAILED : 
+[269][INFO ] 2022-07-13_19_01_04.801 : ***************************Test case started********************
+[271][INFO ] 2022-07-13_19_01_04.801 : TestCase 2 : Test case to retrieve pet by invalid tags
+[273][INFO ] 2022-07-13_19_01_04.841 : Status Code : 404
+[275][ERROR] 2022-07-13_19_01_04.843 : tesGetPetByInvalidTags : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -1073,11 +1073,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[277][INFO ] 2022-07-13_19_02_29.312 : **************Script Update existing pet (PUT) started***********
-[279][INFO ] 2022-07-13_19_02_29.313 : Setting up configurations
-[281][INFO ] 2022-07-13_19_02_29.314 : ***************************Test case started********************
-[283][INFO ] 2022-07-13_19_02_29.314 : TestCase 1 : Test case to validate pet updation by Id 
-[285][ERROR] 2022-07-13_19_02_29.324 : testUpdatePetById : FAILED : 
+[277][INFO ] 2022-07-13_19_01_04.844 : **************Script Update existing pet (PUT) started***********
+[279][INFO ] 2022-07-13_19_01_04.845 : Setting up configurations
+[281][INFO ] 2022-07-13_19_01_04.846 : ***************************Test case started********************
+[283][INFO ] 2022-07-13_19_01_04.846 : TestCase 1 : Test case to validate pet updation by Id 
+[285][ERROR] 2022-07-13_19_01_04.854 : testUpdatePetById : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -1126,9 +1126,9 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[287][INFO ] 2022-07-13_19_02_29.327 : ***************************Test case started********************
-[289][INFO ] 2022-07-13_19_02_29.327 : TestCase 2 : Test case to validate unsuccesful Pet updation by invalid id
-[291][ERROR] 2022-07-13_19_02_29.335 : testUpdatePetByInvaidId : FAILED : 
+[287][INFO ] 2022-07-13_19_01_04.856 : ***************************Test case started********************
+[289][INFO ] 2022-07-13_19_01_04.856 : TestCase 2 : Test case to validate unsuccesful Pet updation by invalid id
+[291][ERROR] 2022-07-13_19_01_04.862 : testUpdatePetByInvaidId : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -1177,11 +1177,11 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[293][INFO ] 2022-07-13_19_02_29.338 : **************Script Upload pet image (POST) started***********
-[295][INFO ] 2022-07-13_19_02_29.338 : Setting up configurations
-[297][INFO ] 2022-07-13_19_02_29.339 : ***************************Test case started********************
-[299][INFO ] 2022-07-13_19_02_29.340 : TestCase 1 : Test case to validate pet image uploading
-[301][ERROR] 2022-07-13_19_02_29.347 : testUploadingPetImage : FAILED : 
+[293][INFO ] 2022-07-13_19_01_04.864 : **************Script Upload pet image (POST) started***********
+[295][INFO ] 2022-07-13_19_01_04.865 : Setting up configurations
+[297][INFO ] 2022-07-13_19_01_04.866 : ***************************Test case started********************
+[299][INFO ] 2022-07-13_19_01_04.867 : TestCase 1 : Test case to validate pet image uploading
+[301][ERROR] 2022-07-13_19_01_04.875 : testUploadingPetImage : FAILED : 
 io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967) ~[json-path-4.4.0.jar:?]
@@ -1230,13 +1230,13 @@ Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while
 	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965) ~[json-path-4.4.0.jar:?]
 	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000) ~[json-path-4.4.0.jar:?]
 	... 37 more
-[303][INFO ] 2022-07-13_19_02_29.582 : ***********************************Test execution ended************************************
+[303][INFO ] 2022-07-13_19_01_05.094 : ***********************************Test execution ended************************************
 
-[305][INFO ] 2022-07-13_19_02_29.676 : Total Class        : 14
-[307][INFO ] 2022-07-13_19_02_29.676 : Start Time         : Wed Jul 13 19:02:27 IST 2022
-[309][INFO ] 2022-07-13_19_02_29.676 : Passed tests count : 5.0
-[311][INFO ] 2022-07-13_19_02_29.676 : Failed tests count : 24.0
-[313][INFO ] 2022-07-13_19_02_29.676 : Skipped tests count: 6
-[315][INFO ] 2022-07-13_19_02_29.676 : Pass percentage    : 14.285714285714285%
-[317][INFO ] 2022-07-13_19_02_29.676 : Fail percentage    : 68.57142857142857%
-[319][INFO ] 2022-07-13_19_02_29.676 : End Time           : Wed Jul 13 19:02:29 IST 2022
+[305][INFO ] 2022-07-13_19_01_05.208 : Total Class        : 14
+[307][INFO ] 2022-07-13_19_01_05.209 : Start Time         : Wed Jul 13 19:01:02 IST 2022
+[309][INFO ] 2022-07-13_19_01_05.209 : Passed tests count : 5.0
+[311][INFO ] 2022-07-13_19_01_05.209 : Failed tests count : 24.0
+[313][INFO ] 2022-07-13_19_01_05.209 : Skipped tests count: 6
+[315][INFO ] 2022-07-13_19_01_05.209 : Pass percentage    : 14.285714285714285%
+[317][INFO ] 2022-07-13_19_01_05.209 : Fail percentage    : 68.57142857142857%
+[319][INFO ] 2022-07-13_19_01_05.209 : End Time           : Wed Jul 13 19:01:04 IST 2022

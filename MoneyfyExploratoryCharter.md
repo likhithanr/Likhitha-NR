@@ -1,13 +1,13 @@
 # Moneyfy Exploratory Testing Charter (Android)
 #### Monefy is a personal finance application that makes money management easy. The app is designed to streamline expense tracking and help you save money.
 ### Tester
-- [@Likhitha NR](https://github.com/likhithanr)
+- [@Likhitha NR](https://github.com./likhithanr)
 
 ### Areas Covered
-* Addition of income and expenses.
-* Categorizing the income and expenses.
-* Creating and viewing income and expenses on various time periods.
-* Creating and viewing income and expenses based on account types.
+* Addition of incom.e and expenses.
+* Categorizing the incom.e and expenses.
+* Creating and viewing incom.e and expenses on various time periods.
+* Creating and viewing incom.e and expenses based on account types.
 * Addition and updation of accounts. 
 * Transfering the amount between different accounts
 * Currency validation in differenct sections of application
@@ -22,18 +22,18 @@
 * Double arrow should be displayed on right side of header ,on clicking it should take us to new transfer window.
 * Three veritical doted line should be displayed in top right corner of the header, on	clicking it should display “Categories, Accounts, Currencies, Settings” options.
 * Red color circle with – sign should be displayed to add expenses, on clicking it should take us to “New expense” window.
-* Green color circle with + sign should be displayed to add income,on clicking 	it should take us to “New income” window.
+* Green color circle with + sign should be displayed to add incom.e,on clicking 	it should take us to “New incom.e” window.
 * Rectangular box should be displayed to show balance in green color on top of add and expense circular button.
-* Two menus should be displayed on left and right side of “Balance field” , on 	clicking both  should take us to display list of added expenses and income 	along with balance field.
-* Expense categories should be displayed in around the balance component in a circualr fashion with respective icon for the category.
+* Two menus should be displayed on left and right side of “Balance field” , on 	clicking both  should take us to display list of added expenses and incom.e 	along with balance field.
+* Expense categories should be displayed in around the balance com.ponent in a circualr fashion with respective icon for the category.
 * Clicking on any category should take us to new expense with the selected category being preselected and category name being displayed at the bottom.
-* When no income or expense is added the circle around the balance component should be greyed. 
-* Default vaule of balance inside the circular component in the centre should be zero. 
-* Click on menu which is present just above +/- circle and it should list out all 	the added expenses and incomes , delete all the income and navigate to home 	screen Balance and amount in circular balance component in center should be reset to 0.
+* When no incom.e or expense is added the circle around the balance com.ponent should be greyed. 
+* Default vaule of balance inside the circular com.ponent in the centre should be zero. 
+* Click on menu which is present just above +/- circle and it should list out all 	the added expenses and incom.es , delete all the incom.e and navigate to home 	screen Balance and amount in circular balance com.ponent in center should be reset to 0.
 * Click on menu on top left corner of the header and it should display 	drop down to list out accounts , Day,Week,Month,Year,All,Interval and 	choose date options.
-### Add income validation (High)
-* Click on green color circle + button and it should take us to New income window
-* New income label should be displayed with back arrow button. Clicking on the button should navigate back to home screen.
+### Add incom.e validation (High)
+* Click on green color circle + button and it should take us to New incom.e window
+* New incom.e label should be displayed with back arrow button. Clicking on the button should navigate back to home screen.
 * Below header selected date,month and year should be displayed in day of the week,day month(Ex: Thursday, 16 June) format along with calendar button.
 * A green text field should be displayed with clear button a and button to show account type.
 * A text field should be present to add note with “Note and pen sybmol”.
@@ -45,10 +45,10 @@
 * User should not be allowed to click on choose category when amount is empty or negative.
 * Click on select date calendar buton and user should be able to select required date on calender and is able to select or cancel the selection.
 * Enter some value into add money text field and click on CHOOSE CATEGORY, it should display Deposites, Salary, Saving and along with these +Add should be displayed to add extra category.
-* Enter amount and note in add income.Navigate back to home screen without saving. Now select Add income again the previously entered data should not persist.
+* Enter amount and note in add incom.e.Navigate back to home screen without saving. Now select Add incom.e again the previously entered data should not persist.
 ### Add expense validation (High)
 * Click on red color circle buttom - (Expense) and it should take us to “New expense” window.
-* New income label should be displayed with back arrow button. Clicking it should take us to home screen.
+* New incom.e label should be displayed with back arrow button. Clicking it should take us to home screen.
 * Just below header selected date, month and year should be displayed in “day of the week,day year”((Ex: Thursday, 16 June)) format along with calendar button.
 * A green color text field should be displayed with clear button and button to show account type.
 * A text box should be present to add note with “Note and pen symbmol”.
@@ -60,7 +60,7 @@
 * User should be allowed to click on choose category when add money field is empty or negative.
 * Click on select date calendar buton and user should be able to select required date with calendar details and ok and cancel button.
 * Enter some value into add money(text field) and click on "CHOOSE CATEGORY" should display all the categories that are displayed in home screen.
-* Enter amount and note in add income.Navigate back to home screen without saving. Now select Add income again the previously entered data should not persist.
+* Enter amount and note in add incom.e.Navigate back to home screen without saving. Now select Add incom.e again the previously entered data should not persist.
 
 ### Accounts (High)
 * Click on three dots on right top corner of the main screen. Select "Accounts" menu, it should display two icons to "Transfer" and "Add" account besides text "Add". 
@@ -71,7 +71,7 @@
 * New account should display "Currency" ,"Intial account balance" and "Initial balance date" and "Included in the toggle" button.
 * Updating selection of currency type from the "Currency" field should update currency type (Pro feature)
 * Enter amount value with (.) dot it should accept the amount
-* Enter amount separated with (,) coma it is not accepting coma(BUG)
+* Enter amount separated with (,) com.a it is not accepting com.a(BUG)
 * Clicking on "Initial balance date", it should allow user to select past, current future dates from the calender widget.
 * Creating a user should not be allowed without selecting a icon and name. 
 * Enter valid name ,image and amount also select date then click on ADD it should navigae back to home screen with new account was added message, now click on main menu on left top corner and click on first drop down it should 	display newly added account with currency type and selected image.
@@ -106,7 +106,7 @@
 
 
 ### Validating right top corner menu with submenus Categories, Currencies and Settings (Medium)
-* Clicking on “Categories” should display EXPENSES and INCOME sections. 
+* Clicking on “Categories” should display EXPENSES and INcom.E sections. 
 * Expenses categories should list out all the available categories option in alphabetical order.
 * Clicking on each category should allow you to edit category and delete category.
 * Select any category ex: HOME and it should take us to edit category window and click on delete button, it should be succesfully deleted from category list and from the application home screen.	
@@ -121,7 +121,7 @@
 * On selecting Budget check box asome amount should be added by default 
 * Selecting Budget checkbox a dialog should be displayed to add money which is greater than 0
 * Click on Carry over check box and it should carry over all the previous day amount into present day and there should another value 	added in home screen big circle.
-* Delete all the expenses, income and accounts and add some amount in budget on home screen it should display only Budget amount and select each time period option present in home screen menu. Displays wrong amount in each time period. (BUG)
+* Delete all the expenses, incom.e and accounts and add some amount in budget on home screen it should display only Budget amount and select each time period option present in home screen menu. Displays wrong amount in each time period. (BUG)
 
 ##### Validating GENERAL SETTING 
 * Unlock ,dark mode ,passcode protection -->Pro feature
@@ -138,16 +138,16 @@
 
 ### Bugs
 * From right top corner menu, select the "Categories". Select individual categories and delete each one of them. Now from the home screen try adding expense with + button. You are not allowed to add expense or deposit as there are no categories. Add category is Pro feature but it is blocker for gerneral user.
-* Add income with + button on home screen. Select "Settings" menu and change the currency to any other Ex: INR. Navigate back to home screen. Amount still displays the same without conversion, expected to change the value based on exchange rate on currency type change.
+* Add incom.e with + button on home screen. Select "Settings" menu and change the currency to any other Ex: INR. Navigate back to home screen. Amount still displays the same without conversion, expected to change the value based on exchange rate on currency type change.
 * Enter some number and click on – and enter another digit, It does not display arithmetic sign 
 * Enter some digit and click on any +/- then click on clear button again enter some digit and click on = , full data is not being cleard
 * Creating account(duplicate) with same name and currency is allowed
 * Edit account screen does not have a save/cancel option 
 * Have only one account, Add some money to the account and enable include in balance, Navigate to home screen in the top menu, select all account, as there is only one account added amount is not displayed in balance field
 * Navigate to account and select a account to edit. Toggle "Include in the balance" is not behaving properly (Disabling it also displays balance in homescreen)
-* Delete all the expenses, income and accounts and add some amount in budget on home screen it should display only Budget amount and select each time period option present in home screen menu. Displays wrong amount in each time period.
+* Delete all the expenses, incom.e and accounts and add some amount in budget on home screen it should display only Budget amount and select each time period option present in home screen menu. Displays wrong amount in each time period.
 * Screen does not rotate even after enabling screen rotation in mobile 
-* Select new transfer. Click on amount field. There is no option to comeback to enter the note
+* Select new transfer. Click on amount field. There is no option to com.eback to enter the note
 
 ### Observations
 * Add expense on each category type in the home screen, links(line connecting) from center circle to category type is missing for some of the categories.
@@ -157,7 +157,7 @@
 ### Time planned for Charter
 There are total of 99 test cases with 66 (High) , 24 (Medium), 9(Low) priority testcases. Total duration for a single tester to run the exploratory test cases would be 120 minutes.
 * Monefy home screen validation (20 min)
-* Add income validation (20 min)
+* Add incom.e validation (20 min)
 * Add expense validation (20 min)
 * Accounts (30 min)
 * Validate new transfer (20 min)
@@ -166,7 +166,7 @@ There are total of 99 test cases with 66 (High) , 24 (Medium), 9(Low) priority t
 ### Prioritisation
 #### Test cases mention below are prioritised in ascending order
 * Monefy home screen validation, because it is the starting screen of the app
-* Add income validation ,because it is core operation
+* Add incom.e validation ,because it is core operation
 * Add expense validation,because it is core operation
 * Accounts
 * Validate synchronization of data

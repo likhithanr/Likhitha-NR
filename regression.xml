@@ -8,20 +8,20 @@
          </run>
    </groups>
       <classes>
-         <class name="com.n26.functional.pets.CreatePet" />
-         <class name="com.n26.functional.pets.UpdatePet" />
-         <class name="com.n26.functional.store.CreateOrder" />
-         <class name="com.n26.functional.store.DeleteOrder" />
-         <class name="com.n26.functional.store.GetOrder" />
-         <class name="com.n26.functional.pets.DeletePet" />
-         <class name="com.n26.functional.pets.FindPetByStatus" />
-         <class name="com.n26.functional.user.DeleteUser" />
-         <class name="com.n26.functional.user.LoginLogout" />
-         <class name="com.n26.functional.user.UpdateUser" />
-         <class name="com.n26.functional.user.CreateUser" />
-         <class name="com.n26.functional.pets.FindByTags" />
-         <class name="com.n26.functional.pets.UpdatePetById" />
-         <class name="com.n26.functional.pets.UplodPetImage" />
+         <class name="com.functional.pets.CreatePet" />
+         <class name="com.functional.pets.UpdatePet" />
+         <class name="com.functional.store.CreateOrder" />
+         <class name="com.functional.store.DeleteOrder" />
+         <class name="com.functional.store.GetOrder" />
+         <class name="com.functional.pets.DeletePet" />
+         <class name="com.functional.pets.FindPetByStatus" />
+         <class name="com.functional.user.DeleteUser" />
+         <class name="com.functional.user.LoginLogout" />
+         <class name="com.functional.user.UpdateUser" />
+         <class name="com.functional.user.CreateUser" />
+         <class name="com.functional.pets.FindByTags" />
+         <class name="com.functional.pets.UpdatePetById" />
+         <class name="com.functional.pets.UplodPetImage" />
       </classes>
    </test>
 </suite>

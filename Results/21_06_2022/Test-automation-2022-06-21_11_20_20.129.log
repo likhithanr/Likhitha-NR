@@ -47,27 +47,27 @@
 [93][INFO ] 2022-06-21_11_20_18.737 : Setting up configurations
 [95][INFO ] 2022-06-21_11_20_18.738 : ***************************Test case started********************
 [97][INFO ] 2022-06-21_11_20_18.738 : TestCase 1 : Test case toValidate pet order creation 
-[99][INFO ] 2022-06-21_11_20_18.749 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"approved","complete":true}
+[99][INFO ] 2022-06-21_11_20_18.749 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"approved","com.plete":true}
 [101][INFO ] 2022-06-21_11_20_18.750 : Status Code : 200
 [103][INFO ] 2022-06-21_11_20_18.767 : Order created for the pet id : 198772 with quantity : 7
 [105][INFO ] 2022-06-21_11_20_18.768 : testCreatePetOrder : PASSED
 [107][INFO ] 2022-06-21_11_20_18.770 : ***************************Test case started********************
 [109][INFO ] 2022-06-21_11_20_18.771 : TestCase 2 : Test case to validate order creation with placed status 
-[111][INFO ] 2022-06-21_11_20_18.789 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"placed","complete":true}
+[111][INFO ] 2022-06-21_11_20_18.789 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"placed","com.plete":true}
 [113][INFO ] 2022-06-21_11_20_18.789 : Status Code : 200
 [115][INFO ] 2022-06-21_11_20_18.811 : Order created for the pet id : 198772 with status : placed
 [117][INFO ] 2022-06-21_11_20_18.832 : order succesfully created with id : 10 and with status as : placed
 [119][INFO ] 2022-06-21_11_20_18.833 : testCreatePlacedPetOrder : PASSED
 [121][INFO ] 2022-06-21_11_20_18.833 : ***************************Test case started********************
 [123][INFO ] 2022-06-21_11_20_18.834 : TestCase 3 : Test case to validate order creation with delivered status 
-[125][INFO ] 2022-06-21_11_20_18.852 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"delivered","complete":true}
+[125][INFO ] 2022-06-21_11_20_18.852 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"delivered","com.plete":true}
 [127][INFO ] 2022-06-21_11_20_18.852 : Status Code : 200
 [129][INFO ] 2022-06-21_11_20_18.879 : Order created for the pet id : 198772 with status : delivered
 [131][INFO ] 2022-06-21_11_20_18.906 : order succesfully created with id : 10 and with status as : delivered
 [133][INFO ] 2022-06-21_11_20_18.907 : testCreateDeliveredPetOrder : PASSED
 [135][INFO ] 2022-06-21_11_20_18.907 : ***************************Test case started********************
 [137][INFO ] 2022-06-21_11_20_18.908 : TestCase 4 : Test case to validate order creation with invalid status 
-[139][INFO ] 2022-06-21_11_20_18.918 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"pending","complete":true}
+[139][INFO ] 2022-06-21_11_20_18.918 : Response : {"id":10,"petId":198772,"quantity":7,"shipDate":"2022-06-15T07:32:26.094+00:00","status":"pending","com.plete":true}
 [141][INFO ] 2022-06-21_11_20_18.918 : Status Code : 200
 [143][ERROR] 2022-06-21_11_20_18.918 : Failed due to java.lang.AssertionError: expected [true] but found [false]
 [145][INFO ] 2022-06-21_11_20_18.919 : testCreateOrderWithInvalidStatus : PASSED
@@ -175,8 +175,8 @@
 [349][INFO ] 2022-06-21_11_20_19.433 : User succesfully logged in
 [351][INFO ] 2022-06-21_11_20_19.434 : ***************************Test case started********************
 [353][INFO ] 2022-06-21_11_20_19.435 : TestCase 1 : Test case to validate update user with valid name
-[355][INFO ] 2022-06-21_11_20_19.500 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
-[357][INFO ] 2022-06-21_11_20_19.515 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com","password":"test1","phone":"123456789","userStatus":1}
+[355][INFO ] 2022-06-21_11_20_19.500 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com.","password":"test1","phone":"123456789","userStatus":1}
+[357][INFO ] 2022-06-21_11_20_19.515 : Get user response : {"id":22,"username":"John","firstName":"Tom","lastName":"bel","email":"tom@gmail.com.","password":"test1","phone":"123456789","userStatus":1}
 [359][INFO ] 2022-06-21_11_20_19.515 : Succesfully retrieved user details
 [361][INFO ] 2022-06-21_11_20_19.516 : testUpdateUserWithValidName : PASSED
 [363][INFO ] 2022-06-21_11_20_19.516 : ***************************Test case started********************
@@ -188,16 +188,16 @@
 [375][INFO ] 2022-06-21_11_20_19.552 : User succesfully logged in
 [377][INFO ] 2022-06-21_11_20_19.553 : ***************************Test case started********************
 [379][INFO ] 2022-06-21_11_20_19.553 : TestCase 1 : Test case to validate single user creation
-[381][INFO ] 2022-06-21_11_20_19.563 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[381][INFO ] 2022-06-21_11_20_19.563 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com.","password":"12345","phone":"12345","userStatus":1}
 [383][INFO ] 2022-06-21_11_20_19.563 : User succesfully created with status code : 200
-[385][INFO ] 2022-06-21_11_20_19.563 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[385][INFO ] 2022-06-21_11_20_19.563 : Created user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com.","password":"12345","phone":"12345","userStatus":1}
 [387][INFO ] 2022-06-21_11_20_19.571 : username : John
-[389][INFO ] 2022-06-21_11_20_19.587 : Get user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}
+[389][INFO ] 2022-06-21_11_20_19.587 : Get user response : {"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com.","password":"12345","phone":"12345","userStatus":1}
 [391][INFO ] 2022-06-21_11_20_19.587 : Succesfully retrieved user details
 [393][INFO ] 2022-06-21_11_20_19.587 : testSingleUserCreation : PASSED
 [395][INFO ] 2022-06-21_11_20_19.588 : ***************************Test case started********************
 [397][INFO ] 2022-06-21_11_20_19.589 : TestCase 2 : Test case to validate multiple user creation
-[399][INFO ] 2022-06-21_11_20_19.632 : Created list of users  : [{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1},{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com","password":"12345","phone":"12345","userStatus":1}]
+[399][INFO ] 2022-06-21_11_20_19.632 : Created list of users  : [{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com.","password":"12345","phone":"12345","userStatus":1},{"id":10,"username":"John","firstName":"John","lastName":"James","email":"john@email.com.","password":"12345","phone":"12345","userStatus":1}]
 [401][INFO ] 2022-06-21_11_20_19.632 : User succesfully created with status code : 200
 [403][INFO ] 2022-06-21_11_20_19.632 : testMultipleUserCreation : PASSED
 [405][INFO ] 2022-06-21_11_20_19.633 : **************Script Find pets by tags (GET) started***********
